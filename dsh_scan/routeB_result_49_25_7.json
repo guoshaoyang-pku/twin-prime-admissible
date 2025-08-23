@@ -1,0 +1,19 @@
+{
+  "k": 49,
+  "DP": 25,
+  "DM": 7,
+  "eps": "1/25",
+  "n": 1808,
+  "family": "routeB min-truncated (1+eps-P1)^r * (1-eps-M1)_+ * p_gamma",
+  "jtval_keys": 632380,
+  "jt0_entries": 4541040,
+  "mpfr_bits": 640,
+  "power_iters": 500,
+  "M_mpfr_converged": "3.9843383258",
+  "exact_rayleigh_check": "k*num - 4*den = -2.109046e-33 < 0 (NOT > 4)",
+  "comparison_polynomial_family_D25": "3.9843342389",
+  "min_truncation_gain": "+4.1e-6",
+  "verdict": "M < 4; route B does NOT cross the threshold for k=49",
+  "note": "Exact Rayleigh positivity fails as expected: the min-truncation gain (~4e-6) is far below the +0.013 needed to cross 4. DM=13 extrapolated gain <= 1e-5, not pursued.",
+  "conclusion": "No k<50 subspace (polynomial family or min-truncated piecewise family) reaches M>4 numerically. 246 remains the boundary of the Maynard-Polymath8b framework (k=50 is the smallest k crossing 4)."
+}

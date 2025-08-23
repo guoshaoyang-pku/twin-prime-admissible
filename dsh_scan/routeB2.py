@@ -205,12 +205,39 @@ def _fill_jt0(_unused):
     return out
 
 def _init_fill(k, eps, H_cache, maxE, JT0tab=None):
-    _G2.update(k=k, eps=eps, H_cache=H_cache, maxE=maxE, JT0tab=JT0tab)
+    if JT0tab is not None:
+        _G2.update(k=k, eps=eps, H_cache=H_cache, maxE=maxE, JT0tab=JT0tab)
+    else:
+        _G2.update(k=k, eps=eps, H_cache=H_cache, maxE=maxE)
+
+def _build_wmaps(key_list, k, H_cache):
+    """预计算每个 distinct mu 的 (Badd, dJ) -> 聚合权重 (主进程, fork 共享只读).
+    关键: Badd + dJ = sum(mu) 恒定, 故 |wmap| <= sum(mu)+1 <= 15, 大幅压缩 JT0 查找."""
+    mu_set = sorted({mu for (_, _, _, _, _, mu) in key_list})
+    wmaps = {}
+    for mu in mu_set:
+        wmap = {}
+        def rec(l, Badd, J, coef):
+            if l == len(mu):
+                dJ = sum(J)
+                Hval = mpq(1) if dJ == 0 else H_exact(J, k - 2, H_cache)
+                w = coef * Hval / mpq(math.factorial(k - 3 + dJ))
+                key2 = (Badd, dJ)
+                wmap[key2] = wmap.get(key2, mpq(0)) + w
+                return
+            mm = mu[l]
+            rec(l + 1, Badd + mm, J, coef * (k - 1))
+            for jj in range(1, mm + 1):
+                rec(l + 1, Badd + (mm - jj), J + [jj], coef * math.comb(mm, jj))
+        rec(0, 0, [], mpq(1))
+        wmaps[mu] = wmap
+    return wmaps
 
 def _fill_keys(key_list):
     k, eps = _G2['k'], _G2['eps']
     H_cache, maxE = _G2['H_cache'], _G2['maxE']
     JT0tab = _G2.get('JT0tab')
+    WMAP = _G2.get('WMAP')
     twoeps_pow = [mpq(1)]
     for _ in range(maxE + 1):
         twoeps_pow.append(twoeps_pow[-1] * (mpq(2) * eps))
@@ -218,37 +245,17 @@ def _fill_keys(key_list):
         if JT0tab is not None:
             return JT0tab[(a, B, B2, C)]
         raise KeyError('no JT0tab')
-    branch_cache = {}
-    def branches(mu):
-        v = branch_cache.get(mu)
-        if v is not None:
-            return v
-        out = []
-        def rec(l, Badd, J, coef):
-            if l == len(mu):
-                out.append((coef, Badd, tuple(J)))
-                return
-            mm = mu[l]
-            rec(l + 1, Badd + mm, J, coef * (k - 1))
-            for jj in range(1, mm + 1):
-                rec(l + 1, Badd + (mm - jj), J + [jj], coef * math.comb(mm, jj))
-        rec(0, 0, [], mpq(1))
-        branch_cache[mu] = out
-        return out
     out = {}
     for (e1, e2, B, B2, B3, mu) in key_list:
         expanded = [(mpq(math.comb(B3, p3)) * twoeps_pow[B3 - p3] * ((-2) ** p3), B + p3)
                     for p3 in range(B3 + 1)]
+        wmap = WMAP[mu]
         tot = mpq(0)
-        br = branches(mu)
         for q in range(e2 + 1):
             cq = mpq(math.comb(e2, q)) * twoeps_pow[e2 - q] * mpq(k - 1)
             for (c3, Bp) in expanded:
-                for (cbr, Badd, J) in br:
-                    dJ = sum(J)
-                    Hval = mpq(1) if len(J) == 0 else H_exact(J, k - 2, H_cache)
-                    hcoef = cq * c3 * cbr * Hval / mpq(math.factorial(k - 3 + dJ))
-                    tot += hcoef * JT0(e1 + q, Bp + Badd, B2, k - 3 + dJ)
+                for (Badd, dJ), w in wmap.items():
+                    tot += cq * c3 * w * JT0(e1 + q, Bp + Badd, B2, k - 3 + dJ)
         out[(e1, e2, B, B2, B3, mu)] = tot
     return out
 
@@ -442,7 +449,7 @@ def main():
             keys.add((e1a + e1b, e2a + e2b, Ba + Bb, B2a + B2b, B3a + B3b, mu))
     key_list = sorted(keys)
     print(f"total distinct keys: {len(key_list)}", flush=True)
-    # JT0 表预计算 (并行, fork 共享)
+    # JT0 表预计算 (分批 + 断点续跑, fork 共享)
     maxE = 3 * DP + 3 * DM + 2 * k + 300
     Amax = max(e1 for (e1, _, _, _, _, _) in key_list) + max(e2 for (_, e2, _, _, _, _) in key_list) + 1
     Bmax = max(B for (_, _, B, _, _, _) in key_list) + max(B3 for (_, _, _, _, B3, _) in key_list) + DP + DM + 5
@@ -450,18 +457,40 @@ def main():
     Cmax = k - 3 + DP + DM + 5
     blocks = [(a, B2, C) for a in range(Amax + 1) for B2 in range(B2max + 1) for C in range(Cmax + 1)]
     print(f"JT0 blocks: {len(blocks)} (Amax={Amax}, Bmax={Bmax}, B2max={B2max}, Cmax={Cmax})", flush=True)
-    blk_chunks = [blocks[i::S] for i in range(S)]
-    pool0 = mp.Pool(S, initializer=_init_jt0, initargs=(k, eps, maxE, Bmax, blocks))
-    t2b = time.time()
     JT0tab = {}
-    for out in pool0.imap_unordered(_fill_jt0, blk_chunks):
-        JT0tab.update(out)
-    pool0.close(); pool0.join()
-    print(f"JT0 table: {len(JT0tab)} entries ({time.time()-t2b:.0f}s)", flush=True)
-    del blocks, blk_chunks
-    # 并行填充 jtval
+    part_file = f'jt0_tab_{k}_{DP}_{DM}.pkl'
+    import os as _os
+    if _os.path.exists(part_file):
+        with open(part_file, 'rb') as f:
+            JT0tab.update(pickle.load(f))
+        print(f"loaded existing part {part_file} ({len(JT0tab)} entries so far)", flush=True)
+    done_keys = set(JT0tab.keys())
+    todo = [b for b in blocks if (b[0], 0, b[1], b[2]) not in done_keys]
+    # 检测部分完成: 某 (a,B2,C) 的部分 B 已算过则整块重算 (简单起见跳过)
+    todo = [b for b in blocks if all((b[0], B, b[1], b[2]) not in done_keys for B in range(Bmax + 1))]
+    print(f"todo blocks: {len(todo)}", flush=True)
+    BATCH = 2048
+    nb = 0
+    for bs in range(0, len(todo), BATCH):
+        batch = todo[bs:bs + BATCH]
+        blk_chunks = [batch[i::S] for i in range(S)]
+        pool0 = mp.Pool(S, initializer=_init_jt0, initargs=(k, eps, maxE, Bmax, batch))
+        t2b = time.time()
+        for out in pool0.imap_unordered(_fill_jt0, blk_chunks):
+            JT0tab.update(out)
+        pool0.close(); pool0.join()
+        nb += 1
+        with open(part_file, 'wb') as f:
+            pickle.dump(JT0tab, f)
+        print(f"JT0 batch {nb} saved ({len(JT0tab)} entries, {time.time()-t2b:.0f}s)", flush=True)
+    print(f"JT0 table complete: {len(JT0tab)} entries", flush=True)
+    # 并行填充 jtval (JT0tab 经 fork 全局共享, 不经 initargs)
+    t_w = time.time()
+    _G2['WMAP'] = _build_wmaps(key_list, k, H_cache)
+    print(f"WMAP built ({time.time()-t_w:.0f}s, {len(_G2['WMAP'])} mu)", flush=True)
     chunks = [key_list[i::S] for i in range(S)]
-    pool = mp.Pool(S, initializer=_init_fill, initargs=(k, eps, H_cache, maxE, JT0tab))
+    _G2['JT0tab'] = JT0tab
+    pool = mp.Pool(S, initializer=_init_fill, initargs=(k, eps, H_cache, maxE))
     t3 = time.time()
     jt_cache = {}
     done = 0
