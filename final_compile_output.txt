@@ -1,0 +1,16 @@
+TwinPrimeAdmissible.lean:39:2: warning: Variable name `n` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _n
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+true
+true
+false
+false
+false
+false
+false
+false
+false
+true
