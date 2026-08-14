@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/ETieSlD6bk0Z1o2XS2gvNUGfgPI</id>
+  <title>arXiv Query: search_query=&amp;id_list=2505.07630&amp;start=0&amp;max_results=10</title>
+  <updated>2026-08-14T07:57:49Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2505.07630" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2505.07630v1</id>
+    <title>On the frequency of small gaps between the primes</title>
+    <updated>2025-05-12T14:56:44Z</updated>
+    <link href="https://arxiv.org/abs/2505.07630v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.07630v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In a recent work Friedlander studied the problem of how large consecutive prime gaps should be in order that the sum of the reciprocals should be divergent. Supposing a very deep Hypothesis, a generalization of the Hardy--Littlewood prime $k$-tuple conjecture, he gave an almost precise answer for it. In the present work we give an unconditional answer for a much weaker form of the same problem.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-12T14:56:44Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Akos Magyar</name>
+    </author>
+    <author>
+      <name>Janos Pintz</name>
+    </author>
+  </entry>
+</feed>

@@ -1,0 +1,5 @@
+N = 100000000000
+twin prime count pi2(N) = 224376048
+Hardy-Littlewood estimate = 205808661.8
+ratio count/estimate = 1.090217
+time = 209.29 s

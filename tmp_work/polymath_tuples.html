@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>Finding narrow admissible tuples - Polymath Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"an7LdQpZVdDjke33FCxdcAAnJVs","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Finding_narrow_admissible_tuples","wgTitle":"Finding narrow admissible tuples","wgCurRevisionId":9719,"wgRevisionId":9719,"wgArticleId":1582,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Finding_narrow_admissible_tuples","wgRelevantArticleId":1582,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSmjUseCdn":
+true,"wgSmjUseChem":true,"wgSmjDisplayMath":[],"wgSmjExtraInlineMath":[],"wgSmjScale":1,"wgSmjEnableMenu":true,"wgSmjDisplayAlign":"left"};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.monobook.styles":"ready"};RLPAGEMODULES=["ext.SimpleMathJax","site","mediawiki.page.ready","mediawiki.toc","skins.monobook.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="/polymath/load.php?lang=en&amp;modules=skins.monobook.styles&amp;only=styles&amp;skin=monobook">
+<script async="" src="/polymath/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=monobook"></script>
+<meta name="generator" content="MediaWiki 1.42.3">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="icon" href="/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="/polymath/opensearch_desc.php" title="Polymath Wiki (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://michaelnielsen.org/polymath/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="Polymath Wiki Atom feed" href="/polymath/index.php?title=Special:RecentChanges&amp;feed=atom">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Finding_narrow_admissible_tuples rootpage-Finding_narrow_admissible_tuples skin-monobook action-view skin--responsive"><div id="globalWrapper">
+	<div id="column-content">
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="siteNotice"></div>
+			<div class="mw-indicators">
+			</div>
+			<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">Finding narrow admissible tuples</span></h1>
+			<div id="bodyContent" class="monobook-body">
+				<div id="siteSub">From Polymath Wiki</div>
+				<div id="contentSub" ><div id="mw-content-subtitle"></div></div>
+				
+				<div id="jump-to-nav"></div><a href="#column-one" class="mw-jump-link">Jump to navigation</a><a href="#searchInput" class="mw-jump-link">Jump to search</a>
+				<!-- start content -->
+				<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><p>For any natural number <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>, an <i>admissible <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>-tuple</i> is a finite set <span style="opacity:.5" class="smj-container">[math]\displaystyle{ {\mathcal H} }[/math]</span> of integers of cardinality <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span> which avoids at least one residue class modulo <span style="opacity:.5" class="smj-container">[math]\displaystyle{ p }[/math]</span> for each prime <span style="opacity:.5" class="smj-container">[math]\displaystyle{ p }[/math]</span>.  (Note that one only needs to check those primes <span style="opacity:.5" class="smj-container">[math]\displaystyle{ p }[/math]</span> of size at most <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>, so this is a finitely checkable condition.)  Let <span style="opacity:.5" class="smj-container">[math]\displaystyle{ H(k_0) }[/math]</span> denote the minimal diameter <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \max {\mathcal H} - \min {\mathcal H} }[/math]</span> of an admissible <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>-tuple.  As part of the <a href="/polymath/index.php?title=Bounded_gaps_between_primes" title="Bounded gaps between primes">Polymath8</a> project, we would like to find as good an upper bound on <span style="opacity:.5" class="smj-container">[math]\displaystyle{ H(k_0) }[/math]</span> as possible for given values of <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>.  To a lesser extent, we would also be interested in lower bounds on this quantity.  There is some scattered numerical evidence that the optimal value of H is roughly of size <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 \log k_0 + k_0 }[/math]</span> for <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span> in the range of interest.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Upper_bounds"><span class="tocnumber">1</span> <span class="toctext">Upper bounds</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Zhang_sieve"><span class="tocnumber">1.1</span> <span class="toctext">Zhang sieve</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Hensley-Richards_sieve"><span class="tocnumber">1.2</span> <span class="toctext">Hensley-Richards sieve</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Asymmetric_Hensley-Richards_sieve"><span class="tocnumber">1.3</span> <span class="toctext">Asymmetric Hensley-Richards sieve</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Schinzel_sieve"><span class="tocnumber">1.4</span> <span class="toctext">Schinzel sieve</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Shifted_Schinzel_sieve"><span class="tocnumber">1.5</span> <span class="toctext">Shifted Schinzel sieve</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Greedy_sieve"><span class="tocnumber">1.6</span> <span class="toctext">Greedy sieve</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Greedy-Schinzel_hybrid"><span class="tocnumber">1.7</span> <span class="toctext">Greedy-Schinzel hybrid</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Seeded_greedy_sieve"><span class="tocnumber">1.8</span> <span class="toctext">Seeded greedy sieve</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Iterated_merging"><span class="tocnumber">1.9</span> <span class="toctext">Iterated merging</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Local_optimizations"><span class="tocnumber">1.10</span> <span class="toctext">Local optimizations</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Further_refinements"><span class="tocnumber">1.11</span> <span class="toctext">Further refinements</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Lower_bounds"><span class="tocnumber">2</span> <span class="toctext">Lower bounds</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#Brun-Titchmarsh_inequality"><span class="tocnumber">2.1</span> <span class="toctext">Brun-Titchmarsh inequality</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#First_Montgomery-Vaughan_large_sieve_inequality"><span class="tocnumber">2.2</span> <span class="toctext">First Montgomery-Vaughan large sieve inequality</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Second_Montgomery-Vaughan_large_sieve_inequality"><span class="tocnumber">2.3</span> <span class="toctext">Second Montgomery-Vaughan large sieve inequality</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#Benchmarks"><span class="tocnumber">3</span> <span class="toctext">Benchmarks</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Upper_bounds">Upper bounds</span></h2>
+<p>Upper bounds are primarily constructed through various "sieves" that delete one residue class modulo <span style="opacity:.5" class="smj-container">[math]\displaystyle{ p }[/math]</span> from an interval for a lot of primes <span style="opacity:.5" class="smj-container">[math]\displaystyle{ p }[/math]</span>.  Examples of sieves, in roughly increasing order of efficiency, are listed below.
+</p>
+<h3><span class="mw-headline" id="Zhang_sieve">Zhang sieve</span></h3>
+<p>The Zhang sieve uses the tuple
+</p>
+<dl><dd><span style="opacity:.5" class="smj-container">[math]\displaystyle{ {\mathcal H} = \{p_{m+1}, \ldots, p_{m+k_0}\} }[/math]</span></dd></dl>
+<p>where <span style="opacity:.5" class="smj-container">[math]\displaystyle{ m }[/math]</span> is minimized subject to staying admissible.  Any <span style="opacity:.5" class="smj-container">[math]\displaystyle{ m }[/math]</span> with <span style="opacity:.5" class="smj-container">[math]\displaystyle{ p_{m+1} \gt  k_0 }[/math]</span> yields an admissible tuple; in particular, one can just take <span style="opacity:.5" class="smj-container">[math]\displaystyle{ {\mathcal H} }[/math]</span> to be the first <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span> primes past <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>, but this is not optimal.  Applying the prime number theorem then gives the upper bound <span style="opacity:.5" class="smj-container">[math]\displaystyle{ H \leq (1+o(1)) k_0\log k_0 }[/math]</span>.
+</p>
+<h3><span class="mw-headline" id="Hensley-Richards_sieve">Hensley-Richards sieve</span></h3>
+<p>The Hensley-Richards sieve [HR1973], [HR1973b], [R1974] uses the tuple
+</p>
+<dl><dd><span style="opacity:.5" class="smj-container">[math]\displaystyle{ {\mathcal H} = \{-p_{m+\lfloor k_0/2\rfloor - 1}, \ldots, -p_{m+1}, -1, +1, p_{m+1},\ldots, p_{m+\lfloor k_0/2+1/2\rfloor-1}\} }[/math]</span></dd></dl>
+<p>where m is optimised to minimize the diameter while staying admissible.
+</p>
+<h3><span class="mw-headline" id="Asymmetric_Hensley-Richards_sieve">Asymmetric Hensley-Richards sieve</span></h3>
+<p>The asymmetric Hensley-Richard sieve uses the tuple
+</p>
+<dl><dd><span style="opacity:.5" class="smj-container">[math]\displaystyle{ {\mathcal H} = \{-p_{m+\lfloor k_0/2\rfloor - 1-i}, \ldots, -p_{m+1}, -1, +1, p_{m+1},\ldots, p_{m+\lfloor k_0/2+1/2\rfloor-1+i}\} }[/math]</span></dd></dl>
+<p>where <span style="opacity:.5" class="smj-container">[math]\displaystyle{ i }[/math]</span> is an integer and <span style="opacity:.5" class="smj-container">[math]\displaystyle{ i,m }[/math]</span> are optimised to minimize the diameter while staying admissible.
+</p>
+<h3><span class="mw-headline" id="Schinzel_sieve">Schinzel sieve</span></h3>
+<p>Given <span style="opacity:.5" class="smj-container">[math]\displaystyle{ 0\lt y\lt z\lt x }[/math]</span>, the Schinzel sieve (discussed in [S1961], [HR1973], [GR1998], [CJ2001]) sieves the interval <span style="opacity:.5" class="smj-container">[math]\displaystyle{ [1,x] }[/math]</span> by <span style="opacity:.5" class="smj-container">[math]\displaystyle{ 1 \bmod p }[/math]</span> for primes <span style="opacity:.5" class="smj-container">[math]\displaystyle{ p \le y }[/math]</span> and by <span style="opacity:.5" class="smj-container">[math]\displaystyle{ 0\bmod p }[/math]</span> for primes <span style="opacity:.5" class="smj-container">[math]\displaystyle{ y \lt  p \le z }[/math]</span>.  Provided that <span style="opacity:.5" class="smj-container">[math]\displaystyle{ z }[/math]</span> is large enough (<span style="opacity:.5" class="smj-container">[math]\displaystyle{ z=k_0 }[/math]</span> clearly suffices), the first <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span> survivors form an admissible <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>-tuple (but not necessarily the narrowest one in the interval).
+The case <span style="opacity:.5" class="smj-container">[math]\displaystyle{ y=1 }[/math]</span> corresponds to a sieve of Eratosthenes; if one minimizes <span style="opacity:.5" class="smj-container">[math]\displaystyle{ z }[/math]</span> and takes the first <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span> survivors greater than 1, this yields the same admissible <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span> tuple as Zhang, with the minimal possible value of <span style="opacity:.5" class="smj-container">[math]\displaystyle{ m }[/math]</span>.
+</p>
+<h3><span class="mw-headline" id="Shifted_Schinzel_sieve">Shifted Schinzel sieve</span></h3>
+<p>As a generalization of the Schinzel sieve, one may instead sieve shifted intervals <span style="opacity:.5" class="smj-container">[math]\displaystyle{ [s,s+x] }[/math]</span>.  This is effectively equivalent to sieving the interval <span style="opacity:.5" class="smj-container">[math]\displaystyle{ [0,x] }[/math]</span> of the residue classes <span style="opacity:.5" class="smj-container">[math]\displaystyle{ -s\ \bmod\ p }[/math]</span> for primes <span style="opacity:.5" class="smj-container">[math]\displaystyle{ p\le y }[/math]</span> and <span style="opacity:.5" class="smj-container">[math]\displaystyle{  1-s\ \bmod\ p }[/math]</span> for primes <span style="opacity:.5" class="smj-container">[math]\displaystyle{ y\lt p\le z }[/math]</span>.
+</p>
+<h3><span class="mw-headline" id="Greedy_sieve">Greedy sieve</span></h3>
+<p>Within a given interval, one sieves a single residue class <span style="opacity:.5" class="smj-container">[math]\displaystyle{ a \bmod p }[/math]</span> for increasing primes <span style="opacity:.5" class="smj-container">[math]\displaystyle{ p=2,3,5,\ldots }[/math]</span>, with <span style="opacity:.5" class="smj-container">[math]\displaystyle{ a }[/math]</span> chosen to maximize the number of survivors.  Ties can be broken in a number of ways: minimize <span style="opacity:.5" class="smj-container">[math]\displaystyle{ a\in[0,p-1] }[/math]</span>, maximize <span style="opacity:.5" class="smj-container">[math]\displaystyle{ a\in [0,p-1] }[/math]</span>, minimize <span style="opacity:.5" class="smj-container">[math]\displaystyle{ |a-\lfloor p/2\rfloor| }[/math]</span>, or randomly.  If not all residue classes modulo <span style="opacity:.5" class="smj-container">[math]\displaystyle{ p }[/math]</span> are occupied by survivors, then <span style="opacity:.5" class="smj-container">[math]\displaystyle{ a }[/math]</span> will be chosen so that no survivors are sieved.
+This necessarily occurs once <span style="opacity:.5" class="smj-container">[math]\displaystyle{ p }[/math]</span> exceeds the number of survivors but typically happens much sooner.  One then chooses the narrowest <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>-tuple <span style="opacity:.5" class="smj-container">[math]\displaystyle{ {\mathcal H} }[/math]</span> among the survivors (if there are fewer than <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span> survivors, retry with a wider interval).
+</p>
+<h3><span class="mw-headline" id="Greedy-Schinzel_hybrid">Greedy-Schinzel hybrid</span></h3>
+<p>Heuristically, the performance of the greedy sieve is significantly improved by starting with a shifted Schinzel sieve on <span style="opacity:.5" class="smj-container">[math]\displaystyle{ [s,\ s+x] }[/math]</span> using <span style="opacity:.5" class="smj-container">[math]\displaystyle{ y = 2 }[/math]</span> and <span style="opacity:.5" class="smj-container">[math]\displaystyle{ z = \sqrt{x} }[/math]</span> and then continuing in a greedy fashion, as <a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/05/30/i-just-cant-resist-there-are-infinitely-many-pairs-of-primes-at-most-59470640-apart#comment-23566">proposed by Sutherland</a>.  One first optimizes the shift value <span style="opacity:.5" class="smj-container">[math]\displaystyle{ s }[/math]</span> over some larger interval (e.g. <span style="opacity:.5" class="smj-container">[math]\displaystyle{ [-k_0\log\ k_0,\ k_0\log\ k_0] }[/math]</span>) and then continues the sieving over primes <span style="opacity:.5" class="smj-container">[math]\displaystyle{ p \gt  z }[/math]</span> greedily choosing the best residue class for each prime according to a chosen tie-breaking rule (in Sutherland's original implementation, ties are broken downward in <span style="opacity:.5" class="smj-container">[math]\displaystyle{ [0,\ p-1] }[/math]</span>).
+</p>
+<h3><span class="mw-headline" id="Seeded_greedy_sieve">Seeded greedy sieve</span></h3>
+<p>Given an initial sequence <span style="opacity:.5" class="smj-container">[math]\displaystyle{ {\mathcal S} }[/math]</span> that is known to contain an admissible <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>-tuple, one can apply greedy sieving to the minimal interval containing <span style="opacity:.5" class="smj-container">[math]\displaystyle{ {\mathcal S} }[/math]</span> until an admissible sequence of survivors remains, and then choose the narrowest <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>=tuple it contains.  The sieving methods above can be viewed as the special case where <span style="opacity:.5" class="smj-container">[math]\displaystyle{ {\mathcal S} }[/math]</span> is the set of integers in some interval.  The main difference is that the choice of <span style="opacity:.5" class="smj-container">[math]\displaystyle{ {\mathcal S} }[/math]</span> affects when ties occur and how they are broken with greedy sieving.
+One approach is to take <span style="opacity:.5" class="smj-container">[math]\displaystyle{ {\mathcal S} }[/math]</span> to be the union of two <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>-tuples that lie in roughly the same interval (see Iterated merging) below.
+</p>
+<h3><span class="mw-headline" id="Iterated_merging">Iterated merging</span></h3>
+<p>Given an admissible <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>-tuple <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{H}_1 }[/math]</span>, one can attempt to improve it using an iterated merging approach <a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23680">suggested by Castryck</a>.  One first uses a greedy (or greedy-Schinzel) sieve to construct an admissible <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>-tuple <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{H}_2 }[/math]</span> in roughly the same interval as <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{H}_1 }[/math]</span>, then performs a randomized greedy sieve using the seed set <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{S} = \mathcal{H}_1 \cup \mathcal{H}_2 }[/math]</span> to obtain an admissible <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>-tuple <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{H}_3 }[/math]</span>.  If <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{H}_3 }[/math]</span> is narrower than <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{H}_2 }[/math]</span>, replace <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{H}_2 }[/math]</span> with <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{H}_3 }[/math]</span>, otherwise try again with a new <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{H}_3 }[/math]</span>.
+Eventually the diameter of <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{H}_2 }[/math]</span> will become less than or equal to that of <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{H}_1 }[/math]</span>.
+As long as <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{H}_1\ne \mathcal{H}_2 }[/math]</span>, one can continue to attempt to improve <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{H}_2 }[/math]</span>, but in practice one stops after some number of retries.
+</p><p>As <a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23733">described by Sutherland</a>, one can then replace <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{H}_1 }[/math]</span> with <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{H}_2 }[/math]</span> and begin the process anew, yielding a randomized algorithm that can be run indefinitely.  Key parameters to this algorithm are the choice of the interval used when constructing <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{H}_2 }[/math]</span>, which is typically made wider than the minimal interval containing <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{H}_1 }[/math]</span> by a small factor <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \delta }[/math]</span> on each side (Sutherland suggests <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \delta = 0.0025 }[/math]</span>), and the number of failed attempts allowed while attempting to impove <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{H}_2 }[/math]</span>.
+</p><p>Eventually this process will tend to converge to particular <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{H}_1 }[/math]</span> that it cannot improve (or more generally, a set of similar <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{H}_1 }[/math]</span>'s with the same diameter).  Interleaving iterated merging with the local optimizations described below often allows the algorithm to make further progress.
+</p>
+<hr />
+<p>Iterated merging can be viewed as a form of simulated annealing.  The set <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{S} }[/math]</span> initially contains at least two admissible <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>-tuples (typically many more), and as the algorithm proceeds the set <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{S} }[/math]</span> converges toward <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{H}_1 }[/math]</span> and the number of admissible <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>-tuples it contains declines.  One can regard the cardinality of the difference between <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{S} }[/math]</span> and <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{H}_1 }[/math]</span> as a measure of the "temperature" of a gradually cooling system, since the number of choices available to the algorithm declines as this cardinality is reduced (more precisely, one may consider the entropy of the possible sequence of tie-breaking choices available for a given <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{S} }[/math]</span>).
+</p>
+<h3><span class="mw-headline" id="Local_optimizations">Local optimizations</span></h3>
+<p>Let <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H = \{h_1,\ldots, h_{k_0}\} }[/math]</span> be an admissible <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>-tuple with endpoints <span style="opacity:.5" class="smj-container">[math]\displaystyle{ h_1 }[/math]</span> and <span style="opacity:.5" class="smj-container">[math]\displaystyle{ h_{k_0} }[/math]</span>, and let <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal I }[/math]</span> be the interval <span style="opacity:.5" class="smj-container">[math]\displaystyle{ [h_1,h_{k_0}] }[/math]</span>.  If there exists an integer <span style="opacity:.5" class="smj-container">[math]\displaystyle{ h\in\mathcal I }[/math]</span> such that removing one of <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H }[/math]</span>'s endpoints and inserting <span style="opacity:.5" class="smj-container">[math]\displaystyle{ h }[/math]</span> yields an admissible <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>-tuple  <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H' }[/math]</span>, then call <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H }[/math]</span> <i>contractible</i>, and if not, say that <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H }[/math]</span> non-contractible.  Note that <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H' }[/math]</span> necessarily has smaller diameter than <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H }[/math]</span>.  Any of the sieving methods described above may produce admissible <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>-tuples that are contractible, so it is worth testing for contractibility as a post-processing step after sieving and replacing <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H }[/math]</span> by <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H' }[/math]</span> if this test succeeds.
+</p><p>We can also <i>shift</i> <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H  }[/math]</span> to the left by removing its right end point <span style="opacity:.5" class="smj-container">[math]\displaystyle{ h_{k_0} }[/math]</span> and replacing it with the greatest integer <span style="opacity:.5" class="smj-container">[math]\displaystyle{ h_0 \lt  h_1 }[/math]</span> that yields an admissible <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>-tuple <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H' }[/math]</span>, and we can similarly shift <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H }[/math]</span> to the right.  The diameter of <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H' }[/math]</span> need not be less than <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H }[/math]</span>, but if it is, it provides a useful replacement.  More generally, by shifting <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H }[/math]</span> repeatedly we can produce a sequence of admissible <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>-tuples that lie successively further to the left or right.  In general the diameter of these tuples may grow as we do so, but it will also occasionally decline, and we may be able to find a shifted <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H' }[/math]</span> with smaller diameter than <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H }[/math]</span>.
+</p>
+<hr />
+<p>A more sophisticated local optimization involves a process of ``adjustment" <a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23766">proposed by Savitt</a>.
+Let <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H  }[/math]</span> be an admissible <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>-tuple.
+For a prime <span style="opacity:.5" class="smj-container">[math]\displaystyle{ p }[/math]</span> and an integer <span style="opacity:.5" class="smj-container">[math]\displaystyle{ a }[/math]</span>, let <span style="opacity:.5" class="smj-container">[math]\displaystyle{ [a;p] }[/math]</span> denote the residue class <span style="opacity:.5" class="smj-container">[math]\displaystyle{ a\bmod p }[/math]</span>, i.e. the set of integers <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \{ x&#160;: x = a \bmod p\} }[/math]</span>.
+Call <span style="opacity:.5" class="smj-container">[math]\displaystyle{ [a;p] }[/math]</span> occupied if it contains an element of <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H  }[/math]</span>.
+</p><p>Suppose that <span style="opacity:.5" class="smj-container">[math]\displaystyle{ [a;p] }[/math]</span> and <span style="opacity:.5" class="smj-container">[math]\displaystyle{ [b;q] }[/math]</span> are occupied residue classes, for some distinct primes <span style="opacity:.5" class="smj-container">[math]\displaystyle{ p }[/math]</span> and <span style="opacity:.5" class="smj-container">[math]\displaystyle{ q }[/math]</span>, and that <span style="opacity:.5" class="smj-container">[math]\displaystyle{ [a';p] }[/math]</span> and <span style="opacity:.5" class="smj-container">[math]\displaystyle{ [b';q] }[/math]</span> are unoccupied.
+Let <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal U }[/math]</span> be the intersection of <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H }[/math]</span> with <span style="opacity:.5" class="smj-container">[math]\displaystyle{ [a;p] \cup [b;q] }[/math]</span>, and let <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal V }[/math]</span> be a subset of the integers that lie in the intersection of the interval <span style="opacity:.5" class="smj-container">[math]\displaystyle{ I }[/math]</span> containing <span style="opacity:.5" class="smj-container">[math]\displaystyle{ H }[/math]</span> and the set <span style="opacity:.5" class="smj-container">[math]\displaystyle{ [a';p] \cup [b';q] }[/math]</span> such that 
+the set <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H'  }[/math]</span> formed by removing the elements of <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal U }[/math]</span> from <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H  }[/math]</span> and adding the elements of <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal V  }[/math]</span> is admissible.
+A necessary (and often sufficient) condition for and integer <span style="opacity:.5" class="smj-container">[math]\displaystyle{ v }[/math]</span> to lie in <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal V }[/math]</span> is that <span style="opacity:.5" class="smj-container">[math]\displaystyle{ v }[/math]</span> must not lie in a residue class <span style="opacity:.5" class="smj-container">[math]\displaystyle{ [c;r] }[/math]</span> that is the unique unoccupied residue class modulo <span style="opacity:.5" class="smj-container">[math]\displaystyle{ r }[/math]</span> for any prime <span style="opacity:.5" class="smj-container">[math]\displaystyle{ r }[/math]</span> other than <span style="opacity:.5" class="smj-container">[math]\displaystyle{ p }[/math]</span> or <span style="opacity:.5" class="smj-container">[math]\displaystyle{ q }[/math]</span>.
+</p><p>The admissible set <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H'  }[/math]</span> lies in the interval <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal I }[/math]</span> containing <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H }[/math]</span>, so its diameter is no greater than that of <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H }[/math]</span>, however its cardinality may differ.  If it happens that <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H'  }[/math]</span> contains more elements than <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H  }[/math]</span>, then by eliminating points at either end of <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H'  }[/math]</span> we obtain an admissible <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>-tuple that is narrower than <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H }[/math]</span> and may ``adjust" <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H  }[/math]</span> by replacing it with <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal H'  }[/math]</span>.
+The process of adjustment can often be applied repeatedly, yielding a sequence of successively narrower admissible <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>-tuples.
+</p>
+<h3><span class="mw-headline" id="Further_refinements">Further refinements</span></h3>
+<h2><span class="mw-headline" id="Lower_bounds">Lower bounds</span></h2>
+<p>There is a substantial amount of literature on bounding the quantity <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \pi(x+y)-\pi(x) }[/math]</span>, the number of primes in a shifted interval <span style="opacity:.5" class="smj-container">[math]\displaystyle{ [x+1,x+y] }[/math]</span>, where <span style="opacity:.5" class="smj-container">[math]\displaystyle{ x,y }[/math]</span> are natural numbers.  As a general rule, whenever a bound of the form
+</p>
+<dl><dd><span style="opacity:.5" class="smj-container">[math]\displaystyle{  \pi(x+y) - \pi(x) \leq F(y)  }[/math]</span> (*)</dd></dl>
+<p>is established for some function <span style="opacity:.5" class="smj-container">[math]\displaystyle{ F(y) }[/math]</span> of <span style="opacity:.5" class="smj-container">[math]\displaystyle{ y }[/math]</span>, the method of proof also gives a bound of the form
+</p>
+<dl><dd><span style="opacity:.5" class="smj-container">[math]\displaystyle{  k_0 \leq F( H(k_0)+1 ). }[/math]</span> (**)</dd></dl>
+<p>Indeed, if one assumes the prime tuples conjecture, any admissible <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>-tuple of diameter <span style="opacity:.5" class="smj-container">[math]\displaystyle{ H }[/math]</span> can be translated into an interval of the form <span style="opacity:.5" class="smj-container">[math]\displaystyle{ [x+1,x+H+1] }[/math]</span> for some <span style="opacity:.5" class="smj-container">[math]\displaystyle{ x }[/math]</span>.  In the opposite direction, all known bounds of the form (*) proceed by using the fact that for <span style="opacity:.5" class="smj-container">[math]\displaystyle{ x\gt y }[/math]</span>, the set of primes between <span style="opacity:.5" class="smj-container">[math]\displaystyle{ x+1 }[/math]</span> and <span style="opacity:.5" class="smj-container">[math]\displaystyle{ x+y }[/math]</span> is admissible, so the method of proof of (*) invariably also gives (**) as well.  
+</p><p>Examples of lower bounds are as follows;
+</p>
+<h3><span class="mw-headline" id="Brun-Titchmarsh_inequality">Brun-Titchmarsh inequality</span></h3>
+<p>The Brun-Titchmarsh theorem gives
+</p>
+<dl><dd><span style="opacity:.5" class="smj-container">[math]\displaystyle{  \pi(x+y) - \pi(x) \leq (1 + o(1)) \frac{2y}{\log y} }[/math]</span></dd></dl>
+<p>which then gives the lower bound
+</p>
+<dl><dd><span style="opacity:.5" class="smj-container">[math]\displaystyle{  H(k_0) \geq (\frac{1}{2}-o(1)) k_0 \log k_0 }[/math]</span>.</dd></dl>
+<p>Montgomery and Vaughan deleted the o(1) error from the Brun-Titchmarsh theorem [MV1973, Corollary 2], giving the more precise inequality
+</p>
+<dl><dd><span style="opacity:.5" class="smj-container">[math]\displaystyle{  k_0 \leq 2 \frac{H(k_0)+1}{\log (H(k_0)+1)}. }[/math]</span></dd></dl>
+<h3><span class="mw-headline" id="First_Montgomery-Vaughan_large_sieve_inequality">First Montgomery-Vaughan large sieve inequality</span></h3>
+<p>The large sieve inequality (in the sharp form of Selberg) [IK2004, Theorem 7.14] gives
+</p>
+<dl><dd><span style="opacity:.5" class="smj-container">[math]\displaystyle{  k_0 (\sum_{q \leq Q} \frac{\mu^2(q)}{\phi(q)}) \leq H(k_0) + Q^2 }[/math]</span></dd></dl>
+<p>for any <span style="opacity:.5" class="smj-container">[math]\displaystyle{ Q \gt  1 }[/math]</span>, which is a parameter that one can optimise over (the optimal value is comparable to <span style="opacity:.5" class="smj-container">[math]\displaystyle{ H(k_0)^{1/2} }[/math]</span>).
+</p>
+<h3><span class="mw-headline" id="Second_Montgomery-Vaughan_large_sieve_inequality">Second Montgomery-Vaughan large sieve inequality</span></h3>
+<p>The second Montgomery-Vaughan large sieve inequality [MV1973, Corollary 1] gives
+</p>
+<dl><dd><span style="opacity:.5" class="smj-container">[math]\displaystyle{  k_0 \leq (\sum_{q \leq z} (H(k_0)+1+cqz)^{-1} \mu(q)^2 \prod_{p|q} \frac{1}{p-1})^{-1} }[/math]</span></dd></dl>
+<p>for any <span style="opacity:.5" class="smj-container">[math]\displaystyle{ z \gt  1 }[/math]</span>, which is a parameter similar to <span style="opacity:.5" class="smj-container">[math]\displaystyle{ Q }[/math]</span> in the previous inequality, and <span style="opacity:.5" class="smj-container">[math]\displaystyle{ c }[/math]</span> is an absolute constant.  In the original paper of Montgomery and Vaughan, <span style="opacity:.5" class="smj-container">[math]\displaystyle{ c }[/math]</span> was taken to be <span style="opacity:.5" class="smj-container">[math]\displaystyle{ 3/2 }[/math]</span>; this was then reduced to <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \sqrt{22}/\pi }[/math]</span> [B1995, p.162] and then to <span style="opacity:.5" class="smj-container">[math]\displaystyle{ 3.2/\pi }[/math]</span> [M1978].  It is conjectured that <span style="opacity:.5" class="smj-container">[math]\displaystyle{ c }[/math]</span> can be taken to in fact be <span style="opacity:.5" class="smj-container">[math]\displaystyle{ 1 }[/math]</span>.
+</p>
+<h2><span class="mw-headline" id="Benchmarks">Benchmarks</span></h2>
+<p>Efforts to fill in the blank fields in this table are very welcome.
+</p>
+<table border="1">
+
+<tbody><tr>
+<th><span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span></th>
+<th>3,500,000</th>
+<th>341,640</th>
+<th>181,000</th>
+<th>34,429</th>
+<th>26,024</th>
+<th>23,283</th>
+<th>22,949</th>
+<th>10,719</th>
+<th>7,140</th>
+<th>6,329</th>
+<th>5,453</th>
+<th>5,000
+</th></tr>
+<tr>
+<th>Upper bounds
+</th></tr>
+<tr>
+<td>First <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span> primes past <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>
+</td>
+<td><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1305.6369">59,874,594</a>
+</td>
+<td>5,005,362
+</td>
+<td>2,530,338
+</td>
+<td>420,878
+</td>
+<td>310,134
+</td>
+<td>275,082
+</td>
+<td>270,698
+</td>
+<td>117,714
+</td>
+<td>75,222
+</td>
+<td>65,924
+</td>
+<td>55,892
+</td>
+<td>50,840
+</td></tr>
+<tr>
+<td>Zhang sieve
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_3500000_59093364.txt">59,093,364</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_341640_4923060.txt">4,923,060</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_181000_2486370.txt">2,486,370</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_34429_411946.txt">411,946</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_26024_303558.txt">303,558</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_23283_268544.txt">268,544</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_22949_264460.txt">264,460</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_10719_114814.txt">114,814</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_7140_73448.txt">73,448</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_6329_64182.txt">64,182</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_5453_54516.txt">54,516</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_5000_49578.txt">49,586</a>
+</td></tr>
+<tr>
+<td>Hensley-Richards sieve
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_3500000_57554086.txt">57,554,086</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_341640_4802222.txt">4,802,222</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_181000_2422558.txt">2,422,558</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_34429_402790.txt">402,790</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_26024_297454.txt">297,454</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_23283_262794.txt">262,794</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_22949_258780.txt">258,780</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_10719_112868.txt">112,868</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_7140_72538.txt">72,538</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_6329_63708.txt">63,708</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_5453_53654.txt">53,654</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_5000_48634.txt">48,634</a>
+</td></tr>
+<tr>
+<td>Asymmetric Hensley-Richards
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_3500000_57480832.txt">57,480,832</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_341640_4788240.txt">4,788,240</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_181000_2418054.txt">2,418,054</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_34429_401700.txt">401,700</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_26024_296154.txt">296,154</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_23283_262286.txt">262,286</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_22949_258302.txt">258,302</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_10719_112562.txt">112,562</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_7140_72062.txt">72,062</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_6329_62900.txt">62,900</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_5453_53278.txt">53,278</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_5000_48484.txt">48,484</a>
+</td></tr>
+<tr>
+<td>Shifted Schinzel sieve
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_3500000_56789070.txt">56,789,070</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_341640_4740846.txt">4,740,846</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_181000_2396594.txt">2,396,594</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_34429_399248.txt">399,248</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_26024_294810.txt">294,810</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_23283_260714.txt">260,714</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_22949_256702.txt">256,702</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_10719_112200.txt">112,200</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_7140_71930.txt">71,930</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_6329_62892.txt">62,892</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_5453_53236.txt">53,236</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_5000_48472.txt">48,472</a>
+</td></tr>
+<tr>
+<td>Greedy-Schinzel hybrid
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_3500000_55233744.txt">55,233,744</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_341640_4603276.txt">4,603,276</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_181000_2326458.txt">2,326,458</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_34429_388076.txt">388,076</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_26024_286308.txt">286,308</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_23283_253968.txt">253,968</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_22949_249992.txt">249,992</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_10719_108694.txt">108,694</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_7140_69564.txt">69,564</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_6329_60942.txt">60,942</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_5453_51688.txt">51,688</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_5000_46968.txt">46,968</a>
+</td></tr>
+<tr>
+<td>Best known tuple
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_3500000_55233504.txt">55,233,504</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_341640_4597926.txt">4,597,926</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_181000_2323344.txt">2,323,344</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_34429_386344.txt">386,344</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_26024_285102.txt">285,102</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_23283_252720.txt">252,720</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.cs.cmu.edu/~xfxie/project/admissible/admissible_22949_248816_262.txt">248,816</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_10719_108440.txt">108,440</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_7140_69280.txt">69,280</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.cs.cmu.edu/~xfxie/project/admissible/admissible_6329_60726_14.txt">60,726</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_5453_51526.txt">51,526</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_5000_46806.txt">46,806</a>
+</td></tr>
+<tr>
+<th>Predictions
+</th></tr>
+<tr>
+<td><span style="opacity:.5" class="smj-container">[math]\displaystyle{ \lfloor k_0 \log k_0 + k_0 \rfloor }[/math]</span>
+</td>
+<td>56,238,957
+</td>
+<td>4,694,650
+</td>
+<td>2,372,231
+</td>
+<td>394,096
+</td>
+<td>290,604
+</td>
+<td>257,404
+</td>
+<td>253,380
+</td>
+<td>110,188
+</td>
+<td>70,496
+</td>
+<td>61,726
+</td>
+<td>52,370
+</td>
+<td>47,585
+</td></tr>
+<tr>
+<th>Lower bounds
+</th></tr>
+<tr>
+<td>Inclusion-exclusion (<span style="opacity:.5" class="smj-container">[math]\displaystyle{ p_\text{exh} }[/math]</span>= 19)
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>304,704
+</td>
+<td>226,104
+</td>
+<td>200,852
+</td>
+<td>197,874
+</td>
+<td>87,690
+</td>
+<td>56,726
+</td>
+<td>49,794
+</td>
+<td>42,494
+</td>
+<td>38,710
+</td></tr>
+<tr>
+<td>Inclusion-exclusion (<span style="opacity:.5" class="smj-container">[math]\displaystyle{ p_\text{exh} }[/math]</span>= 17)
+</td>
+<td>
+</td>
+<td>3,379,776
+</td>
+<td>1,739,850
+</td>
+<td>301,864
+</td>
+<td>224,100
+</td>
+<td>198,998
+</td>
+<td>195,962
+</td>
+<td>86,940
+</td>
+<td>56,238
+</td>
+<td>49,344
+</td>
+<td>42,114
+</td>
+<td>38,342
+</td></tr>
+<tr>
+<td>Inclusion-exclusion (<span style="opacity:.5" class="smj-container">[math]\displaystyle{ p_\text{exh} }[/math]</span>= 13)
+</td>
+<td>35,926,668
+</td>
+<td>3,298,126
+</td>
+<td>1,703,774
+</td>
+<td>297,726
+</td>
+<td>221,266
+</td>
+<td>196,562
+</td>
+<td>193,578
+</td>
+<td>85,954
+</td>
+<td>55,614
+</td>
+<td>48,858
+</td>
+<td>41,648
+</td>
+<td>37,920
+</td></tr>
+<tr>
+<td>Partitioning (<span style="opacity:.5" class="smj-container">[math]\displaystyle{ p_\text{exh} }[/math]</span>= 7)
+</td>
+<td>
+</td>
+<td>2,365,090
+</td>
+<td>1,252,938
+</td>
+<td>238,264
+</td>
+<td>180,094
+</td>
+<td>161,092
+</td>
+<td>158,802
+</td>
+<td>74,160
+</td>
+<td>49,320
+</td>
+<td>43,688
+</td>
+<td>37,630
+</td>
+<td>34,590
+</td></tr>
+<tr>
+<td>Partitioning (<span style="opacity:.5" class="smj-container">[math]\displaystyle{ p_\text{exh} }[/math]</span>= 5)
+</td>
+<td>24,226,450
+</td>
+<td>2,364,700
+</td>
+<td>1,252,726
+</td>
+<td>238,222
+</td>
+<td>180,064
+</td>
+<td>161,062
+</td>
+<td>158,776
+</td>
+<td>74,150
+</td>
+<td>49,312
+</td>
+<td>43,684
+</td>
+<td>37,630
+</td>
+<td>34,590
+</td></tr>
+<tr>
+<td>MV with <span style="opacity:.5" class="smj-container">[math]\displaystyle{ c=1 }[/math]</span> (conjectural)
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23913">32,503,908</a>
+</td>
+<td>2,751,677
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23913">1,395,694</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">234,872</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">173,420</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23896">153,691</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23896">151,298</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23896">66,314</a>
+</td>
+<td>42,551
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23950">37,274</a>
+</td>
+<td>31,644
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">28,781</a>
+</td></tr>
+<tr>
+<td>MV with <span style="opacity:.5" class="smj-container">[math]\displaystyle{ c=3.2/\pi }[/math]</span>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23913">32,469,985</a>
+</td>
+<td>2,748,330
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23913">1,393,869</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">234,529</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">173,140</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23896">153,447</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23896">151,056</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23896">66,211</a>
+</td>
+<td>42,471
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23950">37,207</a>
+</td>
+<td>31,584
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">28,737</a>
+</td></tr>
+<tr>
+<td>MV with <span style="opacity:.5" class="smj-container">[math]\displaystyle{ c=\sqrt{22}/\pi }[/math]</span>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23926">31,765,216</a>
+</td>
+<td>2,677,851
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23926">1,357,096</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23641">227,078</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23777">167,860</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23896">148,719</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23896">146,393</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23896">63,917</a>
+</td>
+<td>40,946
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23950">35,903</a>
+</td>
+<td>30,478
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">27,708</a>
+</td></tr>
+<tr>
+<td>Montgomery-Vaughan
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23926">31,756,667</a>
+</td>
+<td>2,676,967
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23926">1,356,644</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23634">226,987</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23777">167,793</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23896">148,656</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23896">146,338</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23896">63,886</a>
+</td>
+<td>40,929
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23950">35,887</a>
+</td>
+<td>30,463
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">27,696</a>
+</td></tr>
+<tr>
+<td>Brun-Titchmarsh
+</td>
+<td>30,137,225
+</td>
+<td>2,517,690
+</td>
+<td>1,272,083
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23611">211,046</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23777">155,555</a>
+</td>
+<td>137,756
+</td>
+<td>135,599
+</td>
+<td>58,863
+</td>
+<td>37,610
+</td>
+<td>32,916
+</td>
+<td>27,910
+</td>
+<td>25,351
+</td></tr>
+<tr>
+<td>Large sieve
+</td>
+<td>28,080,008
+</td>
+<td>2,342,970
+</td>
+<td>1,184,955
+</td>
+<td>197,097
+</td>
+<td>145,712
+</td>
+<td>128,972
+</td>
+<td>126,932
+</td>
+<td>55,179
+</td>
+<td>35,236
+</td>
+<td>30,983
+</td>
+<td>26,389
+</td>
+<td>24,038
+</td></tr></tbody></table>
+<p><br />
+</p>
+<table border="1">
+
+<tbody><tr>
+<th><span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span></th>
+<th>4,000</th>
+<th>3,405</th>
+<th>3,000</th>
+<th>2,000</th>
+<th>1,783</th>
+<th>1,000</th>
+<th>672</th>
+<th>632</th>
+<th>603</th>
+<th>342
+</th></tr>
+<tr>
+<th>Upper bounds
+</th></tr>
+<tr>
+<td>First <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span> primes past <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>
+</td>
+<td>39,660
+</td>
+<td>33,222
+</td>
+<td>28,972
+</td>
+<td>18,386
+</td>
+<td>16,174
+</td>
+<td>8,424
+</td>
+<td>5,406
+</td>
+<td>5,028
+</td>
+<td>4,800
+</td>
+<td>2,472
+</td></tr>
+<tr>
+<td>Zhang sieve
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_4000_38596.txt">38,596</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_3405_32296.txt">32,296</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_3000_28008.txt">28,008</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_2000_17766.txt">17,766</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_1783_15620.txt">15,620</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_1000_8218.txt">8,218</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_672_5216.txt">5,216</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_632_4860.txt">4,860</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_632_4860.txt">4,634</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_342_2416.txt">2,416</a>
+</td></tr>
+<tr>
+<td>Hensley-Richards sieve
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_4000_38498.txt">38,498</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_3405_31820.txt">31,820</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_3000_27806.txt">27,806</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_2000_17726.txt">17,726</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_1783_15756.txt">15,756</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_1000_8258.txt">8,258</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_672_5314.txt">5,314</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_632_4918.txt">4,918</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_603_4688.txt">4,688</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_342_2446.txt">2,446</a>
+</td></tr>
+<tr>
+<td>Asymmetric Hensley-Richards
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_4000_37932.txt">37,932</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_3405_31762.txt">31,762</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_3000_27638.txt">27,638</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_2000_17676.txt">17,676</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_1783_15470.txt">15,470</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_1000_8168.txt">8,168</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_672_5220.txt">5,220</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_632_4876.txt">4,876</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_603_4672.txt">4,672</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_342_2424.txt">2,424</a>
+</td></tr>
+<tr>
+<td>Shifted Schinzel sieve
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_4000_38006.txt">38,006</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_3405_31910.txt">31,910</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_3000_27600.txt">27,600</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_2000_17554.txt">17,554</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_1783_15484.txt">15,484</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_1000_8072.txt">8,072</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_672_5196.txt">5,196</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_632_4868.txt">4,868</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_603_4610.txt">4,610</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_342_2416.txt">2,416</a>
+</td></tr>
+<tr>
+<td>Greedy-Schinzel hybrid
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_4000_36756.txt">36,756</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_3405_30750.txt">30,750</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_3000_26754.txt">26,754</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_2000_17054.txt">17,054</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_1783_15036.txt">15,036</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_1000_7854.txt">7,854</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_672_5030.txt">5,030</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_632_4710.txt">4,710</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_603_4452.txt">4,452</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_342_2350.txt">2,350</a>
+</td></tr>
+<tr>
+<td>Engelsma data
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.opertech.com/primes/webdata/k4000-4507/k4000-4099/k4000_36622.txt">36,622</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.opertech.com/primes/webdata/k3000-3999/k3400-3499/k3405_30606.txt">30,606</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.opertech.com/primes/webdata/k3000-3999/k3000-3099/k3000_26622.txt">26,622</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.opertech.com/primes/webdata/k2000-2999/k2000-2099/k2000_16978.txt">16,978</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.opertech.com/primes/webdata/k1000-1999/k1000-1099/k1783_14958.txt">14,958</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.opertech.com/primes/webdata/k1000-1999/k1000-1099/k1000_7802.txt">7,802</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.opertech.com/primes/webdata/k2-999/k600-699/k672_4998.txt">4,998</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.opertech.com/primes/webdata/k2-999/k600-699/k632_4680.txt">4,680</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.opertech.com/primes/webdata/k2-999/k600-699/k603_4422.txt">4,422</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.opertech.com/primes/webdata/k2-999/k300-399/k342_2328.txt">2,328</a>
+</td></tr>
+<tr>
+<td>Best known tuple
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_4000_36610.txt">36,610</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_3405_30600.txt">30,600</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.cs.cmu.edu/~xfxie/project/admissible/admissible_3000_26606_-29486.txt">26,606</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.cs.cmu.edu/~xfxie/project/admissible/admissible_2000_16978_1108.txt">16,978</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_1783_14950.txt">14,950</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_1000_7802.txt">7,802</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_672_4998.txt">4,998</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_632_4680.txt"><b>4,680</b></a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~primegaps/tuples/admissible_603_4422.txt">4,422</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_342_2328.txt">2,328</a>
+</td></tr>
+<tr>
+<th>Predictions
+</th></tr>
+<tr>
+<td><span style="opacity:.5" class="smj-container">[math]\displaystyle{ \lfloor k_0 \log k_0 + k_0 \rfloor }[/math]</span>
+</td>
+<td>37,176
+</td>
+<td>31,097
+</td>
+<td>27,019
+</td>
+<td>17,201
+</td>
+<td>15,130
+</td>
+<td>7,907
+</td>
+<td>5,046
+</td>
+<td>4,707
+</td>
+<td>4,463
+</td>
+<td>2,337
+</td></tr>
+<tr>
+<th>Lower bounds
+</th></tr>
+<tr>
+<td>Inclusion-exclusion (<span style="opacity:.5" class="smj-container">[math]\displaystyle{ p_\text{exh} }[/math]</span>= 23)
+</td>
+<td>30,560
+</td>
+<td>25,734
+</td>
+<td>22,432
+</td>
+<td>14,410
+</td>
+<td>12,678
+</td>
+<td>6,696
+</td>
+<td>4,374
+</td>
+<td>4,104
+</td>
+<td>3,912
+</td>
+<td>2,110
+</td></tr>
+<tr>
+<td>Inclusion-exclusion (<span style="opacity:.5" class="smj-container">[math]\displaystyle{ p_\text{exh} }[/math]</span>= 19)
+</td>
+<td>30,366
+</td>
+<td>25,566
+</td>
+<td>22,284
+</td>
+<td>14,332
+</td>
+<td>12,614
+</td>
+<td>6,672
+</td>
+<td>4,344
+</td>
+<td>4,080
+</td>
+<td>3,870
+</td>
+<td>2,096
+</td></tr>
+<tr>
+<td>Inclusion-exclusion (<span style="opacity:.5" class="smj-container">[math]\displaystyle{ p_\text{exh} }[/math]</span>= 17)
+</td>
+<td>30,132
+</td>
+<td>25,328
+</td>
+<td>22,086
+</td>
+<td>14,176
+</td>
+<td>12,522
+</td>
+<td>6,660
+</td>
+<td>4,310
+</td>
+<td>4,020
+</td>
+<td>3,828
+</td>
+<td>2,072
+</td></tr>
+<tr>
+<td>Inclusion-exclusion (<span style="opacity:.5" class="smj-container">[math]\displaystyle{ p_\text{exh} }[/math]</span>= 13)
+</td>
+<td>29,824
+</td>
+<td>25,058
+</td>
+<td>21,838
+</td>
+<td>14,046
+</td>
+<td>12,408
+</td>
+<td>6,594
+</td>
+<td>4,278
+</td>
+<td>3,976
+</td>
+<td>3,792
+</td>
+<td>2,046
+</td></tr>
+<tr>
+<td>Partitioning (<span style="opacity:.5" class="smj-container">[math]\displaystyle{ p_\text{exh} }[/math]</span>= 7)
+</td>
+<td>27,556
+</td>
+<td>23,524
+</td>
+<td>20,704
+</td>
+<td>13,724
+</td>
+<td>12,244
+</td>
+<td>6,810
+</td>
+<td>4,574
+</td>
+<td>4,276
+</td>
+<td>4.052
+</td>
+<td>2,328
+</td></tr>
+<tr>
+<td>Partitioning (<span style="opacity:.5" class="smj-container">[math]\displaystyle{ p_\text{exh} }[/math]</span>= 5)
+</td>
+<td>27,556
+</td>
+<td>23,524
+</td>
+<td>20,704
+</td>
+<td>13,722
+</td>
+<td>12,244
+</td>
+<td>6,808
+</td>
+<td>4,574
+</td>
+<td>4,276
+</td>
+<td>4,052
+</td>
+<td>2,328
+</td></tr>
+<tr>
+<td>MV with <span style="opacity:.5" class="smj-container">[math]\displaystyle{ c=1 }[/math]</span> (conjectural)
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">22,564</a>
+</td>
+<td>18,898
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">16,456</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">10,500</a>
+</td>
+<td>9,253
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">4,858</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">3,124</a>
+</td>
+<td>2,919
+</td>
+<td>2,771
+</td>
+<td>1,454
+</td></tr>
+<tr>
+<td>MV with <span style="opacity:.5" class="smj-container">[math]\displaystyle{ c=3.2/\pi }[/math]</span>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">22,523</a>
+</td>
+<td>18,866
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">16,428</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">10,480</a>
+</td>
+<td>9,236
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">4,847</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">3,118</a>
+</td>
+<td>2,913
+</td>
+<td>2,765
+</td>
+<td>1,450
+</td></tr>
+<tr>
+<td>MV with <span style="opacity:.5" class="smj-container">[math]\displaystyle{ c=\sqrt{22}/\pi }[/math]</span>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">21,701</a>
+</td>
+<td>18,153
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">15,758</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">10,061</a>
+</td>
+<td>8,850
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">4,648</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">2,979</a>
+</td>
+<td>2,778
+</td>
+<td>2,633
+</td>
+<td>1,361
+</td></tr>
+<tr>
+<td>Montgomery-Vaughan
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">21,690</a>
+</td>
+<td>18,143
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">15,751</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">10,056</a>
+</td>
+<td>8,845
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">4,645</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23905">2,977</a>
+</td>
+<td>2,776
+</td>
+<td>2,631
+</td>
+<td>1,360
+</td></tr>
+<tr>
+<td>Brun-Titchmarsh
+</td>
+<td>19,785
+</td>
+<td>16,536
+</td>
+<td>14,358
+</td>
+<td>9,118
+</td>
+<td>8,013
+</td>
+<td>4,167
+</td>
+<td>2,648
+</td>
+<td>2,468
+</td>
+<td>2,338
+</td>
+<td>1,214
+</td></tr>
+<tr>
+<td>Large sieve
+</td>
+<td>18,860
+</td>
+<td>15,784
+</td>
+<td>13,697
+</td>
+<td>8,616
+</td>
+<td>7,548
+</td>
+<td>3,960
+</td>
+<td>2,559
+</td>
+<td>2,393
+</td>
+<td>2,273
+</td>
+<td>1,192
+</td></tr></tbody></table>
+<p><br />
+The <b>bold number</b> indicates the best currently known result for a twin-prime-like theorem.
+</p><p>For the Zhang tuples the minimal <span style="opacity:.5" class="smj-container">[math]\displaystyle{ m }[/math]</span> that produced an admissible <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>-tuple was used.  In some cases one can achieve a smaller diameter using an <span style="opacity:.5" class="smj-container">[math]\displaystyle{ m }[/math]</span> that is slightly larger than the minimal admissible value, as noted <a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23917">here</a>.
+</p><p>The shifted Schinzel tuples were generated with <span style="opacity:.5" class="smj-container">[math]\displaystyle{ y=2 }[/math]</span> using an optimally chosen interval contained in <span style="opacity:.5" class="smj-container">[math]\displaystyle{ [-k_0\log k_0, 2k_0\log k_0] }[/math]</span> (the interval is not in every case guaranteed to be optimal, particularly for larger values of <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>, but it is believed to be so).
+</p><p>The greedy-greedy tuples were generated using Sutherland's original algorithm, breaking ties downward in every case (and the optimal interval in <span style="opacity:.5" class="smj-container">[math]\displaystyle{ [-k_0\log k_0, 2k_0\log k_0] }[/math]</span> was selected on this basis).
+As <a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/#comment-23588">noted by Castryck</a>, breaking ties upward may produce better results in some cases.
+</p><p>The lower bounds listed in the partitioning and inclusion-exclusion rows were computed as described by Avishay in Sections 1 resp.&#160;2 of this <a rel="nofollow" class="external text" href="https://sites.google.com/site/avishaytal/files/Primes.pdf">document</a> (the case <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>=342 corresponds to the trivial partition). The partitioning method was strengthened by using <a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/07/02/the-quest-for-narrow-admissible-tuples/#comment-24517"><span style="opacity:.5" class="smj-container">[math]\displaystyle{ H(343) \geq 2334 }[/math]</span></a>, <a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/07/02/the-quest-for-narrow-admissible-tuples/#comment-24327"><span style="opacity:.5" class="smj-container">[math]\displaystyle{ H(370) \geq 2530 }[/math]</span></a> and <a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/07/02/the-quest-for-narrow-admissible-tuples/#comment-24327"><span style="opacity:.5" class="smj-container">[math]\displaystyle{ H(385) \geq 2656 }[/math]</span></a> (a complete list of bounds for <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span> up to 4,000,000 can be found <a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/partition_bounds_342_plus_4000000.txt">here</a>), and (for <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 \leq }[/math]</span> 341640) by combining the partition method with sieving for primes up to <span style="opacity:.5" class="smj-container">[math]\displaystyle{ p_\text{exh} }[/math]</span>, as described <a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/07/02/the-quest-for-narrow-admissible-tuples/#comment-24524">here</a>.
+The inclusion-exclusion involved an exhaustive search (along <a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/07/02/the-quest-for-narrow-admissible-tuples/#comment-24513">these lines</a>) up to <span style="opacity:.5" class="smj-container">[math]\displaystyle{ p_\text{exh} }[/math]</span>, using the inclusion-exclusion set of primes greater than <span style="opacity:.5" class="smj-container">[math]\displaystyle{ p_\text{exh} }[/math]</span> and less than the first prime where the depth-2 inclusion-exclusion bound is no longer positive.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260814020627
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.089 seconds
+Real time usage: 0.171 seconds
+Preprocessor visited node count: 1260/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 24466/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key newpolymath2:pcache:idhash:1582-0!canonical and timestamp 20260814020627 and revision id 9719. Rendering was triggered because: diff-page
+ -->
+</div>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://michaelnielsen.org/polymath/index.php?title=Finding_narrow_admissible_tuples&amp;oldid=9719">https://michaelnielsen.org/polymath/index.php?title=Finding_narrow_admissible_tuples&amp;oldid=9719</a>"</div></div>
+				<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+				<!-- end content -->
+				<div class="visualClear"></div>
+			</div>
+		</div>
+		<div class="visualClear"></div>
+	</div>
+	<div id="column-one" >
+		<h2>Navigation menu</h2>
+		<div role="navigation" class="portlet" id="p-cactions" aria-labelledby="p-cactions-label">
+			<h3 id="p-cactions-label" >Page actions</h3>
+			<div class="pBody">
+				<ul >
+				<li id="ca-nstab-main" class="selected mw-list-item"><a href="/polymath/index.php?title=Finding_narrow_admissible_tuples" title="View the content page [c]" accesskey="c">Page</a></li><li id="ca-talk" class="new mw-list-item"><a href="/polymath/index.php?title=Talk:Finding_narrow_admissible_tuples&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li><li id="ca-view" class="selected mw-list-item"><a href="/polymath/index.php?title=Finding_narrow_admissible_tuples">Read</a></li><li id="ca-viewsource" class="mw-list-item"><a href="/polymath/index.php?title=Finding_narrow_admissible_tuples&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li><li id="ca-history" class="mw-list-item"><a href="/polymath/index.php?title=Finding_narrow_admissible_tuples&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				
+				</ul>
+			</div>
+		</div>
+		
+<div role="navigation" class="portlet mw-portlet mw-portlet-cactions-mobile"
+	id="p-cactions-mobile" aria-labelledby="p-cactions-mobile-label">
+	<h3 id="p-cactions-mobile-label" >Page actions</h3>
+	<div class="pBody">
+		<ul ><li id="main-mobile" class="selected mw-list-item"><a href="/polymath/index.php?title=Finding_narrow_admissible_tuples" title="Page">Page</a></li><li id="talk-mobile" class="new mw-list-item"><a href="/polymath/index.php?title=Talk:Finding_narrow_admissible_tuples&amp;action=edit&amp;redlink=1" title=" (page does not exist)">Discussion</a></li><li id="ca-more" class="mw-list-item"><a href="#p-cactions">More</a></li><li id="ca-tools" class="mw-list-item"><a href="#p-tb" title="Tools">Tools</a></li></ul>
+		
+	</div>
+</div>
+
+		<div role="navigation" class="portlet" id="p-personal" aria-labelledby="p-personal-label">
+			<h3 id="p-personal-label" >Personal tools</h3>
+			<div class="pBody">
+				<ul >
+				<li id="pt-login" class="mw-list-item"><a href="/polymath/index.php?title=Special:UserLogin&amp;returnto=Finding+narrow+admissible+tuples" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="portlet" id="p-logo" role="banner">
+			<a href="/polymath/index.php?title=Main_Page" class="mw-wiki-logo"></a>
+		</div>
+		<div id="sidebar">
+		
+<div role="navigation" class="portlet mw-portlet mw-portlet-navigation"
+	id="p-navigation" aria-labelledby="p-navigation-label">
+	<h3 id="p-navigation-label" >Navigation</h3>
+	<div class="pBody">
+		<ul ><li id="n-mainpage-description" class="mw-list-item"><a href="/polymath/index.php?title=Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges" class="mw-list-item"><a href="/polymath/index.php?title=Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage" class="mw-list-item"><a href="/polymath/index.php?title=Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help-mediawiki" class="mw-list-item"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">Help about MediaWiki</a></li></ul>
+		
+	</div>
+</div>
+
+		<div role="search" class="portlet" id="p-search">
+			<h3 id="p-search-label" ><label for="searchInput">Search</label></h3>
+			<div class="pBody" id="searchBody">
+				<form action="/polymath/index.php" id="searchform"><input type="hidden" value="Special:Search" name="title"><input type="search" name="search" placeholder="Search Polymath Wiki" aria-label="Search Polymath Wiki" autocapitalize="sentences" title="Search Polymath Wiki [f]" accesskey="f" id="searchInput"><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" class="searchButton" id="searchButton"> <input type="submit" name="fulltext" value="Search" title="Search the pages for this text" class="searchButton mw-fallbackSearchButton" id="mw-searchButton"></form>
+			</div>
+		</div>
+		
+<div role="navigation" class="portlet mw-portlet mw-portlet-tb"
+	id="p-tb" aria-labelledby="p-tb-label">
+	<h3 id="p-tb-label" >Tools</h3>
+	<div class="pBody">
+		<ul ><li id="t-whatlinkshere" class="mw-list-item"><a href="/polymath/index.php?title=Special:WhatLinksHere/Finding_narrow_admissible_tuples" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/polymath/index.php?title=Special:RecentChangesLinked/Finding_narrow_admissible_tuples" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages" class="mw-list-item"><a href="/polymath/index.php?title=Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink" class="mw-list-item"><a href="/polymath/index.php?title=Finding_narrow_admissible_tuples&amp;oldid=9719" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info" class="mw-list-item"><a href="/polymath/index.php?title=Finding_narrow_admissible_tuples&amp;action=info" title="More information about this page">Page information</a></li></ul>
+		
+	</div>
+</div>
+
+		
+		</div>
+		<a href="#sidebar" title="Jump to navigation"
+			class="menu-toggle" id="sidebar-toggle"></a>
+		<a href="#p-personal" title="user tools"
+			class="menu-toggle" id="p-personal-toggle"></a>
+		<a href="#globalWrapper" title="back to top"
+			class="menu-toggle" id="globalWrapper-toggle"></a>
+	</div>
+	<!-- end of the left (by default at least) column -->
+	<div class="visualClear"></div>
+	<div id="footer" class="mw-footer" role="contentinfo"
+		>
+		<div id="f-poweredbyico" class="footer-icons">
+			<a href="https://www.mediawiki.org/"><img src="/polymath/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/polymath/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /polymath/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"></a>
+		</div>
+		<ul id="f-list">
+			<li id="lastmod"> This page was last edited on 12 July 2015, at 08:57.</li>
+			<li id="privacy"><a href="/polymath/index.php?title=Polymath_Wiki:Privacy_policy">Privacy policy</a></li><li id="about"><a href="/polymath/index.php?title=Polymath_Wiki:About">About Polymath Wiki</a></li><li id="disclaimers"><a href="/polymath/index.php?title=Polymath_Wiki:General_disclaimer">Disclaimers</a></li>
+		</ul>
+	</div>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":575,"wgPageParseReport":{"limitreport":{"cputime":"0.089","walltime":"0.171","ppvisitednodes":{"value":1260,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":24466,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260814020627","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/KqpkYBVHuMA4rwl+NWaZz8mangw</id>
+  <title>arXiv Query: search_query=&amp;id_list=2602.07558&amp;start=0&amp;max_results=10</title>
+  <updated>2026-08-14T07:57:52Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2602.07558" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2602.07558v1</id>
+    <title>Bounded gaps and perfect power gaps in sequences of consecutive primes</title>
+    <updated>2026-02-07T14:06:18Z</updated>
+    <link href="https://arxiv.org/abs/2602.07558v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.07558v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study whether several consecutive prime gaps can all be
+  relatively large at the same time, or is it possible that all are squares
+  or perfect powers, or perhaps none of them are squares?
+  A few related results and problems are also presented.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-07T14:06:18Z</published>
+    <arxiv:comment>Submitted to Analysis Mathematica</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Katalin Gyarmati</name>
+    </author>
+  </entry>
+</feed>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/8X6DzIZoIJQ4Kcf3LxvkIQYx6Tk</id>
+  <title>arXiv Query: search_query=&amp;id_list=2511.14810&amp;start=0&amp;max_results=10</title>
+  <updated>2026-08-14T07:57:53Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2511.14810" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2511.14810v1</id>
+    <title>A Generalized Elliott-Halberstam Conjecture Implying the Twin Prime Hypothesis</title>
+    <updated>2025-11-17T21:39:29Z</updated>
+    <link href="https://arxiv.org/abs/2511.14810v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.14810v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a generalization of the Elliott-Halberstam conjecture concerning the distribution of prime pairs in arithmetic progressions. This conjecture, which we call the Generalized Elliott-Halberstam Conjecture for Shifted Convolutions (GEH-2), provides a level of distribution for correlations of the von Mangoldt function. We show that GEH-2 implies the twin prime conjecture, describe heuristic and analytic motivation, and discuss implications for prime gaps and $k$-tuple patterns.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-17T21:39:29Z</published>
+    <arxiv:comment>5 pages, 10 references</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Trey Smith</name>
+    </author>
+  </entry>
+</feed>

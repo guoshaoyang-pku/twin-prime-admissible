@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/YGueWv8lJCxs425G6X65Un1Vb/o</id>
+  <title>arXiv Query: search_query=&amp;id_list=2507.17986&amp;start=0&amp;max_results=10</title>
+  <updated>2026-08-14T07:57:57Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2507.17986" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2507.17986v1</id>
+    <title>Heuristic Bounded Prime Gaps via a Chaotic Multidimensional Sieve and Random Matrix Theory</title>
+    <updated>2025-07-23T23:31:48Z</updated>
+    <link href="https://arxiv.org/abs/2507.17986v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.17986v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present the Enhanced Multidimensional Chaotic Heuristic Sieve (EMCHS), a novel probabilistic framework that integrates chaotic perturbations and random matrix theory (RMT) to suggest improved bounds on prime gaps. Building upon the foundational sieves of Goldston-Pintz-Yildirim and Maynard, EMCHS heuristically suggests unconditional gaps of at most 180 and conditional gaps of at most 8 under a partial Elliott-Halberstam conjecture (EHC) with delta = 0.3. These heuristic suggestions surpass Maynard's unconditional bound of 246 through refined polytope optimizations and probabilistic enhancements. We provide rigorous proofs for certain analytic components (such as bounding chaotic perturbations via ergodic theory) and explicitly distinguish which arguments and conclusions are heuristic or conjectural. Numerical evidence for primes up to 10^18 supports the framework, and we discuss limitations and avenues for future rigorous work.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-23T23:31:48Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Milad Ghadimi</name>
+    </author>
+  </entry>
+</feed>

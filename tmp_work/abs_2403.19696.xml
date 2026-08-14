@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/u6IjZjAE9Zl5LAzFbN+Pe5OybuQ</id>
+  <title>arXiv Query: search_query=&amp;id_list=2403.19696&amp;start=0&amp;max_results=10</title>
+  <updated>2026-08-14T07:57:51Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2403.19696" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2403.19696v3</id>
+    <title>On smooth gaps between primes using the Maynard-Tao sieve</title>
+    <updated>2024-10-13T03:39:15Z</updated>
+    <link href="https://arxiv.org/abs/2403.19696v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.19696v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In 1999, Balog, Brüdern, and Wooley (1999) showed there are infinitely many prime gaps $p-q$ that are $(\log p)^{\frac{3}{4}}$-smooth, and infinitely many consecutive prime gaps that are $(\log p)^\frac{7}{8}$-smooth. Advancements made since then by Zhang (2014), Maynard (2014), and Polymath8b (2014) towards resolving the twin prime conjecture have given us the tools to lower the bounds made by Balog, Brüdern, and Wooley to 47. Moreover, we can show there are infinitely many $m$-tuples of primes whose gaps are all $y_m$-smooth for a calculable prime $y_m$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-20T03:26:09Z</published>
+    <arxiv:comment>7 pages, 1 table; comments welcome!</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Carol Wu</name>
+    </author>
+  </entry>
+</feed>

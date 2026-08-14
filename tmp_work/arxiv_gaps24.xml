@@ -1,0 +1,554 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/4S2H4mNS0x8leuOdLuP6UDfMAmM</id>
+  <title>arXiv Query: search_query=all:"prime gaps" AND submittedDate:"202401010000 TO 202612312359"&amp;id_list=&amp;start=0&amp;max_results=60</title>
+  <updated>2026-08-14T07:56:34Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22prime+gaps%22+AND+submittedDate:%22202401010000+TO+202612312359%22&amp;start=0&amp;max_results=60&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>60</opensearch:itemsPerPage>
+  <opensearch:totalResults>31</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2608.09488v1</id>
+    <title>A Sharper Explicit Result for the Sum of Two Almost Primes</title>
+    <updated>2026-08-10T11:55:41Z</updated>
+    <link href="https://arxiv.org/abs/2608.09488v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.09488v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove that for every integer $N\geq2$, there exist positive integers $a$ and $b$ such that $N=a+b$ and $Ω(ab)\leq33$, where $Ω(n)$ denotes the number of prime factors of $n$, counted with multiplicity. This improves the previous bound of $40$ obtained by Dudek and Dunn. The proof applies the explicit Friedlander--Iwaniec $Λ^-Λ^2$ lower-bound sieve to a sequence derived from the products $n(N-n)$. The main new ingredient is pre-sieving at the prime $3$, which eliminates the extremal small-prime case in the dimension condition while keeping the resulting remainder terms under explicit control. We complete the proof using analytic estimates for large $N$, finite verification over an intermediate range, and explicit prime-gap data for small $N$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-10T11:55:41Z</published>
+    <arxiv:comment>16 Pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Peter J. Campbell</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.08712v1</id>
+    <title>Gilbreath's conjecture: a Cramér random model and a deterministic analysis</title>
+    <updated>2026-07-09T17:23:57Z</updated>
+    <link href="https://arxiv.org/abs/2607.08712v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.08712v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Gilbreath's conjecture asserts that if one starts with the sequence of primes and takes successive absolute differences to create a triangular array, then the left diagonal of this array consists entirely of ones after the first row. In this paper, we show that the analogue of this conjecture for a Cramér random model holds, in which the (normalized) prime gaps are replaced by independent random variables with geometric distributions of logarithmic size. We also give some preliminary analysis of the associated continuous probabilistic model for this problem, as well as a deterministic "inverse theorem" that isolates the specific obstructions to Gilbreath's conjecture (assuming a Cramér type bound on prime gaps), namely long blocks of zeroes, or very long shallow $\{0,d\}$-valued blocks for some $d \geq 2$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-09T17:23:57Z</published>
+    <arxiv:comment>28 pages, 8 figures, comments welcome!</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Zachary Chase</name>
+    </author>
+    <author>
+      <name>Zach Hunter</name>
+    </author>
+    <author>
+      <name>Terence Tao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.08395v2</id>
+    <title>Prime Event Languages: An Information-Theoretic Investigation of Twin-Prime Event Structure</title>
+    <updated>2026-06-10T01:37:04Z</updated>
+    <link href="https://arxiv.org/abs/2606.08395v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.08395v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Prime numbers are traditionally studied through numerical, probabilistic, and analytic frameworks. In this work, we introduce the concept of a prime event language, in which arithmetic phenomena are represented as symbolic event sequences and analyzed using tools from information theory and stochastic processes. Using all primes up to $N = 5 \times 10^9$ (234,954,223 primes), we construct event languages based on twin-prime occurrences and record prime-gap events. We investigate their statistical properties through finite-order Markov models, train/test validation, mutual-information analysis, and information-horizon measurements. For the Twin Prime Event Language, first-order Markov modeling reduces test-set cross entropy from 0.325350 bits to 0.319949 bits, corresponding to an information gain of approximately 0.0054 bits. This gain survives out-of-sample validation and therefore reflects genuine statistical structure rather than overfitting. Mutual-information analysis independently confirms the Markov results and shows that measurable dependence is concentrated almost entirely at lag 1. The mutual information decreases from approximately $5.96 \times 10^{-3}$ bits at lag 1 to approximately $5.07 \times 10^{-7}$ bits at lag 2 (approximately 11,700-fold reduction), representing a reduction of more than four orders of magnitude. Beyond lag 2, residual information fluctuates near the statistical noise floor. These results indicate that prime event languages are neither perfectly memoryless nor strongly predictable. Instead, they exhibit weak but reproducible short-range statistical structure characterized by first-order dependence and an effective information horizon of approximately one event.</summary>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-07T01:18:07Z</published>
+    <arxiv:comment>13 pages,6 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.IT"/>
+    <author>
+      <name>Jinhua Liao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.17622v1</id>
+    <title>Iterative maps emerging from cohomological structure of primes</title>
+    <updated>2026-05-17T19:39:50Z</updated>
+    <link href="https://arxiv.org/abs/2605.17622v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.17622v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Prime numbers appeared in contexts spanning statistical mechanics, quantum mechanics and dynamical systems. However, the mechanisms governing the irregularities observed in their sequence and linking them to physical systems remained unclear. Here, it is shown that prime gaps at different separation distances follow a function depending on that distance and can be described by an iterative map which predicts the primary growth of successive primes. On the other hand, the analysis of remaining fluctuations reveals the existence of a well-defined cohomological structure, where the deterministic functional relation holds for primes up to small decaying fluctuations. In consequence, the long-range correlations as well as local jumps in primes encode the underlying cohomological structure where prime numbers are states of a given system that becomes deterministic asymptotically. Remarkably, the solution to this cohomological equation turns out to be the logarithmic integral function.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-17T19:39:50Z</published>
+    <arxiv:comment>17 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <author>
+      <name>Marzena Ciszak</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.14871v5</id>
+    <title>On Maximal Prime Gaps</title>
+    <updated>2026-07-23T01:30:44Z</updated>
+    <link href="https://arxiv.org/abs/2605.14871v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.14871v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we show a new upper bound of prime gaps, that is the gap between a prime number and its consecutive prime number. We show that the gap between a prime number $p_n$ and its consecutive prime number is not larger than $\frac{13}{3}\log^2{p_n}$. We also show that the result implies the existence of a prime number in a certain type of interval for large enough numbers as a consequence.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-14T14:18:31Z</published>
+    <arxiv:comment>arXiv admin note: substantial text overlap with arXiv:2510.17065 This article supersedes arXiv:2510.17065</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Cheng-TIng Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.08542v1</id>
+    <title>A Complete Answer to Erdős Problem 690</title>
+    <updated>2026-05-08T23:09:19Z</updated>
+    <link href="https://arxiv.org/abs/2605.08542v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.08542v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let \(d_k(p)\) denote the natural density of positive integers whose \(k\)-th smallest prime divisor is \(p\). Erdős asked whether, for each fixed \(k\), the sequence \(p\mapsto d_k(p)\) is unimodal as \(p\) ranges over the primes. Cambie proved that unimodality holds for \(1\le k\le3\) and verified non-unimodality for \(4\le k\le20\). We prove that \(p\mapsto d_k(p)\) is not unimodal for every \(k\ge4\), completing the classification. An exact first-difference criterion reduces the problem to comparing a symmetric-polynomial ratio with prime gaps. Explicit estimates for prime-counting functions, certified finite computations, one certified large prime gap, one certified twin prime, and a uniform Chinese-remainder construction then produce, for every \(k\ge4\), a strict descent followed by a later strict ascent.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-08T23:09:19Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Shouqiao Wang</name>
+    </author>
+    <author>
+      <name>Davide Crapis</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.03274v2</id>
+    <title>Formalizing Singer Sidon Constructions and Sidon Set Infrastructure in Lean 4</title>
+    <updated>2026-05-12T13:57:50Z</updated>
+    <link href="https://arxiv.org/abs/2605.03274v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.03274v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Erdős Problem 30 asks for sharp asymptotics of the Sidon extremal function $h(N)$, and Singer's construction is the classical source of lower-bound examples matching the main term. We present a Lean 4 formalization of Singer's Sidon set construction, together with reusable Sidon-set infrastructure for additive combinatorics. For every prime power $q=p^k$, we prove the existence of a Sidon set modulo $q^2+q+1$ of cardinality $q+1$; the prime-field case $q=p$ is the base presentation. The proof proceeds through a non-trivial algebraic chain: construction of the base field and its degree-three extension, analysis of the trace kernel as a 2-dimensional subspace over the base field, a geometric argument via subspace intersections establishing the multiplicative Sidon property in the quotient group, and a transfer from quotient multiplication to modular integer addition. Around this central result, we develop a reusable Sidon set library. It comprises interval and modular Sidon sets, the extremal function $h(N)$, Lindström's cross-difference inequality, a Johnson-route shift-incidence upper bound of the form $h(N)\leq\sqrt{N}+N^{1/4}+O(1)$, representation-function identities, and unconditional two-sided $h(N)=Θ(\sqrt{N})$ bounds with exact floor-rounded finite statements for $N\geq 5$. We further formalize a conditional reduction: subpolynomial prime gaps together with a full subpolynomial upper-error hypothesis for $h(N)$ imply the Erdős Problem 30 estimate $h(N)=\sqrt{N}+O_ε(N^ε)$ for every $ε&gt;0$. The Singer/Sidon modules and transfer lemmas comprise 7,541 lines of Lean 4 with zero active uses of sorry. We describe the mathematical lessons learned, focusing on how formalization clarifies the precise scope of classical arguments and forces explicit treatment of the passage from the field-theoretic construction to integer Sidon predicates.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-05T02:02:42Z</published>
+    <arxiv:comment>25 pages, LaTeX; expanded from prime-field to prime-power Singer constructions; added the prime-power theorem and prime-power lower-bound reduction; exposition revised throughout</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>David B. Hulak</name>
+    </author>
+    <author>
+      <name>Arthur F. Ramos</name>
+    </author>
+    <author>
+      <name>Ruy J. G. B. de Queiroz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.20588v1</id>
+    <title>A resolution of Erdős Problem #190 via Erdős-Lovász, BCT, and Baker-Harman-Pintz</title>
+    <updated>2026-04-22T14:07:51Z</updated>
+    <link href="https://arxiv.org/abs/2604.20588v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.20588v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let H(k) be the smallest N such that every finite coloring of [N] contains a monochromatic or rainbow k-term arithmetic progression. Erdős and Graham asked whether $H(k)^{1/k}/k \to \infty$ (Problem #190 of the Erdős Problems database). We prove that there is an absolute constant $k_0 \ge 2$ such that for all $k \ge k_0$, \[ H(k)^{1/k}/k \ge (1/e - \varepsilon(k)) \cdot k/\log k, \qquad \varepsilon(k) = O(k^{-0.475} \log k) \to 0 \text{ as } k \to \infty; \] in particular $H(k)^{1/k}/k = Ω(k/\log k)$ and $\lim_{k\to\infty} H(k)^{1/k}/k = \infty$, resolving the positive direction of the Erdős-Graham question. The argument combines three standard ingredients -- the symmetric Lovász Local Lemma applied to the k-AP hypergraph on $[N]$, the restricted form of the Blankenship-Cummings-Taranchuk recurrence, and the Baker-Harman-Pintz prime-gap theorem -- together with the pigeonhole reduction $H(k) \ge W(k-1,k)$, and uses BHP as the only analytic black box. Previous applications of Erdős-Lovász had fixed $r$; the improvement here is that the $r^{k-1}$ base dominates once one allows the color count $r_0 = \lfloor k / \log k \rfloor$ to grow with $k$. No matching upper bound on $H(k)^{1/k}/k$ is known.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-22T14:07:51Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Ji Ho Bae</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.02383v1</id>
+    <title>Neural Prime Sieves: Density-Driven Generalization and Empirical Evidence for Hardy-Littlewood Asymptotics</title>
+    <updated>2026-04-01T20:31:58Z</updated>
+    <link href="https://arxiv.org/abs/2604.02383v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.02383v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Special prime families (twin, Sophie Germain, safe, cousin, sexy, Chen, and isolated primes) are central objects of analytic number theory, yet no efficiently computable probabilistic filter exists for identifying likely members among known primes at large scale. Classical sieves assign no probability weights to surviving candidates, and prior machine learning approaches are limited by the algorithmic randomness of the prime indicator sequence, yielding near-zero true positive rates.
+  We present PrimeFamilyNet, a multi-head residual network conditioned on the backward prime gap and modular primorial residues of a known prime $p$, learning probabilistic filters for all seven families simultaneously and generalising across nine orders of magnitude from training ($10^7$--$10^9$) to evaluation at $10^{16}$.
+  Isolated prime recall increased monotonically from $0.809$ at $5\times10^8$ to $0.984$ at $10^{16}$, a gain of $17.5$ percentage points and the only family among seven to improve with scale. Because recall is invariant to class prevalence, this reflects genuine decision boundary sharpening, not the rising isolated-prime fraction at extreme scales. A model trained only to $10^9$ reproduced the correct asymptotic direction without density supervision, corroborating Hardy--Littlewood $k$-tuple predictions.
+  The causal model retained over $95\%$ recall for five families near $10^{10}$ while reducing the search space by $62$--$88\%$. For Chen primes, causal recall exceeded non-causal recall at every scale (margin $+0.245$ at $10^{16}$) because $g^+=2$ encodes only the prime case of the Chen condition. Focal Loss collapsed sparse algebraic family recall to $0.000$. Asymmetric Loss outperformed weighted BCE in-distribution but degraded more steeply out-of-distribution, showing that in-distribution recall alone is a misleading criterion for scale-generalisation tasks.</summary>
+    <category term="math.GM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-01T20:31:58Z</published>
+    <arxiv:comment>36 pages, 6 figures; cross-listed with math.NT; code at https://github.com/Manik-00/Neural-Prime-Sieves</arxiv:comment>
+    <arxiv:primary_category term="math.GM"/>
+    <author>
+      <name>Manik Kakkar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.25915v1</id>
+    <title>Surviving Eratosthenes sieve I: quadratic density and Legendre's conjecture</title>
+    <updated>2026-03-26T21:15:07Z</updated>
+    <link href="https://arxiv.org/abs/2603.25915v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.25915v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We have been studying Eratosthenes sieve as a discrete dynamic system, obtaining exact models for the relative populations for small gaps (currently gaps $g \le 82$) in the cycle of gaps ${\mathcal G}(p^\#)$ at each stage of the sieve. The gaps in the interval $ΔH(p_k)=[p_k^2, p_{k+1}^2]$ are fixed in ${\mathcal G}(p^\#)$ and survive all subsequent stages of the sieve to be confirmed as gaps between primes.
+  We have shown that samples of gaps between primes over these intervals of survival $ΔH(p_k)$ have population distributions that reflect the relative population models $w_g(p_k^\#)$.
+  This paper advances our study of the estimates of survival across stages of the sieve. Inspired by Legendre's conjecture, we introduce the concept of quadratic density $η_s(p_k)$, which is the expected population of the constellation $s$ in the intervals $[n^2, (n+1)^2]$ for $p_k \le n &lt; p_{k+1}$. We show that once a gap occurs in ${\mathcal G}(p^\#)$, its expected quadratic density increases across all subsequent stages of the sieve.
+  Regarding Legendre's conjecture, beyond postulating one prime in the interval $[n^2,(n+1)^2]$, the quadratic density predicts the populations of several prime gaps within this interval.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-26T21:15:07Z</published>
+    <arxiv:comment>25 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Fred B. Holt</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.10356v2</id>
+    <title>On the Existence of Integers with at Most 3 Prime Factors Between Every Pair of Consecutive Squares</title>
+    <updated>2026-05-19T01:32:57Z</updated>
+    <link href="https://arxiv.org/abs/2603.10356v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.10356v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove an explicit analogue of Legendre's conjecture for almost primes. Namely, for every integer $n \geq 1$, the interval $(n^2,(n+1)^2)$ contains an integer having at most $3$ prime factors, counted with multiplicity. This improves the previous best result of Dudek and Johnston, who showed that every such interval contains an integer with at most $4$ prime factors. The proof is divided into two ranges. For $n^2 \leq 10^{31}$, we use prior computational results on primes in short intervals between consecutive squares, together with explicit bounds on maximal prime gaps. For $n^2 &gt; 10^{31}$, we give a sieve-theoretic argument with explicit constants, adapting Richert's logarithmic weights to intervals between consecutive squares and employing an explicit linear sieve of Bordignon, Johnston, and Starichkova.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-11T03:10:12Z</published>
+    <arxiv:comment>15 pages, no figures. Revised version with expository changes</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Peter J. Campbell</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.07558v1</id>
+    <title>Bounded gaps and perfect power gaps in sequences of consecutive primes</title>
+    <updated>2026-02-07T14:06:18Z</updated>
+    <link href="https://arxiv.org/abs/2602.07558v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.07558v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study whether several consecutive prime gaps can all be
+  relatively large at the same time, or is it possible that all are squares
+  or perfect powers, or perhaps none of them are squares?
+  A few related results and problems are also presented.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-07T14:06:18Z</published>
+    <arxiv:comment>Submitted to Analysis Mathematica</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Katalin Gyarmati</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.12504v1</id>
+    <title>Prime Successor Irreducibility: Turing Machine Complexity, Kolmogorov Complexity, and Weakness-Based Formulations</title>
+    <updated>2026-01-23T04:44:41Z</updated>
+    <link href="https://arxiv.org/abs/2605.12504v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.12504v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop conjectures and theorems expressing the idea that the prime sequence exhibits computational irreducibility in the transition from one prime to its successor. Informally, given a prime pp p, no general algorithm can compute the least prime greater than pp p substantially faster than sequentially testing candidates for primality, except possibly on sparse input sets.
+  Our framework proceeds along complementary lines. First, we formalize Prime Successor Irreducibility in a Turing-machine complexity model (PSI-T), asserting lower bounds on running time relative to a sequential baseline. Second, we propose a Kolmogorov-complexity formulation (PSI-K), asserting that typical prime gaps are algorithmically incompressible at their scale; we prove PSI-K(c, $δ$) unconditionally for all fixed c&lt;1 using standard sieve bounds. Third, we develop weakness-based formulations: PSI-W (sparse-set anti-concentration) shows no small menu of gap values captures a noticeable fraction of primes, while PSI-W-LE shows collision probabilities decay and logical entropy tends to 1. These extend to prime constellations and consecutive gap vectors. Finally, a sieve-theoretic framework connects local obstruction patterns to Selberg weakness parameters.
+  The PSI-K and weakness formulations connect irreducibility to classical statistical questions about prime gaps. Using the relationship between Kolmogorov complexity and Shannon entropy, we derive rigorous lower bounds on prime gap entropy in dyadic intervals [X,2X]. Together, these formulations provide a unified complexity-theoretic perspective on the apparent local unpredictability of the prime sequence, without asserting randomness or independence.</summary>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-23T04:44:41Z</published>
+    <arxiv:primary_category term="cs.CC"/>
+    <author>
+      <name>Ben Goertzel</name>
+    </author>
+    <author>
+      <name>Bill Lauritzen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.16193v1</id>
+    <title>Density-based structural frameworks for prime numbers, prime gaps, and Euler products</title>
+    <updated>2026-01-22T18:46:20Z</updated>
+    <link href="https://arxiv.org/abs/2601.16193v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.16193v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop a unified density-based framework for primality, coprimality, and prime pairs, and introduce an intrinsic normalized model for prime gaps constrained by the Prime Number Theorem. Within this setting, a structural tension between Hardy-Littlewood, Cramer, and PNT predictions emerges, leading to quantitative estimates on the rarity of extreme gaps. Additive representations of even integers are reformulated as local density problems, yielding non-conjectural upper and lower bounds compatible with Hardy-Littlewood heuristics. Finally, the Riemann zeta function is analyzed via truncated Euler products, whose stability and oscillatory structure provide a coherent interpretation of the critical line and prime-based numerical criteria for the localization of non-trivial zeros.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-22T18:46:20Z</published>
+    <arxiv:comment>29 pages, 17 figures</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Gregorio Vettori</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.24230v3</id>
+    <title>Explicit bounds for the graphicality of the prime gap sequence</title>
+    <updated>2026-08-05T14:01:05Z</updated>
+    <link href="https://arxiv.org/abs/2512.24230v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.24230v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We establish explicit unconditional results on the graphic properties of the prime gap sequence. Let $p_n$ denote the $n$-th prime number (with $p_0=1$) and $\mathrm{PD}_n = (p_\ell - p_{\ell-1})_{\ell=1}^n$ be the sequence of the first $n$ prime gaps. Building upon the recent work by Erdős et al, which proved the graphic nature of $\mathrm{PD}_n$ for large $n$ unconditionally, and for all $n$ under RH, we provide the first explicit unconditional threshold such that: (1) For all $n \geq \exp\exp(30.32)$, $\mathrm{PD}_n$ is graphic. (2) For all $n \geq \exp\exp(34.33)$, every realization $G_n$ of $\mathrm{PD}_n$ satisfies that $(G_n, p_{n+1}-p_n)$ is DPG-graphic. Our proofs utilize a more refined criterion for when a sequence is graphic, and better estimates for the first moment of large prime gaps proven through an explicit zero-free region and explicit zero-density estimate for the Riemann zeta function.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-30T13:42:40Z</published>
+    <arxiv:comment>15 pages, incorporates the referees' comments; to appear in Analysis Mathematica. Comments welcome!</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Keshav Aggarwal</name>
+    </author>
+    <author>
+      <name>Robin Frot</name>
+    </author>
+    <author>
+      <name>Haozhe Gou</name>
+    </author>
+    <author>
+      <name>Hui Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.22413v2</id>
+    <title>Sierpinski's Hypothesis H1</title>
+    <updated>2026-07-19T21:46:31Z</updated>
+    <link href="https://arxiv.org/abs/2512.22413v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.22413v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Sierpinski's Hypothesis H1, formulated in 1958, is the conjecture that (provided $n\geq 2$), when the first $n^2$ counting numbers, $1, 2,3,\dots n^2$, are arranged in a square, then each row contains at least one prime. This conjecture is particularly interesting in that it subsumes and is stronger than both the Oppermann and Legrendre conjectures. Herein I shall verify Sierpinski's Hypothesis H1 for (at least) the first $n \leq \hbox{10 070 368 414} \approx 10 \hbox{ billion}$ of these Sierpinski matrices. I shall also demonstrate some partial but more general results. For example: Even for arbitrary $n\geq \hbox{10 070 368 414}$ at least one quarter of the rows of the $n$th Sierpinski matrix contain at least one prime. Furthermore, even for arbitrary $n\geq \hbox{10 070 368 414}$ at least the first $\hbox{141 618}$ rows of the $n$th Sierpinski matrix always contain at least one prime. These and related results are obtained largely by using the locations and values of the known maximal prime gaps, the pigeonhole principle, and some recent bounds on the first Chebyshev function.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-27T00:01:58Z</published>
+    <arxiv:comment>V1: 15 pages; V2: Still 15 pages; Various minor typos fixed; Presentation improved; Updated to reflect the discovery of the 85th maximal prime gap</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Matt Visser</name>
+      <arxiv:affiliation>Victoria University of Wellington</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.14810v1</id>
+    <title>A Generalized Elliott-Halberstam Conjecture Implying the Twin Prime Hypothesis</title>
+    <updated>2025-11-17T21:39:29Z</updated>
+    <link href="https://arxiv.org/abs/2511.14810v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.14810v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a generalization of the Elliott-Halberstam conjecture concerning the distribution of prime pairs in arithmetic progressions. This conjecture, which we call the Generalized Elliott-Halberstam Conjecture for Shifted Convolutions (GEH-2), provides a level of distribution for correlations of the von Mangoldt function. We show that GEH-2 implies the twin prime conjecture, describe heuristic and analytic motivation, and discuss implications for prime gaps and $k$-tuple patterns.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-17T21:39:29Z</published>
+    <arxiv:comment>5 pages, 10 references</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Trey Smith</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.12944v3</id>
+    <title>A Positive Lower Bound for the Sum of Log-Reciprocal Twin Prime Products via Weighted Sieve</title>
+    <updated>2025-11-23T02:19:50Z</updated>
+    <link href="https://arxiv.org/abs/2511.12944v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.12944v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The twin prime conjecture asserts that there are infinitely many pairs of primes that differ by two. While recent advances have improved our understanding of bounded prime gaps, the conjecture remains unresolved. This paper refines the weighted sieve method to estimate a sum over twin prime pairs, where each term is of the form \((1/p)(log(x^{α}/p))^k\). We establish a strict positive lower bound for this sum, which implies the infinitude of twin prime pairs.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-17T03:56:27Z</published>
+    <arxiv:comment>An error in the final integral calculation of the paper led to the invalid conclusion</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Chenghui Ren</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.16285v1</id>
+    <title>A Note on Algorithms for Computing $p_n$</title>
+    <updated>2025-10-18T00:49:08Z</updated>
+    <link href="https://arxiv.org/abs/2510.16285v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.16285v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We analyze algorithms for computing the $n$th prime $p_n$ and establish asymptotic bounds for several approaches. Using existing results on the complexity of evaluating the prime-counting function $π(x)$, we show that the binary search approach computes $p_n$ in $O(\sqrt{n} \, (\log n)^4)$ time. Assuming the Riemann Hypothesis and Cramér's conjecture, we construct a tighter interval around li$^{-1}(n)$, leading to an improved sieve-based algorithm running in $O(\sqrt{n} \, (\log ^{7/2} n) \, \log \log n)$ time. This improvement, though conditional, suggests that further refinements to prime gap estimates may yield provably faster methods for computing primes.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-18T00:49:08Z</published>
+    <arxiv:comment>7 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Ansh Aggarwal</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.09651v1</id>
+    <title>Bayes Meets Riemann Again: Large Prime Discovery and Re-emergence of the Bone of Contention</title>
+    <updated>2025-10-06T11:44:19Z</updated>
+    <link href="https://arxiv.org/abs/2510.09651v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.09651v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Prime numbers have fascinated mathematicians since antiquity, with ongoing efforts to uncover both their properties and ever-larger examples. While giant primes rarely aid cryptography, they find use in areas such as locally decodable codes. Large prime-hunting, often brute-force in nature, is conceptually linked to the Riemann Hypothesis and the prime number theorem, which portrays prime distribution as essentially random. This motivates a statistical perspective, with Bayesian methodology providing a natural foundation.
+  We show that the prime number theorem suggests a nonhomogeneous Poisson process for prime counts, yielding primes as waiting times. This process agrees with the prime number theorem, asymptotic results, and prime gap properties. Building on it, we develop a recursive Bayesian theory for large prime prediction and Riemann Hypothesis validation. The approach matches traditional but computationally infeasible non-recursive Bayesian formulations in the limit, and it strongly falsifies the Riemann Hypothesis.
+  Finally, we propose a computational method using Transformation-based MCMC to simulate recursive posterior predictives. A simple change of variable enables simulation of Mersenne prime exponents. With modest computing resources, we identified 259 primes over 140 million, including 184 strong Mersenne candidates corresponding to potential primes with 42--242 million digits.</summary>
+    <category term="math.GM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-06T11:44:19Z</published>
+    <arxiv:comment>Comments welcome!</arxiv:comment>
+    <arxiv:primary_category term="math.GM"/>
+    <author>
+      <name>Durba Bhattacharya</name>
+    </author>
+    <author>
+      <name>Sucharita Roy</name>
+    </author>
+    <author>
+      <name>Sourabh Bhattacharya</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.16240v1</id>
+    <title>Off Critical Zeros Contradict Contraction in the Dynamical Reformulation of the Riemann Hypothesis</title>
+    <updated>2025-09-16T19:59:06Z</updated>
+    <link href="https://arxiv.org/abs/2509.16240v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.16240v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We continue the dynamical reformulation of the Riemann Hypothesis initiated in [1]. The framework is built from an integer map in which composites advance by pi(m) and primes retreat by their prime gap, producing trajectories whose contraction properties encode the distribution of primes. In this setting, RH is equivalent to the persistence of contraction inequalities for trajectory-based error functionals E(X), E~(X) across multiplicative scales.
+  In the present paper we prove that if zeta(s) has a zero off the critical line Re(s)=1/2, then the Landau--Littlewood Omega-theorem forces oscillations of size x^beta in psi(x)-x. A window-capture lemma shows that these oscillations are inherited by the composite-only window suprema Esup(X), and hence by E(X), producing lower bounds that contradict contraction. Thus any off--critical zero is incompatible with contraction.
+  Headline result. Part I introduced the dynamical system and showed that RH is equivalent to the persistence of contraction inequalities. Part II proves that off--critical zeros force oscillations in psi(x)-x that inevitably violate contraction. Taken together, these two steps close the circle: contraction characterizes RH, and off--critical zeros contradict contraction. Hence every nontrivial zero of zeta(s) lies on the critical line. In particular, the Riemann Hypothesis holds.
+  More generally, the present result shows that whenever contraction holds, the critical line is forced as the only location of nontrivial zeros. In this sense, the critical line is not merely the conjectured locus of zeros, but the equilibrium point singled out by contraction itself.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-16T19:59:06Z</published>
+    <arxiv:comment>Part II of a two paper project on dynamical reformulation of the Riemann Hypothesis. 12 pages, 5 appendices. Companion to Part I: Dynamical Reformulation of the Riemann Hypothesis via Trajectory Contraction (arXiv:2509.10588v1)</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Hendrik Wladimir Albrecht Edwin Kuipers</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.17986v1</id>
+    <title>Heuristic Bounded Prime Gaps via a Chaotic Multidimensional Sieve and Random Matrix Theory</title>
+    <updated>2025-07-23T23:31:48Z</updated>
+    <link href="https://arxiv.org/abs/2507.17986v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.17986v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present the Enhanced Multidimensional Chaotic Heuristic Sieve (EMCHS), a novel probabilistic framework that integrates chaotic perturbations and random matrix theory (RMT) to suggest improved bounds on prime gaps. Building upon the foundational sieves of Goldston-Pintz-Yildirim and Maynard, EMCHS heuristically suggests unconditional gaps of at most 180 and conditional gaps of at most 8 under a partial Elliott-Halberstam conjecture (EHC) with delta = 0.3. These heuristic suggestions surpass Maynard's unconditional bound of 246 through refined polytope optimizations and probabilistic enhancements. We provide rigorous proofs for certain analytic components (such as bounding chaotic perturbations via ergodic theory) and explicitly distinguish which arguments and conclusions are heuristic or conjectural. Numerical evidence for primes up to 10^18 supports the framework, and we discuss limitations and avenues for future rigorous work.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-23T23:31:48Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Milad Ghadimi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.00840v3</id>
+    <title>Towards Enhanced Quantum Resistance for RSA via Constrained Rényi Entropy Optimization: A Theoretical Framework for Backward-Compatible Cryptography</title>
+    <updated>2026-03-10T03:06:10Z</updated>
+    <link href="https://arxiv.org/abs/2508.00840v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.00840v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The advent of quantum computing poses a critical threat to RSA cryptography, as Shor's algorithm can factor integers in polynomial time. While post-quantum cryptography standards offer long-term solutions, their deployment faces significant compatibility and infrastructure challenges. This paper proposes the Constrained Rényi Entropy Optimization (CREO) framework, a mathematical approach to potentially enhance the quantum resistance of RSA while maintaining full backward compatibility. By constraining the proximity of RSA primes ($|p-q| &lt; γ\sqrt{pq}$), CREO reduces the distinguishability of quantum states in Shor's algorithm, as quantified by Rényi entropy. Our analysis demonstrates that for a $k$-bit modulus with $γ= k^{-1/2+ε}$, the number of quantum measurements required for reliable period extraction scales as $Ω(k^{2+ε})$, compared to $\mathcal{O}(k^3)$ for standard RSA under idealized assumptions. This represents a systematic increase in quantum resource requirements. The framework is supported by constructive existence proofs for such primes using prime gap theorems and establishes conceptual security connections to lattice-based problems. CREO provides a new research direction for exploring backward-compatible cryptographic enhancements during the extended transition to post-quantum standards, offering a mathematically grounded pathway to harden widely deployed RSA infrastructure without requiring immediate protocol or infrastructure replacement.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-04T11:18:34Z</published>
+    <arxiv:comment>29 pages , 5 tables ,2 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Ruopengyu Xu</name>
+    </author>
+    <author>
+      <name>Chenglian Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.16821v1</id>
+    <title>Imbalance Prime Sieving: Every Prime Gap Is a Result of a Möbius Imbalance Obstruction</title>
+    <updated>2025-07-04T08:33:30Z</updated>
+    <link href="https://arxiv.org/abs/2507.16821v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.16821v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a novel sieve for prime numbers based on detecting topological obstructions in a Möbius-transformed rational metric space. Unlike traditional sieves which rely on divisibility, our method identifies primes as those numbers which contribute new, non-colliding imbalance conjugates. This provides both an exact algorithm for prime enumeration and a new geometric interpretation of prime gaps. This sieve constructs a topological obstruction theory over rational pairs (p, q), from which we observe that every prime gap is a consequence of a collision in this transformed imbalance space. Our empirical results demonstrate that this method precisely filters the prime numbers up to a specified bound, with potential implications for new number-theoretic models and sieving algorithms.</summary>
+    <category term="math.GM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-04T08:33:30Z</published>
+    <arxiv:comment>10 pages, code in public domain on GitHub</arxiv:comment>
+    <arxiv:primary_category term="math.GM"/>
+    <author>
+      <name>Paul Alexander Bilokon</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.12063v1</id>
+    <title>On the Density of Prime Imbalances in the Unit Interval</title>
+    <updated>2025-06-01T08:37:10Z</updated>
+    <link href="https://arxiv.org/abs/2506.12063v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.12063v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove that the set of normalized differences between primes, defined as $S = \{(p-q)/(p+q) : p &gt; q \text{ are primes}\}$, is dense in the open unit interval $(0,1)$. Our proof provides an explicit construction algorithm with quantitative bounds, relying on elementary results from prime number theory including Bertrand's postulate and explicit bounds on prime gaps in long intervals.</summary>
+    <category term="math.GM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-01T08:37:10Z</published>
+    <arxiv:comment>5 pages</arxiv:comment>
+    <arxiv:primary_category term="math.GM"/>
+    <author>
+      <name>Paul Alexander Bilokon</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.07630v1</id>
+    <title>On the frequency of small gaps between the primes</title>
+    <updated>2025-05-12T14:56:44Z</updated>
+    <link href="https://arxiv.org/abs/2505.07630v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.07630v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In a recent work Friedlander studied the problem of how large consecutive prime gaps should be in order that the sum of the reciprocals should be divergent. Supposing a very deep Hypothesis, a generalization of the Hardy--Littlewood prime $k$-tuple conjecture, he gave an almost precise answer for it. In the present work we give an unconditional answer for a much weaker form of the same problem.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-12T14:56:44Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Akos Magyar</name>
+    </author>
+    <author>
+      <name>Janos Pintz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.04311v1</id>
+    <title>Ramsey-Theoretic Characterizations of Classically Non-Ramseyian Problems</title>
+    <updated>2025-02-06T18:54:00Z</updated>
+    <link href="https://arxiv.org/abs/2502.04311v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.04311v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we will develop a significantly more general notion of classical Ramsey numbers (extending most other graph-theoretic generalizations) and make some preliminary characterizations of these new Ramsey numbers using simple algebraic tools. Throughout, we make a case arguing that, while our access to specific values of Ramsey numbers (or, in general, precise numerical solutions to Ramsey-theoretic problems) may be limited, the interplay between and overall structure of Ramseyian objects is likely tractable. To support the relevancy of this perspective, we conclude by demonstrating that the Green-Tao Theorem, the Twin Prime conjecture, Zhang's bounded prime gap theorem, and Polignac's conjecture can be viewed as statements about Ramsey numbers.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-06T18:54:00Z</published>
+    <arxiv:comment>22 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Bryce Alan Christopherson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.00580v3</id>
+    <title>Partition-theoretic model of prime distribution</title>
+    <updated>2025-10-02T14:48:21Z</updated>
+    <link href="https://arxiv.org/abs/2501.00580v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.00580v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We make an application of ideas from partition theory to a problem in multiplicative number theory. We propose a deterministic model of prime number distribution, from first principles related to properties of integer partitions, that naturally predicts the prime number theorem as well as the twin prime conjecture. The model posits that, for $n\geq 2$, $$p_{n}\ =\ 1\ +\ 2\sum_{j=1}^{n-1}\left\lceil \frac{d(j)}{2}\right\rceil\ +\ \varepsilon(n),$$
+  where $p_k$ is the $k$th prime number, $d(k)$ is the divisor function, and $\varepsilon(k)$ is an explicit error term that is negligible asymptotically; both the main term and error term represent enumerative functions in our conceptual model. We refine the error term to give numerical estimates of $π(n)$ similar to those provided by the logarithmic integral, and much more accurate than $\operatorname{li}(n)$ up to $n=10{,}000$ where the estimates are {\it almost exact}.
+  We then perform computational tests of unusual predictions of the model, finding limited evidence of predictable variations in prime gaps.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-31T18:11:34Z</published>
+    <arxiv:comment>19 pages, 4 figures, 3 tables, under revision for publication</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Aidan Botkin</name>
+    </author>
+    <author>
+      <name>Madeline L. Dawsey</name>
+    </author>
+    <author>
+      <name>David J. Hemmer</name>
+    </author>
+    <author>
+      <name>Matthew R. Just</name>
+    </author>
+    <author>
+      <name>Robert Schneider</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.12311v2</id>
+    <title>Conditional Bounds for Prime Gaps with Applications</title>
+    <updated>2025-08-29T16:50:19Z</updated>
+    <link href="https://arxiv.org/abs/2412.12311v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.12311v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We posit that $d_n^2 &lt; 2p_{n+1}$ holds for all $n\geq 1$, where $p_n$ represents the $n$th prime and $d_n$ stands for the $n$th prime gap i.e. $d_n := p_{n+1} - p_n$. Then, the presence of a prime between successive perfect squares, as well as the validity of $Δ_n := \sqrt{p_{n+1}} - \sqrt{p_n} &lt; 1$ are derived. Next, $π(x)$ being the number of primes $p$ up to $x$, we deduce $π(n^2-n) &lt; π(n^2) &lt; π(n^2+n)$ $(n\geq 2)$. In addition, a proof of $π((n+1)^k) - π(n^k) \geq π(2^k)$ \ $(k\geq 2, n\geq 1)$ is worked out. The vanishing nature of $Δ_n$ as $n$ goes to infinity is set, and used afterwards to achieve both $\displaystyle{\lim_{n\rightarrow\infty}d_n/\sqrt{p_n} = 0}$ and the twin prime conjecture. Also, question about the estimate $p_n &lt; 2j_n^2 \ (n\geq 6)$, where $j_n$ counts the twin prime pairs up to $p_n$, is raised. Finally, we put forward the conjecture that any rational number $r$ $(0\leq r \leq 1)$ represents an accumulation point of the sequence $\left(\{\sqrt{p_n}\}\right)_{n\geq 1}$, where $\{x\}$ acts for the fractional part of $x$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-16T19:29:48Z</published>
+    <arxiv:comment>31 pages, new section 9 deals with twin prime conjecture</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Jacques Grah</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.06783v1</id>
+    <title>Prime Gaps In The Gaussian Integers</title>
+    <updated>2024-11-11T08:23:11Z</updated>
+    <link href="https://arxiv.org/abs/2411.06783v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.06783v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we create a definition for prime gaps in the Gaussian integers using a boxcar metric. From this we used numerical methods to derive an asymptotic upper bound for the gaps in this scenario, namely O(log^2|p_{n}|).</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-11T08:23:11Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Kyle Bradford</name>
+    </author>
+    <author>
+      <name>James Taylor</name>
+    </author>
+    <author>
+      <name>George Volz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.19696v3</id>
+    <title>On smooth gaps between primes using the Maynard-Tao sieve</title>
+    <updated>2024-10-13T03:39:15Z</updated>
+    <link href="https://arxiv.org/abs/2403.19696v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.19696v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In 1999, Balog, Brüdern, and Wooley (1999) showed there are infinitely many prime gaps $p-q$ that are $(\log p)^{\frac{3}{4}}$-smooth, and infinitely many consecutive prime gaps that are $(\log p)^\frac{7}{8}$-smooth. Advancements made since then by Zhang (2014), Maynard (2014), and Polymath8b (2014) towards resolving the twin prime conjecture have given us the tools to lower the bounds made by Balog, Brüdern, and Wooley to 47. Moreover, we can show there are infinitely many $m$-tuples of primes whose gaps are all $y_m$-smooth for a calculable prime $y_m$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-20T03:26:09Z</published>
+    <arxiv:comment>7 pages, 1 table; comments welcome!</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Carol Wu</name>
+    </author>
+  </entry>
+</feed>

@@ -1,0 +1,400 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/7+HVvvkWt3Bly7tVB4il+/RUAB8</id>
+  <title>arXiv Query: search_query=all:"bounded gaps between primes"&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-08-14T07:46:56Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22bounded+gaps+between+primes%22&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>22</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2308.06839v1</id>
+    <title>Generalized divisor functions in arithmetic progressions: I</title>
+    <updated>2023-08-13T19:46:28Z</updated>
+    <link href="https://arxiv.org/abs/2308.06839v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.06839v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove some distribution results for the $k$-fold divisor function in arithmetic progressions to moduli that exceed the square-root of length $X$ of the sum, with appropriate constrains and averaging on the moduli, saving a power of $X$ from the trivial bound. On assuming the Generalized Riemann Hypothesis, we obtain uniform power saving error terms that are independent of $k$.
+  We follow and specialize Y.T. Zhang's method on bounded gaps between primes to our setting. Our arguments are essentially self-contained, with the exception on the use of Deligne's work on the Riemann Hypothesis for varieties over finite fields. In particular, we avoid the reliance on Siegel's theorem, leading to some effective estimates.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-13T19:46:28Z</published>
+    <arxiv:comment>in: J. Number Theory 227 (2021), pp. 30-93</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>J. Number Theory 227 (2021), pp. 30-93</arxiv:journal_ref>
+    <author>
+      <name>David T. Nguyen</name>
+    </author>
+    <arxiv:doi>10.1016/j.jnt.2021.03.021</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.jnt.2021.03.021" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1710.09891v3</id>
+    <title>Revisiting Generalized Bertand's Postulate and Prime Gaps</title>
+    <updated>2019-08-19T19:15:53Z</updated>
+    <link href="https://arxiv.org/abs/1710.09891v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1710.09891v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>It is a well-known fact that for any natural number $n$, there always exists a prime in $[n, 2n]$. Our aim in this note is to generalize this result to $[n, kn]$. A lower as well as an upper bound on the number of primes in $[n, kn]$ were conjectured by Mitra et al. [Arxiv 2009]. In 2016, Christian Axler provided a proof of the lower bound which is valid only when $n$ is greater than a very large threshold. In this paper, after almost a decade, we for the first time provide a direct proof of the lower bound that holds for all $n \geq 2$. Further, we show that the upper bound is a consequence of Firoozbakht's conjecture. Finally, we also prove a stronger version of the bounded gaps between primes.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-10-26T19:40:03Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Madhuparna Das</name>
+    </author>
+    <author>
+      <name>Goutam Paul</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1707.05437v1</id>
+    <title>Bounded gaps between primes in short intervals</title>
+    <updated>2017-07-18T02:00:47Z</updated>
+    <link href="https://arxiv.org/abs/1707.05437v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1707.05437v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Baker, Harman, and Pintz showed that a weak form of the Prime Number Theorem holds in intervals of the form $[x-x^{0.525},x]$ for large $x$. In this paper, we extend a result of Maynard and Tao concerning small gaps between primes to intervals of this length. More precisely, we prove that for any $δ\in [0.525,1]$ there exist positive integers $k,d$ such that for sufficiently large $x$, the interval $[x-x^δ,x]$ contains $\gg_{k} \frac{x^δ}{(\log x)^k}$ pairs of consecutive primes differing by at most $d$. This confirms a speculation of Maynard that results on small gaps between primes can be refined to the setting of short intervals of this length.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-07-18T02:00:47Z</published>
+    <arxiv:comment>29 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Ryan Alweiss</name>
+    </author>
+    <author>
+      <name>Sammy Luo</name>
+    </author>
+    <arxiv:doi>10.1007/s40993-018-0109-y</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s40993-018-0109-y" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1707.04890v2</id>
+    <title>About de Polignac's conjecture</title>
+    <updated>2017-07-27T02:03:00Z</updated>
+    <link href="https://arxiv.org/abs/1707.04890v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1707.04890v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this note we present a method to bound gaps between primes via the divergence of the series of reciprocals of the prime numbers, a consequence of a version of the Bertrand's test for convergence of series of positive numbers and a suitable series of positive terms related to the logarithmic integral function. Using this proposed method we discuss the Polignac's conjecture and present some consequences.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-07-16T14:42:32Z</published>
+    <arxiv:comment>arXiv admin note: text overlap with arXiv:1706.09058</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Douglas Azevedo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1705.08034v1</id>
+    <title>Bounded gaps between primes and the length spectra of arithmetic hyperbolic 3-orbifolds</title>
+    <updated>2017-05-22T23:00:19Z</updated>
+    <link href="https://arxiv.org/abs/1705.08034v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1705.08034v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In 1992, Reid asked whether hyperbolic 3-manifolds with the same geodesic length spectra are necessarily commensurable. While this is known to be true for arithmetic hyperbolic 3-manifolds, the non-arithmetic case is still open. Building towards a negative answer to this question, Futer and Millichap recently constructed infinitely many pairs of non-commensurable, non-arithmetic hyperbolic 3-manifolds which have the same volume and whose length spectra begin with the same first $m$ geodesic lengths. In the present paper, we show that this phenomenon is surprisingly common in the arithmetic setting. In particular, given any arithmetic hyperbolic 3-orbifold derived from a quaternion algebra, any finite subset $S$ of its geodesic length spectrum, and any $k \geq 2$, we produce infinitely many $k$-tuples of arithmetic hyperbolic 3-orbifolds which are pairwise non-commensurable, have geodesic length spectra containing $S$, and have volumes lying in an interval of (universally) bounded length. The main technical ingredient in our proof is a bounded gaps result for prime ideals in number fields lying in Chebotarev sets which extends recent work of Thorner.</summary>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-05-22T23:00:19Z</published>
+    <arxiv:comment>V1: 6 pages</arxiv:comment>
+    <arxiv:primary_category term="math.GT"/>
+    <arxiv:journal_ref>C. R. Math. Acad. Sci. Paris 355 (2017), 1121-1126</arxiv:journal_ref>
+    <author>
+      <name>Benjamin Linowitz</name>
+    </author>
+    <author>
+      <name>D. B. McReynolds</name>
+    </author>
+    <author>
+      <name>Paul Pollack</name>
+    </author>
+    <author>
+      <name>Lola Thompson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1608.04111v2</id>
+    <title>Ergodic recurrence and bounded gaps between primes</title>
+    <updated>2016-08-19T15:15:33Z</updated>
+    <link href="https://arxiv.org/abs/1608.04111v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1608.04111v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $(X,B_X,μ,T)$ be a measure-preserving probability system with $T$ is invertible. Suppose that $A\in B_X$ with $μ(A)&gt;0$ and $ε&gt;0$. For any $m\geq 1$, there exist infinitely many primes $p_0,p_1,\ldots,p_m$ with $p_0&lt;\cdots&lt;p_m$ such that $$ μ(A\cap T^{-(p_i-1)}A)\geq μ(A)^2-ε$$ for each $0\leq i\leq m$ and $$ p_m-p_0&lt;C_m, $$ where $C_m&gt;0$ is a constant only depending on $m$, $A$ and $ε$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-08-14T15:28:13Z</published>
+    <arxiv:comment>This is a very preliminary draft, which maybe contains some mistakes</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Hao Pan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1510.08054v1</id>
+    <title>Limit points and long gaps between primes</title>
+    <updated>2015-10-27T20:00:35Z</updated>
+    <link href="https://arxiv.org/abs/1510.08054v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1510.08054v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $d_n = p_{n+1} - p_n$, where $p_n$ denotes the $n$th smallest prime, and let $R(T) = \log T \log_2 T\log_4 T/(\log_3 T)^2$ (the "Erd{\H o}s--Rankin" function). We consider the sequence $(d_n/R(p_n))$ of normalized prime gaps, and show that its limit point set contains at least $25\%$ of nonnegative real numbers. We also show that the same result holds if $R(T)$ is replaced by any "reasonable" function that tends to infinity more slowly than $R(T)\log_3 T$. We also consider "chains" of normalized prime gaps. Our proof combines breakthrough work of Maynard and Tao on bounded gaps between primes with subsequent developments of Ford, Green, Konyagin, Maynard and Tao on long gaps between consecutive primes.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-10-27T20:00:35Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Roger Baker</name>
+    </author>
+    <author>
+      <name>Tristan Freiberg</name>
+    </author>
+    <arxiv:doi>10.1112/plms/pdw036</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1112/plms/pdw036" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1509.04378v1</id>
+    <title>Bounded Gaps Between Primes in Multidimensional Hecke Equidistribution Problems</title>
+    <updated>2015-09-15T02:43:20Z</updated>
+    <link href="https://arxiv.org/abs/1509.04378v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1509.04378v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Using Duke's large sieve inequality for Hecke Gr{ö}ssencharaktere and the new sieve methods of Maynard and Tao, we prove a general result on gaps between primes in the context of multidimensional Hecke equidistribution. As an application, for any fixed $0&lt;ε&lt;\frac{1}{2}$, we prove the existence of infinitely many bounded gaps between primes of the form $p=a^2+b^2$ such that $|a|&lt;ε\sqrt{p}$. Furthermore, for certain diagonal curves $\mathcal{C}:ax^α+by^β=c$, we obtain infinitely many bounded gaps between the primes $p$ such that $|p+1-\#\mathcal{C}(\mathbb{F}_p)|&lt;ε\sqrt{p}$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-09-15T02:43:20Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Math. Res. Lett. 26 (2019), no. 3, 875-901</arxiv:journal_ref>
+    <author>
+      <name>Jesse Thorner</name>
+    </author>
+    <arxiv:doi>10.4310/MRL.2019.v26.n3.a9</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.4310/MRL.2019.v26.n3.a9" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1509.01564v2</id>
+    <title>Patterns of primes in arithmetic progressions</title>
+    <updated>2015-09-07T16:45:56Z</updated>
+    <link href="https://arxiv.org/abs/1509.01564v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1509.01564v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that there exists a bounded pattern of m consecutive primes for any m&gt;0, that means a tuple H_m of m distinct non-negative integers h_i (i=1,2,...m) such that its translations contain arbitrarily long (finite) arithmetic progressions. More precisely, the set of natural numbers n for which all components n+h_i (i=1,2,...m) are consecutive primes contains arbitrarily long (finite) arithmetic progressions. Moreover, the set of m-tuples that satisfy this property represents a positive proportion of all m-tuples. The present result is the generalization of the results of Green-Tao (about the existence of arbitrarily long arithmetic progressions) and of Maynard/Tao (about the existence of infinitely many bounded blocks of m primes, where m is an arbitrary natural number). It also generalizes the author's work which first showed the existence of infinitely many Polignac numbers and they contain arbitrarily long (finite) arithmetic progressions (arXiv: 1305.6289v1, 27 May 2013) which was a common generalization of the above mentioned result of Green-Tao and that of Zhang (about the exisatence of infinitely many bounded gaps between primes).</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-09-04T19:11:53Z</published>
+    <arxiv:comment>The new version proves also that we can additionally require that the primes in the relevant pattern should be consecutive</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Janos Pintz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1505.00187v3</id>
+    <title>On the set of the difference of primes</title>
+    <updated>2015-09-09T07:27:50Z</updated>
+    <link href="https://arxiv.org/abs/1505.00187v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1505.00187v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this work we prove that the set of the difference of primes is a $Δ_r^*$-set. The work is based on the recent dramatic new developments in the study of bounded gaps between primes, reached by Zhang, Maynard and Tao.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-04-28T07:58:00Z</published>
+    <arxiv:comment>In this revision we prove a stronger result that the set of the difference of primes is a $Δ_r^*$-set</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Wen Huang</name>
+    </author>
+    <author>
+      <name>XiaoSheng Wu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1503.06634v2</id>
+    <title>Bounded gaps between prime polynomials with a given primitive root</title>
+    <updated>2015-04-15T13:05:40Z</updated>
+    <link href="https://arxiv.org/abs/1503.06634v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1503.06634v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A famous conjecture of Artin states that there are infinitely many prime numbers for which a fixed integer $g$ is a primitive root, provided $g \neq -1$ and $g$ is not a perfect square. Thanks to work of Hooley, we know that this conjecture is true, conditional on the truth of the Generalized Riemann Hypothesis. Using a combination of Hooley's analysis and the techniques of Maynard-Tao used to prove the existence of bounded gaps between primes, Pollack has shown that (conditional on GRH) there are bounded gaps between primes with a prescribed primitive root. In the present article, we provide an unconditional proof of the analogue of Pollack's work in the function field case; namely, that given a monic polynomial $g(t)$ which is not an $v$th power for any prime $v$ dividing $q-1$, there are bounded gaps between monic irreducible polynomials $P(t)$ in $\mathbb{F}_q[t]$ for which $g(t)$ is a primitive root (which is to say that $g(t)$ generates the group of units modulo $P(t)$). In particular, we obtain bounded gaps between primitive polynomials, corresponding to the choice $g(t) = t$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-03-23T13:31:19Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Lee Troupe</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1409.8361v1</id>
+    <title>The "bounded gaps between primes" Polymath project - a retrospective</title>
+    <updated>2014-09-30T01:55:58Z</updated>
+    <link href="https://arxiv.org/abs/1409.8361v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1409.8361v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For any $m \geq 1$, let $H_m$ denote the quantity $H_m := \liminf_{n \to \infty} (p_{n+m}-p_n)$, where $p_n$ denotes the $n^{\operatorname{th}}$ prime; thus for instance the twin prime conjecture is equivalent to the assertion that $H_1$ is equal to two. In a recent breakthrough paper of Zhang, a finite upper bound was obtained for the first time on $H_1$; more specifically, Zhang showed that $H_1 \leq 70000000$.
+  Almost immediately after the appearance of Zhang's paper, improvements to the upper bound on $H_1$ were made. In order to pool together these various efforts, a \emph{Polymath project} was formed to collectively examine all aspects of Zhang's arguments, and to optimize the resulting bound on $H_1$ as much as possible. After several months of intensive activity, conducted online in blogs and wiki pages, the upper bound was improved to $H_1 \leq 4680$. As these results were being written up, a further breakthrough was introduced by Maynard, who found a simpler sieve-theoretic argument that gave the improved bound $H_1 \leq 600$, and also showed for the first time that $H_m$ was finite for all $m$. The polymath project, now with Maynard's assistance, then began work on improving these bounds, eventually obtaining the bound $H_1 \leq 246$, as well as a number of additional results, both conditional and unconditional, on $H_m$.
+  In this article, we collect the perspectives of several of the participants to these Polymath projects, in order to form a case study of online collaborative mathematical activity, and to speculate on the suitability of such an online model for other mathematical research projects.</summary>
+    <category term="math.HO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-09-30T01:55:58Z</published>
+    <arxiv:comment>19 pages, submitted, Newsletter of the EMS</arxiv:comment>
+    <arxiv:primary_category term="math.HO"/>
+    <author>
+      <name>D. H. J. Polymath</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1407.7186v1</id>
+    <title>Bounded gaps between primes with a given primitive root, II</title>
+    <updated>2014-07-27T05:26:00Z</updated>
+    <link href="https://arxiv.org/abs/1407.7186v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1407.7186v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $m$ be a natural number, and let $\mathcal{Q}$ be a set containing at least $\exp(C m)$ primes. We show that one can find infinitely many strings of $m$ consecutive primes each of which has some $q\in\mathcal{Q}$ as a primitive root, all lying in an interval of length $O_{\mathcal{Q}}(\exp(C'm))$. This is a bounded gaps variant of a theorem of Gupta and Ram Murty. We also prove a result on an elliptic analogue of Artin's conjecture. Let $E/\mathbb{Q}$ be an elliptic curve with an irrational $2$-torsion point. Assume GRH. Then for every $m$, there are infinitely many strings of $m$ consecutive primes $p$ for which $E(\mathbb{F}_p)$ is cyclic, all lying an interval of length $O_E(\exp(C'' m))$. If $E$ has CM, then the GRH assumption can be removed. Here $C$, $C'$, and $C''$ are absolute constants.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-07-27T05:26:00Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Roger C. Baker</name>
+    </author>
+    <author>
+      <name>Paul Pollack</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1407.1747v1</id>
+    <title>Bounded gaps between primes in special sequences</title>
+    <updated>2014-07-07T15:44:31Z</updated>
+    <link href="https://arxiv.org/abs/1407.1747v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1407.1747v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We use Maynard's methods to show that there are bounded gaps between primes in the sequence $\{\lfloor nα\rfloor\}$, where $α$ is an irrational number of finite type. In addition, given a superlinear function $f$ satisfying some properties described by Leitmann, we show that for all $m$ there are infinitely many bounded intervals containing $m$ primes and at least one integer of the form $\lfloor f(q)\rfloor$ with $q$ a positive integer.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-07-07T15:44:31Z</published>
+    <arxiv:comment>14 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Lynn Chua</name>
+    </author>
+    <author>
+      <name>Soohyun Park</name>
+    </author>
+    <author>
+      <name>Geoffrey D. Smith</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1406.2658v2</id>
+    <title>On the ratio of consecutive gaps between primes</title>
+    <updated>2014-07-08T18:12:06Z</updated>
+    <link href="https://arxiv.org/abs/1406.2658v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1406.2658v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the present work we prove a common generalization of Maynard-Tao's recent result about consecutive bounded gaps between primes and on the Erdős-Rankin bound about large gaps between consecutive primes. The work answers in a strong form a 60 years old problem of Erdös, which asked whether the ratio of two consecutive primegaps can be infinitely often arbitrarily small, and arbitrarily large, respectively.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-06-10T18:40:24Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Janos Pintz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1404.4007v3</id>
+    <title>Bounded gaps between primes with a given primitive root</title>
+    <updated>2014-05-05T14:18:24Z</updated>
+    <link href="https://arxiv.org/abs/1404.4007v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1404.4007v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Fix an integer $g \neq -1$ that is not a perfect square. In 1927, Artin conjectured that there are infinitely many primes for which $g$ is a primitive root. Forty years later, Hooley showed that Artin's conjecture follows from the Generalized Riemann Hypothesis (GRH). We inject Hooley's analysis into the Maynard--Tao work on bounded gaps between primes. This leads to the following GRH-conditional result: Fix an integer $m \geq 2$. If $q_1 &lt; q_2 &lt; q_3 &lt; \dots$ is the sequence of primes possessing $g$ as a primitive root, then $\liminf_{n\to\infty} (q_{n+(m-1)}-q_n) \leq C_m$, where $C_m$ is a finite constant that depends on $m$ but not on $g$. We also show that the primes $q_n, q_{n+1}, \dots, q_{n+m-1}$ in this result may be taken to be consecutive.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-04-15T18:22:16Z</published>
+    <arxiv:comment>small corrections to the treatment of \sum_1 on pp. 11--12</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Algebra Number Theory 8 (2014) 1769-1786</arxiv:journal_ref>
+    <author>
+      <name>Paul Pollack</name>
+    </author>
+    <arxiv:doi>10.2140/ant.2014.8.1769</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.2140/ant.2014.8.1769" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1403.5808v1</id>
+    <title>Bounded gaps between primes in number fields and function fields</title>
+    <updated>2014-03-23T22:11:35Z</updated>
+    <link href="https://arxiv.org/abs/1403.5808v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1403.5808v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Hardy--Littlewood prime $k$-tuples conjecture has long been thought to be completely unapproachable with current methods. While this sadly remains true, startling breakthroughs of Zhang, Maynard, and Tao have nevertheless made significant progress toward this problem. In this work, we extend the Maynard-Tao method to both number fields and the function field $\mathbb{F}_q(t)$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-03-23T22:11:35Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Abel Castillo</name>
+    </author>
+    <author>
+      <name>Chris Hall</name>
+    </author>
+    <author>
+      <name>Robert J. Lemke Oliver</name>
+    </author>
+    <author>
+      <name>Paul Pollack</name>
+    </author>
+    <author>
+      <name>Lola Thompson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1403.4527v4</id>
+    <title>Bounded gaps between primes of the special form</title>
+    <updated>2015-05-15T11:42:13Z</updated>
+    <link href="https://arxiv.org/abs/1403.4527v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1403.4527v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For each $m\geq 1$, there exist infinitely many primes $p_1&lt;p_2&lt;\ldots&lt;p_{m+1}$ such that $p_{m+1}-p_1=O(m^4e^{8m})$ and $p_j+2$ has at most $\frac{16m}{\log 2}+\frac{5\log m}{\log 2}+37$ prime divisors for each $j$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-03-18T16:39:56Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Hongze Li</name>
+    </author>
+    <author>
+      <name>Hao Pan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1402.4849v2</id>
+    <title>Bounded gaps between primes</title>
+    <updated>2014-02-23T00:14:07Z</updated>
+    <link href="https://arxiv.org/abs/1402.4849v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1402.4849v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>These are notes on Zhang's work and subsequent developments produced in preparation for 5 hours of talks for a general mathematical audience given in Cambridge, Edinburgh and Auckland over the last year.
+  Being for colloquium-style talks, these notes are at a much lower level than other accounts in the literature. In places they are deliberately quite nonrigorous. Whether anyone will find them helpful is unclear but some care was taken on their preparation and there is, I hope, little harm in making them available here.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-02-19T23:24:56Z</published>
+    <arxiv:comment>20 double-spaced pages. Submitted to Eureka. Second version corrects a few typos and updates the already obsolete bound of H = 264 to the current record of H = 252</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Ben Green</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1401.6677v5</id>
+    <title>Bounded Gaps Between Primes in Chebotarev Sets</title>
+    <updated>2015-09-15T02:29:03Z</updated>
+    <link href="https://arxiv.org/abs/1401.6677v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1401.6677v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A new and exciting breakthrough due to Maynard establishes that there exist infinitely many pairs of distinct primes $p_1,p_2$ with $|p_1-p_2|\leq 600$ as a consequence of the Bombieri-Vinogradov Theorem. In this paper, we apply his general method to the setting of Chebotarev sets of primes. We study applications of these bounded gaps with an emphasis on ranks of prime quadratic twists of elliptic curves over $\mathbb{Q}$, congruence properties of the Fourier coefficients of normalized Hecke eigenforms, and representations of primes by binary quadratic forms.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-01-26T18:31:57Z</published>
+    <arxiv:comment>15 pages. Referee comments implemented. Research in the Mathematical Sciences 2014, 1:4</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Res. Math. Sci. 1 (2014), Art. 4, 16 pp</arxiv:journal_ref>
+    <author>
+      <name>Jesse Thorner</name>
+    </author>
+    <arxiv:doi>10.1186/2197-9847-1-4</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1186/2197-9847-1-4" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1306.1497v4</id>
+    <title>A note on bounded gaps between primes</title>
+    <updated>2013-07-17T12:29:56Z</updated>
+    <link href="https://arxiv.org/abs/1306.1497v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1306.1497v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As a refinement of the celebrated recent work of Yitang Zhang we show that any admissible k-tuple of integers contains at least two primes and almost primes in each component infinitely often if k is at least 181000. This implies that there are infinitely many gaps between consecutive primes of size at most 2530338, with an improved admissible k-tuple of Andrew W. Sutherland to 2326476.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-06-06T18:20:23Z</published>
+    <arxiv:comment>This paper became irrelevant due to a quick progress in the Polymath project of Terrence Tao</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Janos Pintz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1004.1078v1</id>
+    <title>On small gaps between primes and almost prime powers</title>
+    <updated>2010-04-07T13:02:13Z</updated>
+    <link href="https://arxiv.org/abs/1004.1078v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1004.1078v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In a recent joint work with D.A. Goldston and C.Y. Yildirim we just missed by a hairbreadth a proof that bounded gaps between primes occur infinitely often. In the present work it is shown that adding to the primes a much thinner set, called almost prime powers, the union of the set of primes and almost prime powers contains already infinitely many bounded gaps. More precisely it is shown that if we add to the set of primes either almost prime squares having exactly two, nearly equal prime factors or if we add to the set of primes almost prime cubes having exactly three, nearly equal prime factors, then the resulting set contains already infinitely many bounded gaps.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-04-07T13:02:13Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Janos Pintz</name>
+    </author>
+  </entry>
+</feed>
