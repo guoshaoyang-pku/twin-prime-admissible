@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>Bounded gaps between primes - Polymath Wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"aoCNh6TTYvgmkWlyeR5OaAAAc8I","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Bounded_gaps_between_primes","wgTitle":"Bounded gaps between primes","wgCurRevisionId":11042,"wgRevisionId":11042,"wgArticleId":1554,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Bounded_gaps_between_primes","wgRelevantArticleId":1554,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgSmjUseCdn":true,
+"wgSmjUseChem":true,"wgSmjDisplayMath":[],"wgSmjExtraInlineMath":[],"wgSmjScale":1,"wgSmjEnableMenu":true,"wgSmjDisplayAlign":"left"};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.monobook.styles":"ready"};RLPAGEMODULES=["ext.SimpleMathJax","site","mediawiki.page.ready","mediawiki.toc","skins.monobook.scripts"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="/polymath/load.php?lang=en&amp;modules=skins.monobook.styles&amp;only=styles&amp;skin=monobook">
+<script async="" src="/polymath/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=monobook"></script>
+<meta name="generator" content="MediaWiki 1.42.3">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="icon" href="/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="/polymath/opensearch_desc.php" title="Polymath Wiki (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://michaelnielsen.org/polymath/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="Polymath Wiki Atom feed" href="/polymath/index.php?title=Special:RecentChanges&amp;feed=atom">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Bounded_gaps_between_primes rootpage-Bounded_gaps_between_primes skin-monobook action-view skin--responsive"><div id="globalWrapper">
+	<div id="column-content">
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="siteNotice"></div>
+			<div class="mw-indicators">
+			</div>
+			<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">Bounded gaps between primes</span></h1>
+			<div id="bodyContent" class="monobook-body">
+				<div id="siteSub">From Polymath Wiki</div>
+				<div id="contentSub" ><div id="mw-content-subtitle"></div></div>
+				
+				<div id="jump-to-nav"></div><a href="#column-one" class="mw-jump-link">Jump to navigation</a><a href="#searchInput" class="mw-jump-link">Jump to search</a>
+				<!-- start content -->
+				<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><p>This is the home page for the Polymath8 project, which has two components:
+</p>
+<ul><li>Polymath8a, "Bounded gaps between primes", was a project to improve the bound H=H_1 on the least gap between consecutive primes that was attained infinitely often, by developing the techniques of Zhang.  This project concluded with a bound of H = 4,680.</li>
+<li>Polymath8b, "Bounded intervals with many primes", was project to improve the value of H_1 further, as well as H_m (the least gap between primes with m-1 primes between them that is attained infinitely often), by combining the Polymath8a results with the techniques of Maynard. This project concluded with a bound of H=246, as well as additional bounds on H_m (see below).</li></ul>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#World_records"><span class="tocnumber">1</span> <span class="toctext">World records</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Current_records"><span class="tocnumber">1.1</span> <span class="toctext">Current records</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Timeline_of_bounds"><span class="tocnumber">1.2</span> <span class="toctext">Timeline of bounds</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Polymath_threads"><span class="tocnumber">2</span> <span class="toctext">Polymath threads</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Writeup"><span class="tocnumber">3</span> <span class="toctext">Writeup</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Code_and_data"><span class="tocnumber">4</span> <span class="toctext">Code and data</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Tuples_applet"><span class="tocnumber">4.1</span> <span class="toctext">Tuples applet</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Errata"><span class="tocnumber">5</span> <span class="toctext">Errata</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Other_relevant_blog_posts"><span class="tocnumber">6</span> <span class="toctext">Other relevant blog posts</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#MathOverflow"><span class="tocnumber">7</span> <span class="toctext">MathOverflow</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Wikipedia_and_other_references"><span class="tocnumber">8</span> <span class="toctext">Wikipedia and other references</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Recent_papers_and_notes"><span class="tocnumber">9</span> <span class="toctext">Recent papers and notes</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Media"><span class="tocnumber">10</span> <span class="toctext">Media</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Bibliography"><span class="tocnumber">11</span> <span class="toctext">Bibliography</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="World_records">World records</span></h2>
+<h3><span class="mw-headline" id="Current_records">Current records</span></h3>
+<p>This table lists the current best upper bounds on <span style="opacity:.5" class="smj-container">[math]\displaystyle{ H_m }[/math]</span> - the least quantity for which it is the case that there are infinitely many intervals <span style="opacity:.5" class="smj-container">[math]\displaystyle{ n, n+1, \ldots, n+H_m }[/math]</span> which contain <span style="opacity:.5" class="smj-container">[math]\displaystyle{ m+1 }[/math]</span> consecutive primes - both on the assumption of the Elliott-Halberstam conjecture (or more precisely, a generalization of this conjecture, formulated as Conjecture 1 in [BFI1986]), without this assumption, and without EH or the use of Deligne's theorems.  The boldface entry - the bound on <span style="opacity:.5" class="smj-container">[math]\displaystyle{ H_1 }[/math]</span> without assuming Elliott-Halberstam, but assuming the use of Deligne's theorems - is the quantity that has attracted the most attention. The conjectured value <span style="opacity:.5" class="smj-container">[math]\displaystyle{ H_1=2 }[/math]</span> for <span style="opacity:.5" class="smj-container">[math]\displaystyle{ H_1 }[/math]</span> is the twin prime conjecture.
+</p>
+<table border="1">
+
+<tbody><tr>
+<th><span style="opacity:.5" class="smj-container">[math]\displaystyle{ m }[/math]</span></th>
+<th>Conjectural</th>
+<th>Assuming EH</th>
+<th>Without EH</th>
+<th>Without EH or Deligne
+</th></tr>
+<tr>
+<td>1
+</td>
+<td>2
+</td>
+<td><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2014/01/28/polymath8b-vii-using-the-generalised-elliott-halberstam-hypothesis-to-enlarge-the-sieve-support-yet-further/#comment-268732">6</a> (on GEH)
+<p><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1311.4600">12</a> [M] (on EH only)
+</p>
+</td>
+<td><b><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2014/02/21/polymath8b-ix-large-quadratic-programs/#comment-297456">246</a></b>
+</td>
+<td><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2014/02/21/polymath8b-ix-large-quadratic-programs/#comment-297456">246</a>
+</td></tr>
+<tr>
+<td>2
+</td>
+<td>6
+</td>
+<td><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2014/05/17/polymath-8b-xi-finishing-up-the-paper/#comment-355656">252</a> (on GEH)
+<p><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/12/20/polymath8b-iv-enlarging-the-sieve-support-more-efficient-numerics-and-explicit-asymptotics/#comment-261984">270</a> (on EH only)
+</p>
+</td>
+<td><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2014/01/17/polymath8b-vi-a-low-dimensional-variational-problem/#comment-268356">395,106</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/12/20/polymath8b-iv-enlarging-the-sieve-support-more-efficient-numerics-and-explicit-asymptotics/#comment-262665">474,266</a>
+</td></tr>
+<tr>
+<td>3
+</td>
+<td>8
+</td>
+<td><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/12/20/polymath8b-iv-enlarging-the-sieve-support-more-efficient-numerics-and-explicit-asymptotics/#comment-258528">52,116</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/12/20/polymath8b-iv-enlarging-the-sieve-support-more-efficient-numerics-and-explicit-asymptotics/#comment-258810">24,462,654</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2014/04/14/polymath8b-x-writing-the-paper-and-chasing-down-loose-ends/#comment-324263">32,285,928</a>
+</td></tr>
+<tr>
+<td>4
+</td>
+<td>12
+</td>
+<td><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/12/20/polymath8b-iv-enlarging-the-sieve-support-more-efficient-numerics-and-explicit-asymptotics/#comments">474,266</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2014/05/17/polymath-8b-xi-finishing-up-the-paper/#comment-357073">1,404,556,152</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2014/05/17/polymath-8b-xi-finishing-up-the-paper/#comment-357073">2,031,558,336</a>
+</td></tr>
+<tr>
+<td>5
+</td>
+<td>16
+</td>
+<td><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/12/20/polymath8b-iv-enlarging-the-sieve-support-more-efficient-numerics-and-explicit-asymptotics/#comment-259813">4,137,854</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2014/06/19/polymath8-wrapping-up/#comment-378098">78,602,310,160</a>
+</td>
+<td><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2014/04/14/polymath8b-x-writing-the-paper-and-chasing-down-loose-ends/#comment-339197">124,840,189,042</a>
+</td></tr>
+<tr>
+<td><span style="opacity:.5" class="smj-container">[math]\displaystyle{ m }[/math]</span>
+</td>
+<td><span style="opacity:.5" class="smj-container">[math]\displaystyle{ \displaystyle (1+o(1)) m \log m }[/math]</span>
+</td>
+<td><span style="opacity:.5" class="smj-container">[math]\displaystyle{ \displaystyle O( m e^{2m} ) }[/math]</span>
+</td>
+<td><span style="opacity:.5" class="smj-container">[math]\displaystyle{ O( \exp( 3.815 m) ) [BI] }[/math]</span>
+</td>
+<td><span style="opacity:.5" class="smj-container">[math]\displaystyle{ O( m \exp((4 - \frac{4}{43}) m) ) }[/math]</span>
+</td></tr></tbody></table>
+<p>Unless listed below, all the above bounds were produced by the Polymath8 project.
+</p>
+<ul><li>[BI]: R. C. Baker, A. J. Irving, <a rel="nofollow" class="external text" href="http://arxiv.org/abs/1505.01815">Bounded intervals containing many primes</a></li>
+<li>[M]: J. Maynard, <a rel="nofollow" class="external text" href="http://annals.math.princeton.edu/articles/8772">Small gaps between primes</a></li></ul>
+<p>We have been working on improving a number of other quantities, including the quantity <span style="opacity:.5" class="smj-container">[math]\displaystyle{ H_m }[/math]</span> mentioned above:
+</p>
+<ul><li><span style="opacity:.5" class="smj-container">[math]\displaystyle{ H = H_1 }[/math]</span> is a quantity such that there are infinitely many pairs of consecutive primes of distance at most <span style="opacity:.5" class="smj-container">[math]\displaystyle{ H }[/math]</span> apart.  Would like to be as small as possible (this is a primary goal of the Polymath8 project).</li>
+<li><span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span> is a quantity such that every admissible <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>-tuple has infinitely many translates which each contain at least two primes.  Would like to be as small as possible.  Improvements in <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span> lead to improvements in <span style="opacity:.5" class="smj-container">[math]\displaystyle{ H }[/math]</span>.  (The relationship is roughly of the form <span style="opacity:.5" class="smj-container">[math]\displaystyle{ H \sim k_0 \log k_0 }[/math]</span>; see the page on <a href="/polymath/index.php?title=Finding_narrow_admissible_tuples" title="Finding narrow admissible tuples">finding narrow admissible tuples</a>.)  More recent improvements on <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span> have come from solving a <a href="/polymath/index.php?title=Selberg_sieve_variational_problem" title="Selberg sieve variational problem">Selberg sieve variational problem</a>.</li>
+<li><span style="opacity:.5" class="smj-container">[math]\displaystyle{ \varpi }[/math]</span> is a technical parameter related to a specialized form of the <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Elliott%E2%80%93Halberstam_conjecture">Elliott-Halberstam conjecture</a>.  Would like to be as large as possible.  Improvements in <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \varpi }[/math]</span> lead to improvements in <span style="opacity:.5" class="smj-container">[math]\displaystyle{ k_0 }[/math]</span>, as described in the page on <a href="/polymath/index.php?title=Dickson-Hardy-Littlewood_theorems" title="Dickson-Hardy-Littlewood theorems">Dickson-Hardy-Littlewood theorems</a>. In more recent work, the single parameter <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \varpi }[/math]</span> is replaced by a pair <span style="opacity:.5" class="smj-container">[math]\displaystyle{ (\varpi,\delta) }[/math]</span> (in previous work we had <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \delta=\varpi }[/math]</span>).  These estimates are obtained in turn from Type I, Type II, and Type III estimates, as described at the page on <a href="/polymath/index.php?title=Distribution_of_primes_in_smooth_moduli" title="Distribution of primes in smooth moduli">distribution of primes in smooth moduli</a>.</li></ul>
+<h3><span class="mw-headline" id="Timeline_of_bounds">Timeline of bounds</span></h3>
+<p>A table of bounds as a function of time may be found at <a href="/polymath/index.php?title=Timeline_of_prime_gap_bounds" title="Timeline of prime gap bounds">timeline of prime gap bounds</a>. In this table, infinitesimal losses in <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \delta,\varpi }[/math]</span> are ignored.
+</p>
+<h2><span class="mw-headline" id="Polymath_threads">Polymath threads</span></h2>
+<ol><li><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/05/30/i-just-cant-resist-there-are-infinitely-many-pairs-of-primes-at-most-59470640-apart">I just can’t resist: there are infinitely many pairs of primes at most 59470640 apart</a>, Scott Morrison, 30 May 2013. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/06/03/the-prime-tuples-conjecture-sieve-theory-and-the-work-of-goldston-pintz-yildirim-motohashi-pintz-and-zhang/">The prime tuples conjecture, sieve theory, and the work of Goldston-Pintz-Yildirim, Motohashi-Pintz, and Zhang</a>, Terence Tao, 3 June 2013. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://polymathprojects.org/2013/06/04/polymath-proposal-bounded-gaps-between-primes/">Polymath proposal: bounded gaps between primes</a>, Terence Tao, 4 June 2013. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/06/04/online-reading-seminar-for-zhangs-bounded-gaps-between-primes/">Online reading seminar for Zhang’s “bounded gaps between primes”</a>, Terence Tao, 4 June 2013. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/06/05/more-narrow-admissible-sets/">More narrow admissible sets</a>, Scott Morrison, 5 June 2013.  <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/06/08/the-elementary-selberg-sieve-and-bounded-prime-gaps/">The elementary Selberg sieve and bounded prime gaps</a>, Terence Tao, 8 June 2013. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/06/10/a-combinatorial-subset-sum-problem-associated-with-bounded-prime-gaps/">A combinatorial subset sum problem associated with bounded prime gaps</a>, Terence Tao, 10 June 2013. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/06/11/further-analysis-of-the-truncated-gpy-sieve/">Further analysis of the truncated GPY sieve</a>, Terence Tao, 11 June 2013. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/06/12/estimation-of-the-type-i-and-type-ii-sums/">Estimation of the Type I and Type II sums</a>, Terence Tao, 12 June 2013. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/06/14/estimation-of-the-type-iii-sums/">Estimation of the Type III sums</a>, Terence Tao, 14 June 2013.  <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/06/18/a-truncated-elementary-selberg-sieve-of-pintz/">A truncated elementary Selberg sieve of Pintz</a>, Terence Tao, 18 June, 2013. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/06/22/bounding-short-exponential-sums-on-smooth-moduli-via-weyl-differencing/">Bounding short exponential sums on smooth moduli via Weyl differencing</a>, Terence Tao, 22 June, 2013. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/06/23/the-distribution-of-primes-in-densely-divisible-moduli/">The distribution of primes in densely divisible moduli</a>, Terence Tao, 23 June, 2013.  <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/06/30/bounded-gaps-between-primes-polymath8-a-progress-report/">Bounded gaps between primes (Polymath8) – a progress report</a>, Terence Tao, 30 June 2013. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/07/02/the-quest-for-narrow-admissible-tuples/">The quest for narrow admissible tuples</a>, Andrew Sutherland, 2 July 2013. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/07/07/the-distribution-of-primes-in-doubly-densely-divisible-moduli/">The distribution of primes in doubly densely divisible moduli</a>, Terence Tao, 7 July 2013. <i>Inactive</i>.</li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/07/27/an-improved-type-i-estimate/">An improved Type I estimate</a>, Terence Tao, 27 July 2013. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/08/17/polymath8-writing-the-paper/">Polymath8: writing the paper</a>, Terence Tao, 17 August 2013. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/09/02/polymath8-writing-the-paper-ii/">Polymath8: writing the paper, II</a>, Terence Tao, 2 September 2013. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/09/22/polymath8-writing-the-paper-iii/">Polymath8: writing the paper, III</a>, Terence Tao, 22 September 2013. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/10/15/polymath8-writing-the-paper-iv/">Polymath8: writing the paper, IV</a>, Terence Tao, 15 October 2013. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/11/17/polymath8-writing-the-first-paper-v-and-a-look-ahead/">Polymath8: Writing the first paper, V, and a look ahead</a>, Terence Tao, 17 November 2013. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/11/19/polymath8b-bounded-intervals-with-many-primes-after-maynard/">Polymath8b: Bounded intervals with many primes, after Maynard</a>, Terence Tao, 19 November 2013. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/11/22/polymath8b-ii-optimising-the-variational-problem-and-the-sieve/">Polymath8b, II: Optimising the variational problem and the sieve</a> Terence Tao, 22 November 2013. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/12/08/polymath8b-iii-numerical-optimisation-of-the-variational-problem-and-a-search-for-new-sieves/">Polymath8b, III: Numerical optimisation of the variational problem, and a search for new sieves</a>, Terence Tao, 8 December 2013. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2013/12/20/polymath8b-iv-enlarging-the-sieve-support-more-efficient-numerics-and-explicit-asymptotics/">Polymath8b, IV: Enlarging the sieve support, more efficient numerics, and explicit asymptotics</a>, Terence Tao, 20 December 2013. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2014/01/08/polymath8b-v-stretching-the-sieve-support-further/">Polymath8b, V: Stretching the sieve support further</a>, Terence Tao, 8 January 2014. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2014/01/17/polymath8b-vi-a-low-dimensional-variational-problem/">Polymath8b, VI: A low-dimensional variational problem</a>, Terence Tao, 17 January 2014. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2014/01/28/polymath8b-vii-using-the-generalised-elliott-halberstam-hypothesis-to-enlarge-the-sieve-support-yet-further/">Polymath8b, VII: Using the generalised Elliott-Halberstam hypothesis to enlarge the sieve support yet further</a>, Terence Tao, 28 January 2014. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2014/02/07/new-equidistribution-estimates-of-zhang-type-and-bounded-gaps-between-primes-and-a-retrospective/">“New equidistribution estimates of Zhang type, and bounded gaps between primes” – and a retrospective</a>, Terence Tao, 7 February 2013. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2014/02/09/polymath8b-viii-time-to-start-writing-up-the-results/">Polymath8b, VIII: Time to start writing up the results?</a>, Terence Tao, 9 February 2014. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2014/02/21/polymath8b-ix-large-quadratic-programs/">Polymath8b, IX: Large quadratic programs</a>, Terence Tao, 21 February 2014. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2014/04/14/polymath8b-x-writing-the-paper-and-chasing-down-loose-ends/">Polymath8b, X: Writing the paper, and chasing down loose ends</a>, Terence Tao, 14 April 2014. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2014/05/17/polymath-8b-xi-finishing-up-the-paper/">Polymath 8b, XI: Finishing up the paper</a>, Terence Tao, 17 May 2014.<i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2014/06/19/polymath8-wrapping-up/">Polymath8: wrapping up</a>, Terence Tao, 19 June 2014. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2014/07/20/variants-of-the-selberg-sieve-and-bounded-intervals-containing-many-primes/">Variants of the Selberg sieve, and bounded intervals containing many primes</a>, Terence Tao, 21 July 2014. <i>Inactive</i></li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2014/09/30/the-bounded-gaps-between-primes-polymath-project-a-retrospective/">The "bounded gaps between primes" Polymath project - a retrospective</a>, Terence Tao, 30 September 2014.  <b>Active</b></li></ol>
+<h2><span class="mw-headline" id="Writeup">Writeup</span></h2>
+<ul><li>Files for the submitted paper for the Polymath8a project may be found in <a rel="nofollow" class="external text" href="https://www.dropbox.com/sh/0xb4xrsx4qmua7u/AABLbLyNrYktSuGsKsXjfu37a/Revised%20version">this directory</a>.
+<ul><li>The compiled PDF for this paper is available <a rel="nofollow" class="external text" href="https://www.dropbox.com/sh/0xb4xrsx4qmua7u/AAAFh3ElzOp6jrt0MtLyQ01ca/Revised%20version/newgap.pdf">here</a>.</li>
+<li>The paper is now on the arXiv as "<a rel="nofollow" class="external text" href="http://arxiv.org/abs/1402.0811">New equidistribution estimates of Zhang type</a>".</li>
+<li>An older unabridged version of the paper may be found <a rel="nofollow" class="external text" href="http://arxiv.org/abs/1402.0811v2">here</a>.</li>
+<li>The initial referee report is <a rel="nofollow" class="external text" href="https://www.dropbox.com/sh/0xb4xrsx4qmua7u/AAANw1yXYBckm0Ao9aQEe-lKa/report1C.pdf">here</a>.</li>
+<li>The paper has appeared at Algebra &amp; Number Theory 8-9 (2014), 2067--2199.</li></ul></li>
+<li>Files for the draft paper for the Polymath8 retrospective may be found in <a rel="nofollow" class="external text" href="https://www.dropbox.com/sh/koxbhwvw1ysybk9/AAB1IAAjsb9kpyilhVRLLvH5a">this directory</a>.
+<ul><li>The compiled PDF for this paper is available <a rel="nofollow" class="external text" href="https://www.dropbox.com/sh/koxbhwvw1ysybk9/AADTJ4w3yegvgTut_Tsv0Sana/retrospective.pdf">here</a>.</li>
+<li>The paper is now on the arXiv as <a rel="nofollow" class="external text" href="http://arxiv.org/abs/1409.8361">"The "bounded gaps between primes" Polymath project - a retrospective</a>".</li>
+<li>The paper has appeared at <a rel="nofollow" class="external text" href="https://www.ems-ph.org/journals/newsletter/pdf/2014-12-94.pdf">Newsletter of the European Mathematics Society, December 2014, issue 94, 13--23</a>.</li></ul></li>
+<li>Files for the draft paper for the Polymath8b project may be found in <a rel="nofollow" class="external text" href="https://www.dropbox.com/sh/uyph1zjpcirtp9b/AAC-b6Eo8GRpUHlWsC-UlKuxa">this directory</a>.
+<ul><li>The compiled PDF for this paper is available <a rel="nofollow" class="external text" href="https://www.dropbox.com/s/85pt6mvzf5ghukw/newergap-submitted.pdf">here</a>.</li>
+<li>The paper is now on the arXiv as <a rel="nofollow" class="external text" href="http://arxiv.org/abs/1407.4897">Variants of the Selberg sieve, and bounded intervals containing many primes</a></li>
+<li>The paper is published at <a rel="nofollow" class="external text" href="http://www.resmathsci.com/content/1/1/12">Research in the Mathematical Sciences 2014, 1:12</a>.</li></ul></li></ul>
+<p>Here are the <a href="/polymath/index.php?title=Polymath8_grant_acknowledgments" title="Polymath8 grant acknowledgments">Polymath8 grant acknowledgments</a>.
+</p>
+<h2><span class="mw-headline" id="Code_and_data">Code and data</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://github.com/semorrison/polymath8">Hensely-Richards sequences</a>, Scott Morrison
+<ul><li><a rel="nofollow" class="external text" href="http://tqft.net/misc/finding%20k_0.nb">A mathematica notebook for finding k_0</a>, Scott Morrison</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/avi-levy/dhl">python implementation</a>, Avi Levy</li></ul></li>
+<li><a rel="nofollow" class="external text" href="http://www.opertech.com/primes/k-tuples.html">k-tuple pattern data</a>, Thomas J Engelsma
+<ul><li><a rel="nofollow" class="external text" href="https://perswww.kuleuven.be/~u0040935/k0graph.png">A graph of this data</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.opertech.com/primes/webdata/">Tuples giving this data</a></li></ul></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/vit-tucek/admissible_sets">Sifted sequences</a>, Vit Tucek</li>
+<li><a rel="nofollow" class="external text" href="http://sbseminar.wordpress.com/2013/05/30/i-just-cant-resist-there-are-infinitely-many-pairs-of-primes-at-most-59470640-apart/#comment-23555">Other sifted sequences</a>, Christian Elsholtz</li>
+<li><a rel="nofollow" class="external text" href="http://www.ams.org/journals/mcom/2001-70-236/S0025-5718-01-01348-5/S0025-5718-01-01348-5.pdf">Size of largest admissible tuples in intervals of length up to 1050</a>, Clark and Jarvis</li>
+<li><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/admissible_v0.1.tar">C implementation of the "greedy-greedy" algorithm</a>, Andrew Sutherland</li>
+<li><a rel="nofollow" class="external text" href="https://www.dropbox.com/sh/jjxi0jmcskx1xcz/iBBVwZTj-x">Dropbox for sequences</a>, pedant</li>
+<li><a rel="nofollow" class="external text" href="https://docs.google.com/spreadsheet/ccc?key=0Ao3urQ79oleSdEZhRS00X1FLQjM3UlJTZFRqd19ySGc&amp;usp=sharing">Spreadsheet for admissible sequences</a>, Vit Tucek</li>
+<li><a rel="nofollow" class="external text" href="http://www.cs.cmu.edu/~xfxie/project/admissible/admissibleV1.1.zip">Java code for optimising a given tuple V1.1</a>, xfxie</li>
+<li><a rel="nofollow" class="external text" href="https://math.mit.edu/~primegaps/MaynardMathematicaNotebook.txt">Mathematica Notebook for optimising M_k</a>, James Maynard</li>
+<li>Some <a href="/polymath/index.php?title=Notes_on_polytope_decomposition" title="Notes on polytope decomposition">notes on polytope decomposition</a></li>
+<li><a rel="nofollow" class="external text" href="https://math.mit.edu/~drew/ompadm_v0.5.tar">Multi-threaded admissibility testing for very large tuples</a>, Andrew Sutherland</li>
+<li><a rel="nofollow" class="external text" href="http://users.ugent.be/~ibogaert/KrylovMk/KrylovMk.pdf">Krylov method for lower bounding M_k</a>, Ignace Bogaert</li></ul>
+<h3><span class="mw-headline" id="Tuples_applet">Tuples applet</span></h3>
+<p>Here is <a rel="nofollow" class="external text" href="https://math.mit.edu/~primegaps/sieve.html?ktuple=632">a small javascript applet</a> that illustrates the process of sieving for an admissible 632-tuple of diameter 4680 (the sieved residue classes match the example in the paper when translated to [0,4680]). 
+</p><p>The same applet <a rel="nofollow" class="external text" href="https://math.mit.edu/~primegaps/sieve.html">can also be used to interactively create new admissible tuples</a>. The default sieve interval is [0,400], but you can change the diameter to any value you like by adding “?d=nnnn” to the URL (e.g. use <a rel="nofollow" class="external free" href="https://math.mit.edu/~primegaps/sieve.html?d=4680">https://math.mit.edu/~primegaps/sieve.html?d=4680</a> for diameter 4680). The applet will highlight a suggested residue class to sieve in green (corresponding to a greedy choice that doesn’t hit the end points), but you can sieve any classes you like.
+</p><p>You can also create sieving demos similar to the k=632 example above by specifying a list of residues to sieve. A longer but equivalent version of the “?ktuple=632″ URL is
+</p><p><a rel="nofollow" class="external free" href="https://math.mit.edu/~primegaps/sieve.html?d=4680&amp;r=1,1,4,3,2,8,2,14,13,8,29,31,33,28,6,49,21,47,58,35,57,44,1,55,50,57,9,91,87,45,89,50,16,19,122,114,151,66">https://math.mit.edu/~primegaps/sieve.html?d=4680&amp;r=1,1,4,3,2,8,2,14,13,8,29,31,33,28,6,49,21,47,58,35,57,44,1,55,50,57,9,91,87,45,89,50,16,19,122,114,151,66</a>
+</p><p>The numbers listed after “r=” are residue classes modulo increasing primes 2,3,5,7,…, omitting any classes that do not require sieving — the applet will automatically skip such primes (e.g. it skips 151 in the k=632 example).
+</p><p>A few caveats: You will want to run this on a PC with a reasonably wide display (say 1360 or greater), and it has only been tested on the current versions of Chrome and Firefox.
+</p>
+<h2><span class="mw-headline" id="Errata">Errata</span></h2>
+<p>Page numbers refer to the file linked to for the relevant paper.
+</p>
+<ol><li>Errata for Zhang's "<a rel="nofollow" class="external text" href="http://annals.math.princeton.edu/2014/179-3/p07">Bounded gaps between primes</a>"
+<ol><li>Page 5: In the first display, <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{E} }[/math]</span> should be multiplied by <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \mathcal{L}^{2k_0+2l_0} }[/math]</span>, because <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \lambda(n)^2 }[/math]</span> in (2.2) can be that large, cf. (2.4).</li>
+<li>Page 14: In the final display, the constraint <span style="opacity:.5" class="smj-container">[math]\displaystyle{ (n,d_1=1 }[/math]</span> should be <span style="opacity:.5" class="smj-container">[math]\displaystyle{ (n,d_1)=1 }[/math]</span>.</li>
+<li>Page 35: In the display after (10.5), the subscript on <span style="opacity:.5" class="smj-container">[math]\displaystyle{ {\mathcal J}_i }[/math]</span> should be deleted.</li>
+<li>Page 36: In the third display, a factor of <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \tau(q_0r)^{O(1)} }[/math]</span> may be needed on the right-hand side (but is ultimately harmless).</li>
+<li>Page 38: In the display after (10.14), <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \xi(r,a;q_1,b_1;q_2,b_2;n,k) }[/math]</span> should be <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \xi(r,a;k;q_1,b_1;q_2,b_2;n) }[/math]</span>.</li>
+<li>Page 42: In (12.3), <span style="opacity:.5" class="smj-container">[math]\displaystyle{ B }[/math]</span> should probably be 2.</li>
+<li>Page 47: In the third display after (13.13), the condition <span style="opacity:.5" class="smj-container">[math]\displaystyle{ l \in {\mathcal I}_i(h) }[/math]</span> should be <span style="opacity:.5" class="smj-container">[math]\displaystyle{ l \in {\mathcal I}_i(sh) }[/math]</span>.</li>
+<li>Page 49: In the top line, a comma in <span style="opacity:.5" class="smj-container">[math]\displaystyle{ (h_1,h_2;,n_1,n_2) }[/math]</span> should be deleted.</li>
+<li>Page 51: In the penultimate display, one of the two consecutive commas should be deleted.</li>
+<li>Page 54: Three displays before (14.17), <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \bar{r_2}(m_1+m_2)q }[/math]</span> should be <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \bar{r_2}(m_1+m_2)/q }[/math]</span>.</li></ol></li>
+<li>Errata for Motohashi-Pintz's "<a rel="nofollow" class="external text" href="http://arxiv.org/pdf/math/0602599v1.pdf">A smoothed GPY sieve</a>", version 1.  Update: the errata below have been corrected in the most recent arXiv version of the paper.
+<ol><li>Page 31: The estimation of (5.14) by (5.15) does not appear to be justified.  In the text, it is claimed that the second summation in (5.14) can be treated by a variant of (4.15); however, whereas (5.14) contains a factor of <span style="opacity:.5" class="smj-container">[math]\displaystyle{ (\log \frac{R}{|D|})^{2\ell+1} }[/math]</span>, (4.15) contains instead a factor of <span style="opacity:.5" class="smj-container">[math]\displaystyle{ (\log \frac{R/w}{|K|})^{2\ell+1} }[/math]</span> which is significantly smaller (K in (4.15) plays a similar role to D in (5.14)).  As such, the crucial gain of <span style="opacity:.5" class="smj-container">[math]\displaystyle{ \exp(-k\omega/3) }[/math]</span> in (4.15) does not seem to be available for estimating the second sum in (5.14).</li></ol></li>
+<li>Errata for Pintz's "<a rel="nofollow" class="external text" href="http://arxiv.org/pdf/1306.1497v1.pdf">A note on bounded gaps between primes</a>", version 1.  Update: the errata below have been corrected in subsequent versions of Pintz's paper.
+<ol><li>Page 7: In (2.39), the exponent of <span style="opacity:.5" class="smj-container">[math]\displaystyle{ 3a/2 }[/math]</span> should instead be <span style="opacity:.5" class="smj-container">[math]\displaystyle{ -5a/2 }[/math]</span> (it comes from dividing (2.38) by (2.37)).  This impacts the numerics for the rest of the paper.</li>
+<li>Page 8: The "easy calculation" that the relative error caused by discarding all but the smooth moduli appears to be unjustified, as it relies on the treatment of (5.14) in Motohashi-Pintz which has the issue pointed out in 2.1 above.</li></ol></li></ol>
+<h2><span class="mw-headline" id="Other_relevant_blog_posts">Other relevant blog posts</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://terrytao.wordpress.com/2008/11/19/marker-lecture-iii-small-gaps-between-primes/">Marker lecture III: “Small gaps between primes”</a>, Terence Tao, 19 Nov 2008.</li>
+<li><a rel="nofollow" class="external text" href="http://blogs.ethz.ch/kowalski/2009/01/22/the-goldston-pintz-yildirim-result-and-how-far-do-we-have-to-walk-to-twin-primes/">The Goldston-Pintz-Yildirim result, and how far do we have to walk to twin primes&#160;?</a>, Emmanuel Kowalski, 22 Jan 2009.</li>
+<li><a rel="nofollow" class="external text" href="http://www.math.columbia.edu/~woit/wordpress/?p=5865">Number Theory News</a>, Peter Woit, 12 May 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://golem.ph.utexas.edu/category/2013/05/bounded_gaps_between_primes.html">Bounded Gaps Between Primes</a>, Emily Riehl, 14 May 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://blogs.ethz.ch/kowalski/2013/05/21/bounded-gaps-between-primes/">Bounded gaps between primes!</a>, Emmanuel Kowalski, 21 May 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://blogs.ethz.ch/kowalski/2013/06/04/bounded-gaps-between-primes-some-grittier-details/">Bounded gaps between primes: some grittier details</a>, Emmanuel Kowalski, 4 June 2013.
+<ul><li><a rel="nofollow" class="external text" href="http://www.math.ethz.ch/~kowalski/zhang-notes.pdf">The slides from the talk mentioned in that post</a></li></ul></li>
+<li><a rel="nofollow" class="external text" href="http://aperiodical.com/2013/06/bound-on-prime-gaps-bound-decreasing-by-leaps-and-bounds/">Bound on prime gaps bound decreasing by leaps and bounds</a>, Christian Perfect, 8 June 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://blogs.ams.org/blogonmathblogs/2013/06/14/narrowing-the-gap/">Narrowing the Gap</a>, Brie Finegold, AMS Blog on Math Blogs, 14 June 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://blogs.ethz.ch/kowalski/2013/06/22/bounded-gaps-between-primes-the-dawn-of-some-enlightenment/">Bounded gaps between primes: the dawn of (some) enlightenment</a>, Emmanuel Kowalski, 22 June 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://blogs.ethz.ch/kowalski/2013/06/25/a-ternary-divisor-variation/">A ternary divisor variation</a>, Emmanuel Kowalski, 25 June 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://blogs.ethz.ch/kowalski/2013/09/09/conductors-of-one-variable-transforms-of-trace-functions/">Conductors of one-variable transforms of trace functions</a>, Emmanuel Kowalski, 9 September 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://gilkalai.wordpress.com/2013/09/20/polymath-8-a-success/">Polymath 8 – a Success!</a>, Gil Kalai, 20 September 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://blogs.ethz.ch/kowalski/2013/10/24/james-maynard-auteur-du-theoreme-de-lannee/">James Maynard, auteur du théorème de l’année</a>, Emmanuel Kowalski, 24 October 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://blogs.ethz.ch/kowalski/2013/12/08/reflections-on-reading-the-polymath8a-paper/">Reflections on reading the Polymath8(a) paper</a>, Emmanuel Kowalski, 8 December 2013.</li></ul>
+<h2><span class="mw-headline" id="MathOverflow">MathOverflow</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://mathoverflow.net/questions/131185/philosophy-behind-yitang-zhangs-work-on-the-twin-primes-conjecture">Philosophy behind Yitang Zhang’s work on the Twin Primes Conjecture</a>, 20 May 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://mathoverflow.net/questions/131825/a-technical-question-related-to-zhangs-result-of-bounded-prime-gaps">A technical question related to Zhang’s result of bounded prime gaps</a>, 25 May 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://mathoverflow.net/questions/132452/how-does-yitang-zhang-use-cauchys-inequality-and-theorem-2-to-obtain-the-error">How does Yitang Zhang use Cauchy’s inequality and Theorem 2 to obtain the error term coming from the <span style="opacity:.5" class="smj-container">[math]\displaystyle{ S_2 }[/math]</span> sum</a>, 31 May 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://mathoverflow.net/questions/132632/tightening-zhangs-bound-closed">Tightening Zhang’s bound</a>, 3 June 2013.
+<ul><li><a rel="nofollow" class="external text" href="http://meta.mathoverflow.net/discussion/1605/tightening-zhangs-bound/">Metathread for this post</a></li></ul></li>
+<li><a rel="nofollow" class="external text" href="http://mathoverflow.net/questions/132731/does-zhangs-theorem-generalize-to-3-or-more-primes-in-an-interval-of-fixed-len">Does Zhang’s theorem generalize to 3 or more primes in an interval of fixed length?</a>, 3 June 2013.</li></ul>
+<h2><span class="mw-headline" id="Wikipedia_and_other_references">Wikipedia and other references</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Bessel_function">Bessel function</a></li>
+<li><a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Bombieri-Vinogradov_theorem">Bombieri-Vinogradov theorem</a></li>
+<li><a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Brun%E2%80%93Titchmarsh_theorem">Brun-Titchmarsh theorem</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.encyclopediaofmath.org/index.php/Dispersion_method">Dispersion method</a></li>
+<li><a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Prime_gap">Prime gap</a></li>
+<li><a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Second_Hardy%E2%80%93Littlewood_conjecture">Second Hardy-Littlewood conjecture</a></li>
+<li><a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Twin_prime_conjecture">Twin prime conjecture</a></li></ul>
+<h2><span class="mw-headline" id="Recent_papers_and_notes">Recent papers and notes</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1304.3199">On the exponent of distribution of the ternary divisor function</a>, Étienne Fouvry, Emmanuel Kowalski, Philippe Michel, 11 Apr 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://www.renyi.hu/~revesz/ThreeCorr0grey.pdf">On the optimal weight function in the Goldston-Pintz-Yildirim method for finding small gaps between consecutive primes</a>, Bálint Farkas, János Pintz and Szilárd Gy. Révész, To appear in: Paul Turán Memorial Volume: Number Theory, Analysis and Combinatorics, de Gruyter, Berlin, 2013. 23 pages. <a rel="nofollow" class="external text" href="http://arxiv.org/abs/1306.2133">arXiv</a></li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1305.0348">The existence of small prime gaps in subsets of the integers</a>, Jacques Benatar, 2 May, 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://annals.math.princeton.edu/2014/179-3/p07">Bounded gaps between primes</a>, Yitang Zhang, Annals of Mathematics 179 (2014), 1121-1174. Released 21 May, 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1305.6289">Polignac Numbers, Conjectures of Erdös on Gaps between Primes, Arithmetic Progressions in Primes, and the Bounded Gap Conjecture</a>, Janos Pintz, 27 May 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1305.6369">A poor man's improvement on Zhang's result: there are infinitely many prime gaps less than 60 million</a>, T. S. Trudgian, 28 May 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://www.math.ethz.ch/~kowalski/friedlander-iwaniec-sum.pdf">The Friedlander-Iwaniec sum</a>, É. Fouvry, E. Kowalski, Ph. Michel., May 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://www.aimath.org/news/primegaps70m/">Zhang's Theorem on Bounded Gaps Between Primes</a>, Dan Goldston, May? 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://terrytao.files.wordpress.com/2013/06/bounds.pdf">Notes on Zhang's prime gaps paper</a>, Terence Tao, 1 June 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1306.0511">Bounded prime gaps in short intervals</a>, Johan Andersson, 3 June 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1306.0948">Bounded length intervals containing two primes and an almost-prime II</a>, James Maynard, 5 June 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1306.1497">A note on bounded gaps between primes</a>, Janos Pintz, 6 June 2013.</li>
+<li><a rel="nofollow" class="external text" href="https://sites.google.com/site/avishaytal/files/Primes.pdf">Lower Bounds for Admissible k-tuples</a>, Avishay Tal, 15 June 2013.</li>
+<li>Notes in a truncated elementary Selberg sieve (<a rel="nofollow" class="external text" href="http://terrytao.files.wordpress.com/2013/06/file-1.pdf">Section 1</a>, <a rel="nofollow" class="external text" href="http://terrytao.files.wordpress.com/2013/06/file-2.pdf">Section 2</a>, <a rel="nofollow" class="external text" href="http://terrytao.files.wordpress.com/2013/06/file-3.pdf">Section 3</a>), Janos Pintz, 18 June 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://www.renyi.hu/~gharcos/gaps.pdf">Lecture notes: bounded gaps between primes</a>, Gergely Harcos, 1 Oct 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/PrimeGaps.pdf">New bounds on gaps between primes</a>, Andrew Sutherland, 17 Oct 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://www.dms.umontreal.ca/~andrew/CurrentEventsArticle.pdf">Bounded gaps between primes</a>, Andrew Granville, 29 Oct 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://www.dms.umontreal.ca/~andrew/CEBBrochureFinal.pdf">Primes in intervals of bounded length</a>, Andrew Granville, 19 Nov 2013.  <a rel="nofollow" class="external text" href="http://arxiv.org/abs/1410.8400">Uploaded to arXiv</a>, 30 Oct 2014.</li>
+<li><a rel="nofollow" class="external text" href="http://annals.math.princeton.edu/articles/8772">Small gaps between primes</a>, James Maynard, 19 Nov 2013.  To appear, Annals Math.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1311.5319">A note on the theorem of Maynard and Tao</a>, Tristan Freiberg, 21 Nov 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1311.7003">Consecutive primes in tuples</a>,  William D. Banks, Tristan Freiberg, and Caroline L. Turnage-Butterbaugh, 27 Nov 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1312.2926">Close encounters among the primes</a>, John Friedlander, Henryk Iwaniec, 10 Dec 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1401.7555">A Friendly Intro to Sieves with a Look Towards Recent Progress on the Twin Primes Conjecture</a>, David Lowry-Duda, 25 Jan, 2014.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1401.6614">The twin prime conjecture</a>, Yoichi Motohashi, 26 Jan 2014.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1401.6677">Bounded gaps between primes in Chebotarev sets</a>, Jesse Thorner, 26 Jan 2014.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1402.4849">Bounded gaps between primes</a>, Ben Green, 19 Feb 2014.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1403.4527">Bounded gaps between primes of the special form</a>, Hongze Li, Hao Pan, 19 Mar 2014.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1403.5808">Bounded gaps between primes in number fields and function fields</a>, Abel Castillo, Chris Hall, Robert J. Lemke Oliver, Paul Pollack, Lola Thompson, 23 Mar 2014.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1404.4007">Bounded gaps between primes with a given primitive root</a>, Paul Pollack, 15 Apr 2014.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1404.5094">On limit points of the sequence of normalized prime gaps</a>, William D. Banks, Tristan Freiberg, and James Maynard, 21 Apr 2014.</li>
+<li><a rel="nofollow" class="external text" href="http://smf4.emath.fr/Publications/Gazette/2014/140/smf_gazette_140_19-31.pdf">Petits écarts entre nombres premiers et polymath&#160;: une nouvelle manière de faire de la recherche en mathématiques?</a>, R. de la Breteche, Gazette des Mathématiciens, Soc. Math. France, Avril 2014, 19--31.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1405.2593">Dense clusters of primes in subsets</a>, James Maynard, 11 May 2014.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1405.4444">Arithmetic functions at consecutive shifted primes</a>, Paul Pollack, Lola Thompson, 17 May 2014.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1406.2658">On the ratio of consecutive gaps between primes</a>, Janos Pintz, 10 Jun 2014.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1407.1747">Bounded gaps between primes in special sequences</a>, Lynn Chua, Soohyun Park, Geoffrey D. Smith, 8 Jul 2014.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1407.2213">On the distribution of gaps between consecutive primes</a>, Janos Pintz, 8 Jul 2014 (first version), 24 Sep 2014 (second version).</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1408.5110">Large gaps between primes</a>, James Maynard, 21 Aug 2014.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1410.8198">Best possible densities of Dickson m-tuples, as a consequence of Zhang-Maynard-Tao</a>, Andrew Granville, Daniel M. Kane, Dimitris Koukoulopoulos, Robert J. Lemke Oliver, 29 Oct, 2014.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1411.2989">Gaps between Primes in Beatty Sequences</a>, Roger Baker, Liangyi Zhao, 11 Nov 2014.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1501.06690">On the Density of Weak Polignac Numbers</a>, Stijn Hanson, 27 Jan 2015.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1504.06860">On a conjecture of Erdős, Pólya and Turán on consecutive gaps between primes</a>, Janos Pintz, 26 Apr 2015.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1505.01815">Bounded intervals containing many primes</a>, R. C. Baker, A. J. Irving, 7 May 2015.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1505.03104">Goldbach versus de Polignac numbers</a>, Jacques Benatar, 12 May 2015.</li>
+<li><a rel="nofollow" class="external text" href="http://www.ams.org/notices/201506/rnoti-p660.pdf">Prime numbers: A much needed gap is finally found</a>, John Friedlander, June 2015.</li>
+<li><a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/PrimeGapsOberwolfach1.pdf">Sieve theory and small gaps between primes: Introduction</a>, <a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/PrimeGapsOberwolfach2.pdf">A variational problem</a>, <a rel="nofollow" class="external text" href="http://math.mit.edu/~drew/PrimeGapsOberwolfach3.pdf">Narrow admissible tuples</a>  Andrew V. Sutherland, July 2015.</li>
+<li>"Small gaps between the set of primes and products of two primes", Keiju Sono, August 2015.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1509.01564">Patterns of primes in arithmetic progressions</a>, Janos Pintz, 4 Sep 2015.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1510.04577">A note on the distribution of normalized prime gaps</a>, Janos Pintz, 15 Oct 2015.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1510.08054">Limit points and long gaps between primes</a>, Roger Baker, Tristan Freiberg, 27 Oct 2015.</li>
+<li><a rel="nofollow" class="external text" href="http://www.mast.queensu.ca/~akshaa/gaussian.pdf">Bounded gaps between Gaussian primes</a>, Akshaa Vatwani, 3 Nov 2015.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1512.01470">General divisor functions in arithmetic progressions to large moduli</a>, Fei Wei, Boqing Xue, Yitang Zhang, Dec 2015.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1512.03936">Large gaps between consecutive primes containing perfect k-th powers of prime numbers</a>, Helmut Maier, Michael Rassias, 12 Dec 2015.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1604.01761">Increasing and decreasing prime gaps</a>, Daniel Shiu, 6 Apr 2016.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1604.06903">Golomb's conjecture on prime gaps</a>, Christian Elsholtz, 23 Apr 2016.</li>
+<li>Factors of Carmichael numbers and a weak k-tuples conjecture, Thomas Wright, J. Aust. Math. Soc. 100 (2016), 421-429.</li>
+<li><a rel="nofollow" class="external text" href="https://arxiv.org/abs/1605.02920">Small gaps between the set of products of at most two primes</a>, Keiju Sono, May 10 2016.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1607.03887">Bounded Gaps Between Products of Distinct Primes</a>, Yang Liu, Peter S. Park, Zhuo Qun Song, Jul 14 2016.</li>
+<li><a rel="nofollow" class="external text" href="https://arxiv.org/abs/1705.08034">Bounded gaps between primes and the length spectra of arithmetic hyperbolic 3-orbifolds</a>, Benjamin Linowitz, D. B. McReynolds, Paul Pollack, Lola Thompson, May 24, 2017.</li>
+<li><a rel="nofollow" class="external text" href="https://arxiv.org/abs/1707.05437">Bounded gaps between primes in short intervals</a>, Ryan Alweiss, Sammy Luo, Jul 18 2017.</li>
+<li><a rel="nofollow" class="external text" href="https://arxiv.org/abs/1711.01949">Bounded gaps between product of two primes in number fields</a>, Pranendu Darbar, Anirban Mukhopadhyay, Nov 6 2017.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1802.10327">Short intervals containing a prescribed number of primes</a>, Daniele Mastrostefano, Mar 1 2018.</li>
+<li><a rel="nofollow" class="external text" href="http://arxiv.org/abs/1806.09034">Almost primes in various settings</a>, Paweł Lewulis, Jun 23 2018.</li>
+<li><a rel="nofollow" class="external text" href="https://arxiv.org/abs/1907.02246">On the largest square divisor of shifted primes</a>, Jori Merikoski, Jul 4 2019.</li></ul>
+<h2><span class="mw-headline" id="Media">Media</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://www.nature.com/news/first-proof-that-infinitely-many-prime-numbers-come-in-pairs-1.12989">First proof that infinitely many prime numbers come in pairs</a>, Maggie McKee, Nature, 14 May 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://www.newscientist.com/article/dn23535-proof-that-an-infinite-number-of-primes-are-paired.html">Proof that an infinite number of primes are paired</a>, Lisa Grossman, New Scientist, 14 May 2013.</li>
+<li><a rel="nofollow" class="external text" href="https://www.simonsfoundation.org/features/science-news/unheralded-mathematician-bridges-the-prime-gap/">Unheralded Mathematician Bridges the Prime Gap</a>, Erica Klarreich, Simons science news, 20 May 2013.
+<ul><li>The article also appeared on Wired as "<a rel="nofollow" class="external text" href="http://www.wired.com/wiredscience/2013/05/twin-primes/">Unknown Mathematician Proves Elusive Property of Prime Numbers</a>".</li></ul></li>
+<li><a rel="nofollow" class="external text" href="http://www.slate.com/articles/health_and_science/do_the_math/2013/05/yitang_zhang_twin_primes_conjecture_a_huge_discovery_about_prime_numbers.html">The Beauty of Bounded Gaps</a>, Jordan Ellenberg, Slate, 22 May 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://www.newscientist.com/article/dn23644">Game of proofs boosts prime pair result by millions</a>, Jacob Aron, New Scientist, 4 June 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://www.lemonde.fr/sciences/article/2013/06/24/l-union-fait-la-force-des-mathematiciens_3435624_1650684.html">L'union fait la force des mathématiciens</a>, Philippe Pajot, Le Monde, 24 June, 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://blogs.discovermagazine.com/crux/2013/07/10/primal-madness-mathematicians-hunt-for-twin-prime-numbers/">Primal Madness: Mathematicians’ Hunt for Twin Prime Numbers</a>, Amir Aczel, Discover Magazine, 10 July, 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://nautil.us/issue/5/fame/the-twin-prime-hero">The Twin Prime Hero</a>, Michael Segal, Nautilus, Issue 005, 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://news.anu.edu.au/2013/11/19/prime-time/">Prime Time</a>, Casey Hamilton, Australian National University, 19 November 2013.</li>
+<li><a rel="nofollow" class="external text" href="https://www.simonsfoundation.org/quanta/20131119-together-and-alone-closing-the-prime-gap/">Together and Alone, Closing the Prime Gap</a>, Erica Klarreich, Quanta, 19 November 2013.
+<ul><li>The article also appeared on Wired as "<a rel="nofollow" class="external text" href="http://www.wired.com/wiredscience/2013/11/prime/">Sudden Progress on Prime Number Problem Has Mathematicians Buzzing</a>".</li>
+<li><a rel="nofollow" class="external text" href="http://science.slashdot.org/story/13/11/20/1256229/mathematicians-team-up-to-close-the-prime-gap">Mathematicians Team Up To Close the Prime Gap</a>, Slashdot, 20 November 2013.</li></ul></li>
+<li><a rel="nofollow" class="external text" href="http://www.spektrum.de/alias/mathematik/ein-grosser-schritt-zum-beweis-der-primzahlzwillingsvermutung/1216488">Ein großer Schritt zum Beweis der Primzahlzwillingsvermutung</a>, Hans Engler, Spektrum, 13 December 2013.</li>
+<li><a rel="nofollow" class="external text" href="http://phys.org/news/2014-01-mathematical-puzzle-unraveled.html">An old mathematical puzzle soon to be unraveled?</a>, Benjamin Augereau, Phys.org, 15 January 2014.</li>
+<li><a rel="nofollow" class="external text" href="http://www.spektrum.de/alias/zahlentheorie/neuer-durchbruch-auf-dem-weg-zur-primzahlzwillingsvermutung/1222001">Neuer Durchbruch auf dem Weg zur Primzahlzwillingsvermutung</a>, Christoph Poppe, Spektrum, 30 January 2014.</li>
+<li><a rel="nofollow" class="external text" href="http://news.cnet.com/8301-17938_105-57618696-1/yitang-zhang-a-prime-number-proof-and-a-world-of-persistence/">Yitang Zhang: A prime-number proof and a world of persistence</a>, Leslie Katz, CNET, February 12, 2014.</li>
+<li><a rel="nofollow" class="external text" href="http://podacademy.org/podcasts/maths-isnt-standing-still/">Maths isn’t standing still</a>, Adam Smith and Vicky Neale, Pod Academy, March 3, 2014.</li>
+<li><a rel="nofollow" class="external text" href="https://www.quantamagazine.org/20141210-prime-gap-grows-after-decades-long-lull/">Prime Gap Grows After Decades-Long Lull</a>, Erica Klarreich, Quanta, Dec 10, 2014.</li>
+<li><a rel="nofollow" class="external text" href="http://www.zalafilms.com/films/countingindex.html">Counting from infinity: Yitang Zhang and the twin prime conjecture</a> (Documentary), George Csicsery, released Jan 2015.</li>
+<li><a rel="nofollow" class="external text" href="http://www.newyorker.com/magazine/2015/02/02/pursuit-beauty">The Pursuit of Beauty</a>, Alec Wilkinson, New Yorker, Feb 2 2015.
+<ul><li><a rel="nofollow" class="external text" href="http://video.newyorker.com/watch/annals-of-ideas-yitang-zhang-s-discovery-2015-01-28">Yitang Zhang's discovery</a> (Video), Alec Wilkinson, New Yorker, Jan 28, 2015.</li></ul></li>
+<li><a rel="nofollow" class="external text" href="http://digitaleditions.walsworthprintgroup.com/publication/?i=247647&amp;p=16">Prime Progress Invigorates Math Minds</a>, Katherine Merow, MAA Focus, February/March 2015.</li>
+<li><a rel="nofollow" class="external text" href="http://www.ams.org/notices/201506/rnoti-p660.pdf">Prime Numbers: A Much Needed Gap Is Finally Found</a>, John Friedlander, Notices of the AMS, June/July 2015.</li></ul>
+<h2><span class="mw-headline" id="Bibliography">Bibliography</span></h2>
+<p>Additional links for some of these references (e.g. to arXiv versions) would be greatly appreciated.
+</p>
+<ul><li>[BFI1986] Bombieri, E.; Friedlander, J. B.; Iwaniec, H. Primes in arithmetic progressions to large moduli. Acta Math. 156 (1986), no. 3-4, 203–251. <a rel="nofollow" class="external text" href="http://www.ams.org/mathscinet-getitem?mr=834613">MathSciNet</a> <a rel="nofollow" class="external text" href="http://link.springer.com/article/10.1007%2FBF02399204">Article</a></li>
+<li>[BFI1987] Bombieri, E.; Friedlander, J. B.; Iwaniec, H. Primes in arithmetic progressions to large moduli. II. Math. Ann. 277 (1987), no. 3, 361–393. <a rel="nofollow" class="external text" href="http://www.ams.org/mathscinet-getitem?mr=891581">MathSciNet</a> <a rel="nofollow" class="external text" href="https://eudml.org/doc/164255">Article</a></li>
+<li>[BFI1989] Bombieri, E.; Friedlander, J. B.; Iwaniec, H. Primes in arithmetic progressions to large moduli. III. J. Amer. Math. Soc. 2 (1989), no. 2, 215–224. <a rel="nofollow" class="external text" href="http://www.ams.org/mathscinet-getitem?mr=976723">MathSciNet</a> <a rel="nofollow" class="external text" href="http://www.ams.org/journals/jams/1989-02-02/S0894-0347-1989-0976723-6/">Article</a></li>
+<li>[B1995] Jörg Brüdern, Einführung in die analytische Zahlentheorie, Springer Verlag 1995</li>
+<li>[CJ2001] Clark, David A.; Jarvis, Norman C.; Dense admissible sequences. Math. Comp. 70 (2001), no. 236, 1713–1718 <a rel="nofollow" class="external text" href="http://www.ams.org/mathscinet-getitem?mr=1836929">MathSciNet</a> <a rel="nofollow" class="external text" href="http://www.ams.org/journals/mcom/2001-70-236/S0025-5718-01-01348-5/home.html">Article</a></li>
+<li>[FI1981] Fouvry, E.; Iwaniec, H. On a theorem of Bombieri-Vinogradov type., Mathematika 27 (1980), no. 2, 135–152 (1981). <a rel="nofollow" class="external text" href="http://www.ams.org/mathscinet-getitem?mr=610700">MathSciNet</a> <a rel="nofollow" class="external text" href="http://www.math.ethz.ch/~kowalski/fouvry-iwaniec-on-a-theorem.pdf">Article</a></li>
+<li>[FI1983] Fouvry, E.; Iwaniec, H. Primes in arithmetic progressions. Acta Arith. 42 (1983), no. 2, 197–218. <a rel="nofollow" class="external text" href="http://www.ams.org/mathscinet-getitem?mr=719249">MathSciNet</a> <a rel="nofollow" class="external text" href="http://matwbn.icm.edu.pl/ksiazki/aa/aa42/aa4226.pdf">Article</a></li>
+<li>[FI1985] Friedlander, John B.; Iwaniec, Henryk, Incomplete Kloosterman sums and a divisor problem.  With an appendix by Bryan J. Birch and Enrico Bombieri. Ann. of Math. (2) 121 (1985), no. 2, 319–350. <a rel="nofollow" class="external text" href="http://www.ams.org/mathscinet-getitem?mr=786351">MathSciNet</a> <a rel="nofollow" class="external text" href="http://www.jstor.org/stable/1971175">JSTOR</a> <a rel="nofollow" class="external text" href="http://www.jstor.org/stable/1971176">Appendix</a></li>
+<li>[GPY2009] Goldston, Daniel A.; Pintz, János; Yıldırım, Cem Y. Primes in tuples. I. Ann. of Math. (2) 170 (2009), no. 2, 819–862.  <a rel="nofollow" class="external text" href="http://arxiv.org/abs/math/0508185">arXiv</a> <a rel="nofollow" class="external text" href="http://www.ams.org/mathscinet-getitem?mr=2552109">MathSciNet</a></li>
+<li>[GR1998] Gordon, Daniel M.; Rodemich, Gene Dense admissible sets. Algorithmic number theory (Portland, OR, 1998), 216–225, Lecture Notes in Comput. Sci., 1423, Springer, Berlin, 1998. <a rel="nofollow" class="external text" href="http://www.ams.org/mathscinet-getitem?mr=1726073">MathSciNet</a> <a rel="nofollow" class="external text" href="http://www.ccrwest.org/gordon/ants.pdf">Article</a></li>
+<li>[GR1980] S. W. Graham, C. J. Ringrose, Lower bounds for least quadratic nonresidues. Analytic number theory (Allerton Park, IL, 1989), 269–309, Progr. Math., 85, Birkhäuser Boston, Boston, MA, 1990. <a rel="nofollow" class="external text" href="http://www.ams.org/mathscinet-getitem?mr=1084186">MathSciNet</a> <a rel="nofollow" class="external text" href="http://link.springer.com/content/pdf/10.1007%2F978-1-4612-3464-7_18.pdf">Article</a></li>
+<li>[HB1978] D. R. Heath-Brown, Hybrid bounds for Dirichlet L-functions. Invent. Math. 47 (1978), no. 2, 149–170. <a rel="nofollow" class="external text" href="http://www.ams.org/mathscinet-getitem?mr=485727">MathSciNet</a> <a rel="nofollow" class="external text" href="http://link.springer.com/article/10.1007%2FBF01578069">Article</a></li>
+<li>[HB1986] D. R. Heath-Brown, The divisor function d3(n) in arithmetic progressions.  Acta Arith. 47 (1986), no. 1, 29–56. <a rel="nofollow" class="external text" href="http://www.ams.org/mathscinet-getitem?mr=866901">MathSciNet</a> <a rel="nofollow" class="external text" href="http://matwbn.icm.edu.pl/ksiazki/aa/aa47/aa4713.pdf">Article</a></li>
+<li>[HR1973] Hensley, Douglas; Richards, Ian, On the incompatibility of two conjectures concerning primes. Analytic number theory (Proc. Sympos. Pure Math., Vol. XXIV, St. Louis Univ., St. Louis, Mo., 1972), pp. 123–127. Amer. Math. Soc., Providence, R.I., 1973. <a rel="nofollow" class="external text" href="http://www.ams.org/mathscinet-getitem?mr=340194">MathSciNet</a> <a rel="nofollow" class="external text" href="http://www.ams.org/journals/bull/1974-80-03/S0002-9904-1974-13434-8/S0002-9904-1974-13434-8.pdf">Article</a></li>
+<li>[HR1973b] Hensley, Douglas; Richards, Ian, Primes in intervals.  Acta Arith. 25 (1973/74), 375–391. <a rel="nofollow" class="external text" href="http://www.ams.org/mathscinet-getitem?mr=396440">MathSciNet</a> <a rel="nofollow" class="external text" href="https://eudml.org/doc/205282">Article</a></li>
+<li>[MP2008] Motohashi, Yoichi; Pintz, János A smoothed GPY sieve. Bull. Lond. Math. Soc. 40 (2008), no. 2, 298–310.  <a rel="nofollow" class="external text" href="http://arxiv.org/abs/math/0602599">arXiv</a> <a rel="nofollow" class="external text" href="http://www.ams.org/mathscinet-getitem?mr=2414788">MathSciNet</a> <a rel="nofollow" class="external text" href="http://blms.oxfordjournals.org/content/40/2/298">Article</a></li>
+<li>[MV1973] Montgomery, H. L.; Vaughan, R. C. The large sieve. Mathematika 20 (1973), 119–134. <a rel="nofollow" class="external text" href="http://www.ams.org/mathscinet-getitem?mr=374060">MathSciNet</a> <a rel="nofollow" class="external text" href="http://journals.cambridge.org/action/displayAbstract?fromPage=online&amp;aid=6718308">Article</a></li>
+<li>[M1978] Hugh L. Montgomery, The analytic principle of the large sieve. Bull. Amer. Math. Soc. 84 (1978), no. 4, 547–567. <a rel="nofollow" class="external text" href="http://www.ams.org/mathscinet-getitem?mr=466048">MathSciNet</a> <a rel="nofollow" class="external text" href="http://projecteuclid.org/DPubS?service=UI&amp;version=1.0&amp;verb=Display&amp;handle=euclid.bams/1183540922">Article</a></li>
+<li>[R1974] Richards, Ian On the incompatibility of two conjectures concerning primes; a discussion of the use of computers in attacking a theoretical problem. Bull. Amer. Math. Soc. 80 (1974), 419–438.  <a rel="nofollow" class="external text" href="http://www.ams.org/mathscinet-getitem?mr=337832">MathSciNet</a> <a rel="nofollow" class="external text" href="http://www.ams.org/journals/bull/1974-80-03/S0002-9904-1974-13434-8/home.html">Article</a></li>
+<li>[S1961] Schinzel, A. Remarks on the paper "Sur certaines hypothèses concernant les nombres premiers". Acta Arith. 7 1961/1962 1–8. <a rel="nofollow" class="external text" href="http://www.ams.org/mathscinet-getitem?mr=130203">MathSciNet</a> <a rel="nofollow" class="external text" href="http://matwbn.icm.edu.pl/ksiazki/aa/aa7/aa711.pdf">Article</a></li>
+<li>[S2007] K. Soundararajan, Small gaps between prime numbers: the work of Goldston-Pintz-Yıldırım. Bull. Amer. Math. Soc. (N.S.) 44 (2007), no. 1, 1–18. <a rel="nofollow" class="external text" href="http://www.ams.org/mathscinet-getitem?mr=2265008">MathSciNet</a> <a rel="nofollow" class="external text" href="http://www.ams.org/journals/bull/2007-44-01/S0273-0979-06-01142-6/">Article</a> <a rel="nofollow" class="external text" href="http://arxiv.org/abs/math/0605696">arXiv</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260815115428
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.065 seconds
+Real time usage: 0.098 seconds
+Preprocessor visited node count: 294/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 4721/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key newpolymath2:pcache:idhash:1554-0!canonical and timestamp 20260815115428 and revision id 11042. Rendering was triggered because: page-view
+ -->
+</div>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://michaelnielsen.org/polymath/index.php?title=Bounded_gaps_between_primes&amp;oldid=11042">https://michaelnielsen.org/polymath/index.php?title=Bounded_gaps_between_primes&amp;oldid=11042</a>"</div></div>
+				<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+				<!-- end content -->
+				<div class="visualClear"></div>
+			</div>
+		</div>
+		<div class="visualClear"></div>
+	</div>
+	<div id="column-one" >
+		<h2>Navigation menu</h2>
+		<div role="navigation" class="portlet" id="p-cactions" aria-labelledby="p-cactions-label">
+			<h3 id="p-cactions-label" >Page actions</h3>
+			<div class="pBody">
+				<ul >
+				<li id="ca-nstab-main" class="selected mw-list-item"><a href="/polymath/index.php?title=Bounded_gaps_between_primes" title="View the content page [c]" accesskey="c">Page</a></li><li id="ca-talk" class="mw-list-item"><a href="/polymath/index.php?title=Talk:Bounded_gaps_between_primes" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li><li id="ca-view" class="selected mw-list-item"><a href="/polymath/index.php?title=Bounded_gaps_between_primes">Read</a></li><li id="ca-viewsource" class="mw-list-item"><a href="/polymath/index.php?title=Bounded_gaps_between_primes&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li><li id="ca-history" class="mw-list-item"><a href="/polymath/index.php?title=Bounded_gaps_between_primes&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				
+				</ul>
+			</div>
+		</div>
+		
+<div role="navigation" class="portlet mw-portlet mw-portlet-cactions-mobile"
+	id="p-cactions-mobile" aria-labelledby="p-cactions-mobile-label">
+	<h3 id="p-cactions-mobile-label" >Page actions</h3>
+	<div class="pBody">
+		<ul ><li id="main-mobile" class="selected mw-list-item"><a href="/polymath/index.php?title=Bounded_gaps_between_primes" title="Page">Page</a></li><li id="talk-mobile" class="mw-list-item"><a href="/polymath/index.php?title=Talk:Bounded_gaps_between_primes" title="Discussion">Discussion</a></li><li id="ca-more" class="mw-list-item"><a href="#p-cactions">More</a></li><li id="ca-tools" class="mw-list-item"><a href="#p-tb" title="Tools">Tools</a></li></ul>
+		
+	</div>
+</div>
+
+		<div role="navigation" class="portlet" id="p-personal" aria-labelledby="p-personal-label">
+			<h3 id="p-personal-label" >Personal tools</h3>
+			<div class="pBody">
+				<ul >
+				<li id="pt-login" class="mw-list-item"><a href="/polymath/index.php?title=Special:UserLogin&amp;returnto=Bounded+gaps+between+primes" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="portlet" id="p-logo" role="banner">
+			<a href="/polymath/index.php?title=Main_Page" class="mw-wiki-logo"></a>
+		</div>
+		<div id="sidebar">
+		
+<div role="navigation" class="portlet mw-portlet mw-portlet-navigation"
+	id="p-navigation" aria-labelledby="p-navigation-label">
+	<h3 id="p-navigation-label" >Navigation</h3>
+	<div class="pBody">
+		<ul ><li id="n-mainpage-description" class="mw-list-item"><a href="/polymath/index.php?title=Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges" class="mw-list-item"><a href="/polymath/index.php?title=Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage" class="mw-list-item"><a href="/polymath/index.php?title=Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help-mediawiki" class="mw-list-item"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">Help about MediaWiki</a></li></ul>
+		
+	</div>
+</div>
+
+		<div role="search" class="portlet" id="p-search">
+			<h3 id="p-search-label" ><label for="searchInput">Search</label></h3>
+			<div class="pBody" id="searchBody">
+				<form action="/polymath/index.php" id="searchform"><input type="hidden" value="Special:Search" name="title"><input type="search" name="search" placeholder="Search Polymath Wiki" aria-label="Search Polymath Wiki" autocapitalize="sentences" title="Search Polymath Wiki [f]" accesskey="f" id="searchInput"><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" class="searchButton" id="searchButton"> <input type="submit" name="fulltext" value="Search" title="Search the pages for this text" class="searchButton mw-fallbackSearchButton" id="mw-searchButton"></form>
+			</div>
+		</div>
+		
+<div role="navigation" class="portlet mw-portlet mw-portlet-tb"
+	id="p-tb" aria-labelledby="p-tb-label">
+	<h3 id="p-tb-label" >Tools</h3>
+	<div class="pBody">
+		<ul ><li id="t-whatlinkshere" class="mw-list-item"><a href="/polymath/index.php?title=Special:WhatLinksHere/Bounded_gaps_between_primes" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/polymath/index.php?title=Special:RecentChangesLinked/Bounded_gaps_between_primes" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages" class="mw-list-item"><a href="/polymath/index.php?title=Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink" class="mw-list-item"><a href="/polymath/index.php?title=Bounded_gaps_between_primes&amp;oldid=11042" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info" class="mw-list-item"><a href="/polymath/index.php?title=Bounded_gaps_between_primes&amp;action=info" title="More information about this page">Page information</a></li></ul>
+		
+	</div>
+</div>
+
+		
+		</div>
+		<a href="#sidebar" title="Jump to navigation"
+			class="menu-toggle" id="sidebar-toggle"></a>
+		<a href="#p-personal" title="user tools"
+			class="menu-toggle" id="p-personal-toggle"></a>
+		<a href="#globalWrapper" title="back to top"
+			class="menu-toggle" id="globalWrapper-toggle"></a>
+	</div>
+	<!-- end of the left (by default at least) column -->
+	<div class="visualClear"></div>
+	<div id="footer" class="mw-footer" role="contentinfo"
+		>
+		<div id="f-poweredbyico" class="footer-icons">
+			<a href="https://www.mediawiki.org/"><img src="/polymath/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/polymath/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /polymath/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"></a>
+		</div>
+		<ul id="f-list">
+			<li id="lastmod"> This page was last edited on 11 July 2019, at 08:51.</li>
+			<li id="privacy"><a href="/polymath/index.php?title=Polymath_Wiki:Privacy_policy">Privacy policy</a></li><li id="about"><a href="/polymath/index.php?title=Polymath_Wiki:About">About Polymath Wiki</a></li><li id="disclaimers"><a href="/polymath/index.php?title=Polymath_Wiki:General_disclaimer">Disclaimers</a></li>
+		</ul>
+	</div>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":270,"wgPageParseReport":{"limitreport":{"cputime":"0.065","walltime":"0.098","ppvisitednodes":{"value":294,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":4721,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260815115428","ttl":86400,"transientcontent":false}}});});</script>
+</body>
+</html>
