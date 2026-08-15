@@ -1,0 +1,30 @@
+# strict Part B: k=44..49 x eps in {1/25, 1/50}, D=8, r=6, bisect 14 iters
+cd /data3/guoshaoyang/workdir/math && timeout 6000 python3 dsh_scan/batch_k.py 44 8 6 14 1 25 1 50
+cd /data3/guoshaoyang/workdir/math && timeout 6000 python3 dsh_scan/batch_k.py 45 8 6 14 1 25 1 50
+cd /data3/guoshaoyang/workdir/math && timeout 6000 python3 dsh_scan/batch_k.py 46 8 6 14 1 50
+cd /data3/guoshaoyang/workdir/math && timeout 6000 python3 dsh_scan/batch_k.py 47 8 6 14 1 25 1 50
+cd /data3/guoshaoyang/workdir/math && timeout 6000 python3 dsh_scan/batch_k.py 48 8 6 14 1 25 1 50
+cd /data3/guoshaoyang/workdir/math && timeout 6000 python3 dsh_scan/batch_k.py 49 8 6 14 1 25 1 50
+# Part D table 1: float family-max scans per k (r=6,10)
+cd /data3/guoshaoyang/workdir/math && timeout 3600 python3 dsh_scan/scan_k.py 44 8 6,10 1 100 1 50 1 25 1 20 1 16 1 10
+cd /data3/guoshaoyang/workdir/math && timeout 3600 python3 dsh_scan/scan_k.py 45 8 6,10 1 100 1 50 1 25 1 20 1 16 1 10
+cd /data3/guoshaoyang/workdir/math && timeout 3600 python3 dsh_scan/scan_k.py 46 8 6,10 1 100 1 50 1 25 1 20 1 16 1 10
+cd /data3/guoshaoyang/workdir/math && timeout 3600 python3 dsh_scan/scan_k.py 47 8 6,10 1 100 1 50 1 25 1 20 1 16 1 10
+cd /data3/guoshaoyang/workdir/math && timeout 3600 python3 dsh_scan/scan_k.py 48 8 6,10 1 100 1 50 1 25 1 20 1 16 1 10
+cd /data3/guoshaoyang/workdir/math && timeout 3600 python3 dsh_scan/scan_k.py 49 8 6,10 1 100 1 50 1 25 1 20 1 16 1 10
+cd /data3/guoshaoyang/workdir/math && timeout 3600 python3 dsh_scan/scan_k.py 50 8 6,10 1 100 1 50 1 25 1 20 1 16 1 10
+# Part D: mk_probe-style CD heuristic (task-instructed), fast build
+cd /data3/guoshaoyang/workdir/math && timeout 2400 python3 dsh_scan/mk_probe_fast.py 44 50 1 100 8 8
+cd /data3/guoshaoyang/workdir/math && timeout 2400 python3 dsh_scan/mk_probe_fast.py 45 49 1 100 8 8
+cd /data3/guoshaoyang/workdir/math && timeout 2400 python3 dsh_scan/mk_probe_fast.py 44 50 1 50 8 8
+cd /data3/guoshaoyang/workdir/math && timeout 2400 python3 dsh_scan/mk_probe_fast.py 45 49 1 50 8 8
+cd /data3/guoshaoyang/workdir/math && timeout 2400 python3 dsh_scan/mk_probe_fast.py 44 50 1 25 8 8
+cd /data3/guoshaoyang/workdir/math && timeout 2400 python3 dsh_scan/mk_probe_fast.py 45 49 1 25 8 8
+cd /data3/guoshaoyang/workdir/math && timeout 2400 python3 dsh_scan/mk_probe_fast.py 44 50 1 20 8 8
+cd /data3/guoshaoyang/workdir/math && timeout 2400 python3 dsh_scan/mk_probe_fast.py 45 49 1 20 8 8
+cd /data3/guoshaoyang/workdir/math && timeout 2400 python3 dsh_scan/mk_probe_fast.py 44 50 1 16 8 8
+cd /data3/guoshaoyang/workdir/math && timeout 2400 python3 dsh_scan/mk_probe_fast.py 45 49 1 16 8 8
+cd /data3/guoshaoyang/workdir/math && timeout 2400 python3 dsh_scan/mk_probe_fast.py 44 50 1 10 8 8
+cd /data3/guoshaoyang/workdir/math && timeout 2400 python3 dsh_scan/mk_probe_fast.py 45 49 1 10 8 8
+# Part C: k=49 D-trend float (D=10,12)
+cd /data3/guoshaoyang/workdir/math && timeout 7200 python3 dsh_scan/dscan.py 49 1 25 6 10 12

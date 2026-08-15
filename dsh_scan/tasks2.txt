@@ -1,0 +1,21 @@
+# --- 关键任务优先 ---
+# batch_k 47 (严格, 被旧 orchestrator 跳过)
+cd /data3/guoshaoyang/workdir/math && timeout 6000 python3 dsh_scan/batch_k.py 47 8 6 14 1 25 1 50
+# dcheck 高精度验证 (Decimal 50位幂迭代)
+cd /data3/guoshaoyang/workdir/math && timeout 1800 python3 dsh_scan/dcheck.py 46 1 25 8 6 100 50
+cd /data3/guoshaoyang/workdir/math && timeout 1800 python3 dsh_scan/dcheck.py 48 1 100 8 6 100 50
+cd /data3/guoshaoyang/workdir/math && timeout 1800 python3 dsh_scan/dcheck.py 44 1 10 8 6 100 50
+cd /data3/guoshaoyang/workdir/math && timeout 1800 python3 dsh_scan/dcheck.py 49 1 10 8 10 100 50
+cd /data3/guoshaoyang/workdir/math && timeout 1800 python3 dsh_scan/dcheck.py 50 1 20 8 6 100 50
+cd /data3/guoshaoyang/workdir/math && timeout 1800 python3 dsh_scan/dcheck.py 46 1 25 8 10 100 50
+# k=49 D=12 浮点趋势 (nice-to-have)
+cd /data3/guoshaoyang/workdir/math && timeout 7200 python3 dsh_scan/dscan.py 49 1 25 6 10 12
+# --- 其余 mk_probe_fast (ε=1/25, 1/20, 1/16, 1/10) ---
+cd /data3/guoshaoyang/workdir/math && timeout 2400 python3 dsh_scan/mk_probe_fast.py 44 50 1 25 8 8
+cd /data3/guoshaoyang/workdir/math && timeout 2400 python3 dsh_scan/mk_probe_fast.py 45 49 1 25 8 8
+cd /data3/guoshaoyang/workdir/math && timeout 2400 python3 dsh_scan/mk_probe_fast.py 44 50 1 20 8 8
+cd /data3/guoshaoyang/workdir/math && timeout 2400 python3 dsh_scan/mk_probe_fast.py 45 49 1 20 8 8
+cd /data3/guoshaoyang/workdir/math && timeout 2400 python3 dsh_scan/mk_probe_fast.py 44 50 1 16 8 8
+cd /data3/guoshaoyang/workdir/math && timeout 2400 python3 dsh_scan/mk_probe_fast.py 45 49 1 16 8 8
+cd /data3/guoshaoyang/workdir/math && timeout 2400 python3 dsh_scan/mk_probe_fast.py 44 50 1 10 8 8
+cd /data3/guoshaoyang/workdir/math && timeout 2400 python3 dsh_scan/mk_probe_fast.py 45 49 1 10 8 8
