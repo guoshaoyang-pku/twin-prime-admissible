@@ -1,0 +1,7 @@
+import Sound
+import lean_certs.cert_23_52
+
+open CertVerify
+
+theorem H23_gt_52 : ¬ ∃ t : List Nat, admissible 23 t = true ∧ diameter t ≤ 52 := by
+  exact certValidRoot_sound (k := 23) (d := 52) (c := cert_23_52) (by native_decide)
