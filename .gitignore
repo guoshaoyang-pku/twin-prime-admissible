@@ -1,0 +1,47 @@
+# 大型二进制与工具链
+lean-4.33.0-linux/
+lean433.zip
+lean/
+admissible
+admissible_d
+twin_sieve
+pm8b/
+pm8b_src.tar
+*.log
+unsat_jobs/
+mscan/
+strict/
+# 临时
+__pycache__/
+.DS_Store
+
+# 编译产物（保留对应 .c 源码）
+admissible_par
+admissible_par[0-9]*
+*.olean
+
+# Lean 编译产物（证书/定理 .lean 源码保留上传）
+*.olean
+lean_cert/*.olean
+lean_cert/lean_certs/*.olean
+lean_cert/lean_theorems/*.olean
+
+# 并行运行数据（结果/任务/锁）
+par*_results/
+par2rest_results/
+par2rest_par3_results/
+par_jobs/
+*_locks/
+par*_tasks.txt
+par*_tasks_done/
+
+# 开发调试残留
+lean_cert/Probe*.lean
+lean_cert/Test*.lean
+lean_cert/FinalCheck.lean
+
+# 运行锁/标记文件（空文件）
+par2rest_par3_done/
+par4_tasks_done/
+par5_tasks_done/
+par6_tasks_done/
