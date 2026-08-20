@@ -1,93 +1,104 @@
-# 孪生素数猜想：246 纪录的完整分析与自足证明
+# 可容许元组最小直径 H(k) 的 Lean 证书化证明与复现计算
 
-本仓库包含对"有界素数间隔"问题（Polymath8b 纪录 H₁ ≤ 246）的完整独立研究：
-**可容许 k 元组最小直径 H(k) 的完全自足证明、Lean 4 形式化验证、以及 Maynard
-筛法判据 M_{k,ε} 的严格数值判定工具链。**
+本仓库是对 **有界素数间隔问题（Polymath8b 纪录 H₁ ≤ 246）** 的组合学侧补充：
+**可容许 k 元组最小直径 H(k) 的证明证书化（proof-carrying computation）**——
+把 319 个 (k,d) 下界目标的穷举证明压缩为 Lean 4 可机器检查的证书。
 
-## 核心数学结论
+> **项目定位（诚实声明）**：本项目**不是**新的素数间隔纪录，也**没有**证明
+> "246 是 Maynard–Polymath8b 框架的理论极限"。它提供的是：
+> (1) H(k) 关键最小直径值的**可重新验证的机器检查证明链**；
+> (2) 对 Polymath8b 的 246 结果补充 **H(50) 最小性的证书化证明**；
+> (3) M 泛函侧的严格数值工具与**明确标注的开放缺口**。
 
-| 定理 | 状态 | 证明方式 |
+---
+
+## 1. 三部分结论的精确区分
+
+| 类别 | 内容 | 状态 |
 |---|---|---|
-| H(43) = 200 | ✅ 完整自足证明 | 穷举搜索：全部 d<200 UNSAT + 显式 SAT 见证 |
-| H(44) = 210 | ✅ 完整自足证明 | 穷举搜索：全部 d<210 UNSAT + 显式 SAT 见证 |
-| H(46) = 216 | ✅ 完整自足证明 | 穷举搜索：全部 d<216 UNSAT + 显式 SAT 见证 |
-| H(45) = 212 | 🔄 收尾 | SAT 见证 ✓；边界 d=208 已证 UNSAT，d=210 运行中 |
-| H(50) = 246 | 🔄 收尾 | SAT 见证 ✓（纪录元组复现）；d≤220 已证 UNSAT |
-| H(k), k=2..42 | ✅ 全表验证 | 与 OEIS A008407（Clark–Jarvis 2001）零失配 |
+| **已严格证明（本项目）** | H(43)=200, H(44)=210, H(45)=212, H(46)=216, H(50)=246 的下界（319 个 (k,d) 目标 UNSAT，Lean 4 证书验证）+ 显式 SAT 见证 + 三算法交叉验证 | ✅ 机器检查 |
+| **继承自文献（非本项目）** | 存在无穷多素数间隔 ≤ 246（Maynard 2013/2014; Polymath8b 2014, arXiv:1407.4897） | ✅ 已发表同行评审 |
+| **尚未证明（开放）** | 对所有 k < 50 的真实全空间 M_{k,ε} < 4（M 泛函侧） | ❌ 开放缺口 |
 
-与 OEIS A008407 / Clark–Jarvis (2001) / Polymath8b (2014) 三方互证。
+**关键边界**：受限函数族（幂和多项式）内的严格上界 **不能**推出真实全空间
+M_{k,ε} 的上界（受限族 supremum 是真实值的下界）。因此"246 无法被 Maynard–
+Polymath8b 框架改进"**不是本项目的结论**——目前 k=47,48,49 的真实 M_{k,ε} > 4
+未被排除（解析上界在 ε=1/50 分别为 4.0125 / 4.0326 / 4.0524）。
 
-## 关键洞察：为什么 246 无法缩短
+## 2. H(k) 精确值（与 OEIS A008407 一致）
 
-Polymath8b 判据（无条件，Bombieri–Vinogradov）：若 **M_{k,ε} > 4** 则存在无穷多
-素数间隔 ≤ H(k)。他们严格计算 M_{50,1/25} > 4.0043（k=50 首次过线，压线 0.1%），
-而 **k<50 的 M_{k,ε} 数值从未被任何人发布**——这是本项目的核心探索空间。
+| k | H(k) | 下界（319 目标 UNSAT） | 上界（SAT 见证） |
+|---|---|---|---|
+| 43 | 200 | ✅ d=84..198 全 UNSAT | ✅ 直径 200 见证 |
+| 44 | 210 | ✅ d=86..208 全 UNSAT | ✅ 直径 210 见证 |
+| 45 | 212 | ✅ d=88..210 全 UNSAT | ✅ 直径 212 见证 |
+| 46 | 216 | ✅ d=90..214 全 UNSAT | ✅ 直径 216 见证 |
+| 50 | 246 | ✅ d=98..244 全 UNSAT | ✅ 直径 246 见证（Polymath8b 元组复现） |
 
-- 元组侧：H(46)=216 < H(50)=246 已被完全证明——纪录用的 50 元组并非最小
-- 数值侧：若 M_{46,ε*}>4 或 M_{49,ε*}>4 被证明，纪录立即降到 216 或 240
-- 本仓库的严格判定（有理数 LDLᵀ 惯性 + 二分）证明：幂和多项式族（度数≤D）内
-  M_{k,ε} < 4（D=8 时族内精确值：k=46: 3.65188, k=49: 3.69705, k=50: 3.71115）
-- 解析上界（论文 Prop. 7.x）：M_{k,ε} ≤ (k/(k−1))·log(2k−1) 及其 a-优化推广
+这些数值是公开已知结果（[OEIS A008407](https://oeis.org/A008407)、
+[Engelsma 的计算记录](https://math.mit.edu/~primegaps/)、Polymath8b 2014）。
+本项目的贡献是**下界侧的独立、自足、机器检查证明链**，而非新数值。
 
-## 工具链
+## 3. Lean 4 证书工程（lean_cert/）
 
-| 文件 | 功能 |
-|---|---|
-| `admissible.c` / `admissible_d.c` | 可容许 k 元组最小直径的精确搜索（频数剪枝 DFS） |
-| `verify_admissible.py` | 独立验证器（直接枚举剩余类，不同算法） |
-| `mk_probe.py` | M_{k,ε} 数值探针（Dirichlet 闭式积分 + 坐标下降） |
-| `mk_probe_strict.py` | **严格判定器**：精确有理数 LDLᵀ 惯性 → 严格判定族内 M 与 4 的关系 |
-| `mk_bisect.py` | **有理数二分**：族内 λ_max 的严格区间（宽度 < 1e-10） |
-| `twin_sieve.c` / `twin_sieve.py` | 孪生素数分段筛计数（验证到 10¹¹：224,376,048 精确一致） |
-| `TwinPrimeAdmissible.lean` | **Lean 4 形式化**：89 定理，零 sorry/axiom（仅 import Init） |
+对 319 个 (k,d) 目标：
 
-## Lean 4 形式化（TwinPrimeAdmissible.lean）
+1. **证书生成**（`cert_gen.py`，算法 C 剩余类分配 DFS）：每个目标一棵"剩余类分配
+   失败树"——叶子 = 部分分配下幸存位置 < k，分支 = 素数类枚举。
+   共 100,316 节点 / 218 KB，生成 5 秒；
+2. **验证器**（`CertVerify.lean`）：对证书树结构递归验证；
+3. **可靠性证明**（`Sound.lean`，约 700 行，无 `sorry`）：证明
+   "证书通过 ⟹ 不存在直径 ≤ d 的可容许 k 元组"（幸存单调性、判定等价、平移不变性）；
+4. **319 个定理**（`lean_theorems/`）：`H50_gt_244 : ¬ ∃ t, admissible 50 t ∧ diameter t ≤ 244`
+   等，每条 `exact certValidRoot_sound ... (by native_decide)`。
 
-- 六个关键见证（k=43..50）可容许性 + 直径 + 存在性定理
-- k=46 的 14 个下行见证（d=246→216）
-- H(2)..H(12) 的 11 个精确最小性定理（穷举机器证明）
-- 结构定理（手写证明）：平移不变性、任意 k 存在可容许元组（primorial 构造）、单调性
+**信任边界披露**：
+- 无用户自定义 `axiom` 或 `sorry`；
+- 计算验证使用 Lean 的 `native_decide`（VM 执行 + 内核检查 `ofReduceBool`），
+  其信任边界是 Lean 编译器/VM 的正确性（Lean 社区标准实践）；
+- 需要纯 kernel 归约的版本可将 `native_decide` 替换为 `decide`（慢得多）。
 
-编译（Lean 4.33.0，仅核心库）：
-```
-lean TwinPrimeAdmissible.lean    # EXIT 0
-```
+## 4. 构建
 
-## 结果数据
-
-- `results/unsat/`：H(44)/H(45)/H(50) 边界 UNSAT 证明输出（含用时）
-- `results/strict/`：M_{k,ε} 严格判定与严格族内值日志
-- `results/mscan/`：k×ε 网格的浮点扫描（族内最优 ε 确认 = 1/25）
-- `dmin_table_k2to50.csv`：k=2..50 的最小直径表（与 OEIS 对照）
-
-## 复现
+**Lean 4.33.0**（仅依赖核心库 `Init`，无 Mathlib）。在 `lean_cert/` 下：
 
 ```bash
-# 元组搜索
-gcc -O3 -o admissible admissible.c -lm
-./admissible 2 50          # H(k) 表
-./admissible_d 46 216      # 单点 SAT/UNSAT 判定
-
-# M 泛函严格判定
-python3 mk_probe_strict.py 46 1 25 8 8 6    # k=46, eps=1/25, D=8
-python3 mk_bisect.py 46 1 25 8 8 6 50       # 严格区间
-
-# 孪生素数计数
-gcc -O3 -o twin_sieve twin_sieve.c -lm
-./twin_sieve 100000000000  # π₂(10^11) = 224376048
+lean CertVerify.lean        # 定义 + 验证器
+lean Sound.lean             # 可靠性证明（0 sorry）
+lean lean_certs/cert_50_244.lean     # 证书（319 个）
+lean lean_theorems/T_50_244.lean     # 下界定理（319 个）
 ```
 
-## 诚实声明
+`build_all.sh` 并行编译全部 319 证书 + 319 定理（需要 `lean` 在 `PATH` 中，
+或设置 `LEAN_BIN` 环境变量指向 lean 可执行文件）。
 
-- 孪生素数猜想本身未解决（奇偶性障碍，Selberg）。
-- "超越 246"需要证明真实 M_{k<50,ε} > 4——数值证据（渐近标定 + 族内收敛）强烈
-  表明真实值 < 4，但有限多项式族的严格判定无法完全排除（需区间算术全空间分析
-  或新数学）。本仓库提供的是：H 侧的完整自足证明 + M 侧的严格判定工具与部分
-  严格结果。
+C/Python 工具链：`gcc -O2`、Python 3.10+（无第三方依赖）。
 
-## 参考文献
+## 5. 数据与复现说明
 
-- Polymath8b, *Variants of the Selberg sieve, and bounded intervals containing many primes*, Res. Math. Sci. 1 (2014), arXiv:1407.4897
-- D. Clark, N. Jarvis, *Dense admissible sequences*, Math. Comp. 70 (2001) 1713–1718
-- OEIS A008407: minimal diameter of admissible k-tuples
-- J. Maynard, *Small gaps between primes*, Ann. of Math. 181 (2015)
+- **原始并行运行数据未随仓库发布**（约 42.4 万个结果文件、1.6 GB，见 `.gitignore`）——
+  **正式审计入口是 `lean_cert/` 的 319 个 Lean 证书与定理**；
+- 文本证书（`lean_cert/certs/`、`certs_num/`）与 Lean 证书定义（`lean_certs/`）
+  均由生成器确定性产出，可复现；
+- 三算法交叉验证：`verify_admissible_independent.py`（算法 A/B/C + OEIS 对拍）。
+
+## 6. 工具链与报告
+
+| 文件 | 说明 |
+|---|---|
+| `lean_cert/` | Lean 证书工程（验证器、可靠性证明、319 证书、319 定理） |
+| `admissible_par*.c` | 大规模并行 UNSAT 穷举求解器（六层子空间划分） |
+| `verify_admissible_independent.py` | 三套独立算法交叉验证 |
+| `TwinPrimeAdmissible.lean` | SAT 侧形式化（见证可容许性，96 定理，EXIT 0） |
+| `M_exclusion_analysis_k47_49.md` | M 泛函侧严格分析（含开放缺口声明） |
+| `最终报告_素数间隔246.md` | 完整证明报告 |
+| `blog_素数间隔246.html/md` | 项目说明 |
+
+## 许可与引用
+
+- License: Apache-2.0（见 `LICENSE`）
+- 引用：见 `CITATION.cff`
+
+**一句话总结**：这是一个"可容许元组最小直径的形式化验证/可复现计算"项目——
+H(k) 侧（319 个下界）已机器检查、可信度高；M 泛函侧保持开放；它不是新纪录，
+也不是"246 为框架极限"的证明。

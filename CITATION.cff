@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "若使用本仓库的证书/证明内容，请引用此条目。"
+title: "Admissible k-tuple minimal diameters H(k): Lean-certified lower bounds"
+abstract: >-
+  Proof-carrying computation for the minimal diameter H(k) of admissible
+  k-tuples. For k in {43,44,45,46,50} all even diameters below H(k)
+  (319 targets in total) are certified in Lean 4: certificate trees for
+  residue-class assignment failures, a verified certificate checker
+  (CertVerify.lean), and a hand-written soundness proof (Sound.lean)
+  showing "certificate valid => no admissible k-tuple of diameter <= d".
+  SAT witnesses and triple independent verification are included.
+  The M-functional side is analyzed but the question whether the true
+  M_{k,eps} < 4 for all k < 50 remains open.
+authors:
+  - family-names: "Guo"
+    given-names: "Shaoyang"
+    orcid: ""
+date-released: "2026-08-20"
+keywords:
+  - prime gaps
+  - admissible tuples
+  - Lean 4
+  - formal verification
+  - certificate
+license: Apache-2.0
+repository-code: "https://github.com/guoshaoyang-pku/twin-prime-admissible"
