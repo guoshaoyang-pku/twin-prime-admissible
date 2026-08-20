@@ -1,0 +1,7 @@
+import Sound
+import lean_certs.cert_47_178
+
+open CertVerify
+
+theorem H47_gt_178 : ¬ ∃ t : List Nat, admissible 47 t = true ∧ diameter t ≤ 178 := by
+  exact certValidRoot_sound (k := 47) (d := 178) (c := cert_47_178) (by native_decide)
