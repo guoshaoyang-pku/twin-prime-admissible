@@ -67,7 +67,7 @@
    - 判定等价：无含 0 可容许元组 ⟸ 所有非零分配幸存 < k（剩余类覆盖论证）；
    - 平移不变性：直径 ≤ d 的可容许元组 ⟹ 含 0 且 ⊆ [0,d]（模算术 + foldl min/max）；
    - 证书归纳：验证通过 ⟹ 每个完整分配幸存 < k；
-4. **319 个定理**：`H50_gt_244 : ¬ ∃ t, admissible 50 t ∧ diameter t ≤ 244` 等，
+4. **1593 个定理**：`H50_gt_244 : ¬ ∃ t, admissible 50 t ∧ diameter t ≤ 244` 等，
    每条 `exact certValidRoot_sound ... (by native_decide)`——内核执行验证器复算证书；
    **另有 1593 个纯内核 `by decide` 版本（无 native_decide 信任边界）**。
 
@@ -84,7 +84,7 @@ Axiom Math（41 位贡献者，Ken Ono 团队）于 2026-08-17 发布了 **Prime
 | M 侧（筛法泛函证书） | ✅ Lean（PrimeGapsCert） | 族内严格 LDL^T 计算 + 引用论文 |
 | 可容许 50 元组（上界） | ✅ Lean（H50, decide） | ✅ Lean（witness_k50_d246）+ 三实现验证 |
 | **H(k) 下界（UNSAT 穷举）** | ❌ 不需要（定理只需上界） | ✅ **数学完备**（1593 目标/Lean 证书全覆盖） |
-| **H(k) 下界（Lean 证书）** | ❌ | ✅ **本工作**（CertVerify + 319 定理） |
+| **H(k) 下界（Lean 证书）** | ❌ | ✅ **本工作**（CertVerify + 1593 定理） |
 
 **互补关系**：PrimeGapsLib 覆盖"主定理 + M 侧"（机器检查），我们的证书覆盖
 "H(k) 精确值下界"（机器检查）。合并即"BV ⟹ 间隔 ≤ 246 且 H(50) = 246 的
@@ -105,7 +105,7 @@ k<50 的真实全空间 M_{k,ε} < 4 未被排除（M 侧开放缺口，见 §6�
 ## 产物
 
 - `最终报告_素数间隔246.md` — 完整证明报告
-- `lean_cert/` — Lean 证书验证器（CertVerify.lean + Sound.lean + 319 证书 + 319 定理）
+- `lean_cert/` — Lean 证书验证器（CertVerify.lean + Sound.lean + 1593 证书 + 1593 定理）
 - `par*_results/` — 42.4 万 UNSAT 结果
 - `verify_admissible_independent.py/.log` — 三算法交叉验证
 - `TwinPrimeAdmissible.lean` — SAT 侧形式化（96 定理，EXIT 0）

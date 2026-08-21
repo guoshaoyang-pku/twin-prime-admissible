@@ -16,7 +16,7 @@ cd lean_cert
 export LEAN_PATH=.
 lean CertVerify.lean      # 定义 + 验证器（几秒）
 lean Sound.lean           # 可靠性证明，0 sorry（约 1 分钟）
-# 编译全部 1436 个证书与定理（约 20-40 分钟，取决于核数）：
+# 编译全部 1593 个证书与定理（约 20-40 分钟，取决于核数）：
 ./build_all.sh /path/to/lean
 ```
 
@@ -102,7 +102,7 @@ python3 batch_k.py 49 8 6 55 1 25 1 50   # 严格有理数 LDL^T 判定
 | 步骤 | 命令 | 预期 |
 |---|---|---|
 | 验证器编译 | `lean CertVerify.lean Sound.lean` | EXIT 0 |
-| 全量编译 | `./build_all.sh <lean>` | 1436/1436 无 FAIL |
+| 全量编译 | `./build_all.sh <lean>` | 1593/1593 无 FAIL |
 | 证书生成 | `python3 gen_all.py` | 529 个，全部 verify=True |
 | 交叉验证 | `python3 verify_admissible_independent.py` | 全部 PASS |
 | SAT 形式化 | `lean TwinPrimeAdmissible.lean` | EXIT 0 |

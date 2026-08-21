@@ -28,7 +28,7 @@ Polymath8b 框架改进"**不是本项目的结论**——目前 k=47,48,49 的�
 
 ## 2. H(k) 精确值（与 OEIS A008407 一致）
 
-| k | H(k) | 下界（319 目标 UNSAT） | 上界（SAT 见证） |
+| k | H(k) | 下界（1593 目标 UNSAT） | 上界（SAT 见证） |
 |---|---|---|---|
 | 43 | 200 | ✅ d=84..198 全 UNSAT | ✅ 直径 200 见证 |
 | 44 | 210 | ✅ d=86..208 全 UNSAT | ✅ 直径 210 见证 |
@@ -71,11 +71,11 @@ Polymath8b 框架改进"**不是本项目的结论**——目前 k=47,48,49 的�
 ```bash
 lean CertVerify.lean        # 定义 + 验证器
 lean Sound.lean             # 可靠性证明（0 sorry）
-lean lean_certs/cert_50_244.lean     # 证书（319 个）
-lean lean_theorems/T_50_244.lean     # 下界定理（319 个）
+lean lean_certs/cert_50_244.lean     # 证书（1593 个）
+lean lean_theorems/T_50_244.lean     # 下界定理（1593 个）
 ```
 
-`build_all.sh` 并行编译全部 319 证书 + 319 定理（需要 `lean` 在 `PATH` 中，
+`build_all.sh` 并行编译全部 1593 证书 + 1593 定理（需要 `lean` 在 `PATH` 中，
 或设置 `LEAN_BIN` 环境变量指向 lean 可执行文件）。
 
 C/Python 工具链：`gcc -O2`、Python 3.10+（无第三方依赖）。
@@ -92,7 +92,7 @@ C/Python 工具链：`gcc -O2`、Python 3.10+（无第三方依赖）。
 
 | 文件 | 说明 |
 |---|---|
-| `lean_cert/` | Lean 证书工程（验证器、可靠性证明、319 证书、319 定理） |
+| `lean_cert/` | Lean 证书工程（验证器、可靠性证明、1593 证书、1593 定理） |
 | `admissible_par*.c` | 大规模并行 UNSAT 穷举求解器（六层子空间划分） |
 | `verify_admissible_independent.py` | 三套独立算法交叉验证 |
 | `TwinPrimeAdmissible.lean` | SAT 侧形式化（见证可容许性，96 定理，EXIT 0） |
@@ -106,5 +106,5 @@ C/Python 工具链：`gcc -O2`、Python 3.10+（无第三方依赖）。
 - 引用：见 `CITATION.cff`
 
 **一句话总结**：这是一个"可容许元组最小直径的形式化验证/可复现计算"项目——
-H(k) 侧（319 个下界）已机器检查、可信度高；M 泛函侧保持开放；它不是新纪录，
+H(k) 侧（1593 个下界）已机器检查、可信度高；M 泛函侧保持开放；它不是新纪录，
 也不是"246 为框架极限"的证明。
