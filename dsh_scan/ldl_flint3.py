@@ -34,9 +34,8 @@ def ldl_sign_flint3(A, mid=None):
                 val = fmpq(Am[i, j])
                 if j > 0:
                     acc = fmpq(0)
-                    Li = L[i, :j]
                     for m in range(j):
-                        acc += Li[m] * D[m] * L[j, m]
+                        acc += L[i, m] * D[m] * L[j, m]
                     val -= acc
                 col[i - j - 1, 0] = val / v
             for i in range(j + 1, n):
