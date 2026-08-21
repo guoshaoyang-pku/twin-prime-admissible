@@ -45,3 +45,7 @@ par2rest_par3_done/
 par4_tasks_done/
 par5_tasks_done/
 par6_tasks_done/
+
+# 数值缓存/中间矩阵
+*.pkl
+dsh_scan/d16d20_out/

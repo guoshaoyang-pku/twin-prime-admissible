@@ -13,13 +13,13 @@ import floatbuild as fb
 
 def gen_multisets(max_deg, max_parts, min_val=1):
     res = {}
-    def rec(deg_used, parts):
-        key = tuple(sorted(parts))
+    def rec(deg_used, parts, last):
+        key = tuple(parts)
         res[key] = sum(parts)
-        for v in range(min_val, max_deg - deg_used + 1):
+        for v in range(last, max_deg - deg_used + 1):
             if len(parts) < max_parts:
-                rec(deg_used + v, parts + [v])
-    rec(0, [])
+                rec(deg_used + v, parts + [v], v)
+    rec(0, [], min_val)
     return res
 
 
