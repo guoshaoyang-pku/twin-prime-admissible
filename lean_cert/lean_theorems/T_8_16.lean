@@ -1,0 +1,7 @@
+import Sound
+import lean_certs.cert_8_16
+
+open CertVerify
+
+theorem H8_gt_16 : ¬ ∃ t : List Nat, admissible 8 t = true ∧ diameter t ≤ 16 := by
+  exact certValidRoot_sound (k := 8) (d := 16) (c := cert_8_16) (by native_decide)

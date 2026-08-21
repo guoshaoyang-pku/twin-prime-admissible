@@ -1,0 +1,8 @@
+import Sound
+import lean_certs.cert_28_116
+
+open CertVerify
+
+set_option maxHeartbeats 4000000 in
+theorem H28_gt_116_kernel : ¬ ∃ t : List Nat, admissible 28 t = true ∧ diameter t ≤ 116 := by
+  exact certValidRoot_sound (k := 28) (d := 116) (c := cert_28_116) (by decide)

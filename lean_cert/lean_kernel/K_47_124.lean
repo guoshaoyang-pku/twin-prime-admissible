@@ -1,0 +1,8 @@
+import Sound
+import lean_certs.cert_47_124
+
+open CertVerify
+
+set_option maxHeartbeats 4000000 in
+theorem H47_gt_124_kernel : ¬ ∃ t : List Nat, admissible 47 t = true ∧ diameter t ≤ 124 := by
+  exact certValidRoot_sound (k := 47) (d := 124) (c := cert_47_124) (by decide)
