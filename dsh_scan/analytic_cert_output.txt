@@ -1,0 +1,72 @@
+=== 纯有理数严格验证: M_{k,eps} < 4 (Remark 6.6 端点 a->1/(1+eps)) ===
+M_{k,eps} < (1+eps)(k/(k-1)) ln k  (对 0<=eps<1, k>=2, 严格)
+
+k     eps=0        eps=1/200     eps=1/100     eps=1/50      eps=1/25
+  2      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+  3      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+  4      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+  5      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+  6      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+  7      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+  8      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+  9      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 10      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 11      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 12      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 13      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 14      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 15      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 16      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 17      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 18      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 19      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 20      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 21      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 22      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 23      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 24      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 25      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 26      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 27      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 28      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 29      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 30      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 31      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 32      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 33      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 34      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 35      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 36      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 37      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 38      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 39      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 40      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 41      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 42      STRICT<4      STRICT<4      STRICT<4      STRICT<4      STRICT<4
+ 43      STRICT<4      STRICT<4      STRICT<4      STRICT<4       upper>4
+ 44      STRICT<4      STRICT<4      STRICT<4      STRICT<4       upper>4
+ 45      STRICT<4      STRICT<4      STRICT<4      STRICT<4       upper>4
+ 46      STRICT<4      STRICT<4      STRICT<4      STRICT<4       upper>4
+ 47      STRICT<4      STRICT<4      STRICT<4       upper>4       upper>4
+ 48      STRICT<4      STRICT<4      STRICT<4       upper>4       upper>4
+ 49      STRICT<4      STRICT<4       upper>4       upper>4       upper>4
+ 50      STRICT<4       upper>4       upper>4       upper>4       upper>4
+
+结论:
+  对一切 2<=k<=46 与 eps<=1/50: M_{k,eps} < 4 严格成立 (纯有理证书)
+  对一切 2<=k<=42 与 eps<=1/25: M_{k,eps} < 4 严格成立
+  对一切 2<=k<=50 与 eps=0:     M_{k,eps} < 4 严格成立 (Lemma 6.4)
+  k=47..50 @ eps=1/50: 解析上界 >4, 不排除 M>4 (开放)
+
+eps 阈值表 (有理验证: 1/m 使 (1+1/m)(k/(k-1))ln k < 4 的最大 m):
+  k=40: eps <= 1/18 严格排除
+  k=41: eps <= 1/20 严格排除
+  k=42: eps <= 1/23 严格排除
+  k=43: eps <= 1/26 严格排除
+  k=44: eps <= 1/31 严格排除
+  k=45: eps <= 1/37 严格排除
+  k=46: eps <= 1/46 严格排除
+  k=47: eps <= 1/60 严格排除
+  k=48: eps <= 1/86 严格排除
+  k=49: eps <= 1/147 严格排除
+  k=50: eps <= 1/491 严格排除
