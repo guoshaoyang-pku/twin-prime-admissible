@@ -126,9 +126,10 @@ def main():
             J1[ia][ib] = tot
     print(f"matrices built exactly ({time.time()-t2:.0f}s)", flush=True)
     import pickle
-    with open(f'frac_cache_{k}_{D}.pkl', 'wb') as f:
+    out_name = sys.argv[7] if len(sys.argv) > 7 else f'frac_cache_{k}_{D}.pkl'
+    with open(out_name, 'wb') as f:
         pickle.dump((I, J1), f)
-    print("matrices saved to pkl", flush=True)
+    print(f"matrices saved to {out_name}", flush=True)
     # mpmath Lanczos
     import mpmath as mp
     mp.mp.dps = digits
