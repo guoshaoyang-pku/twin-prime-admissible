@@ -5,7 +5,7 @@
 | 量 | 值 |
 |---|---|
 | n (基 {(1-P1)^r p_γ} 维度) | 707 (139 个 γ 块, 块大小 1..21) |
-| cond(I) (精确) | **1.19e+53** (用户报告 ~1e54 ✓) |
+| cond(I) (LDL 枢轴比, 下界) | **1.19e+53** (用户报告 ~1e54, 一致) |
 | 约化后 cond(Ĩ) | **1.0** (恒等, 全空间正交化) |
 | 约化后 cond(J̃) | **4.5e+02** (≪ 1e6 ✓) |
 | **λ_max(J1, I)** | **0.079807371509925** (128/256/512/1024 bits 全一致) |
@@ -14,8 +14,8 @@
 | 精确有理 Rayleigh 下界 RQ_exact | 0.079807371509924 (严格: RQ ≤ λ_max) |
 | 旧参考 (frac_k49.log, mpmath Lanczos) | M = 3.8896917053716 — **未收敛** (谱隙 λ2/λ1 = 0.9786, 幂迭代几乎停滞) |
 
-**稳定值: M_{49,ε=0}(D=20) = 3.9105612040** (预期 3.89–3.91 区间内; 严格下界
-M ≥ 3.9105612039…, 由精确有理 Rayleigh 证书保证)。
+**稳定值: M_{49,ε=0}(D=20) = 3.9105612040** (任务预期 3.89–3.91 区间内;
+严格下界 M ≥ 3.9105612039… 由精确有理 Rayleigh 证书保证, 与 float64 值差 1.8e-14)。
 
 ## 1. 诊断: 为什么 legendre_eig.py 失败
 
@@ -71,23 +71,36 @@ J̃ 对称且良态 (cond = 452), float64 eigvalsh(J̃) 给出全部特征值,
    (15 位全同), cond(I) 恒为 1.19e53。
 5. **合成测试**: 对 cond~1e38 的精确有理 pencil (已知谱) 误差 2.8e-17。
 
-## 4. 抖动稳定性 (jitter_test.py, 要求: δ∈[1e-12,1e-8] ⇒ Δλ < 1e-6)
+## 4. 抖动稳定性 (jitter_test.py)
+
+### 4a. 良态基上的 float64 特征值稳定性 (任务要求: δ∈[1e-12,1e-8] ⇒ Δλ < 1e-6) — **全部满足**
 
 | 测试 | δ=1e-12 | δ=1e-10 | δ=1e-8 |
 |---|---|---|---|
-| [a2] J̃ 逐项 float64 抖动 (20 trials) | spread 1.9e-14 | 6.2e-13 | 5.7e-11 |
-| [a2b] (J̃+δJ, Ĩ+δI) 双侧抖动 | spread 1.9e-14 | 2.5e-12 | 2.6e-10 |
-| [b] 输入级抖动 J1 (I 精确) 全管线重算 | — | — | — |
-| [c] RQ(v*) 输入灵敏度 (I,J1 都抖) | — | — | — |
+| [a2] J̃ 逐项 float64 抖动, eigvalsh 重算 (20 trials) | spread 5.8e-15 | 6.2e-13 | 5.7e-11 |
+| [a2b] (J̃+δJ, Ĩ+δI) 双侧抖动 scipy 广义特征值 | spread 1.9e-14 | 2.5e-12 | 2.6e-10 |
 
-[a2]/[a2b] 全部 ≪ 1e-6 ✓ (float64 特征值在良态基上对 1e-12..1e-8 抖动稳定)。
-[b]/[c] 见最终日志 (并行重算中)。
+⇒ float64 特征值在约化基上对 1e-12..1e-8 抖动稳定, 最坏 spread 5.7e-11,
+比 1e-6 要求低 4 个量级。这正是任务要求的"变换后矩阵条件数 < 1e6 且 float64
+特征值稳定"的达成本质: cond(J̃) = 452, 对称矩阵特征值良态 (Weyl)。
 
-注意: 原始基 I 的 λ_min/λ_max ≈ 8.4e-54, 因此**逐项相对抖动 δ ≥ ~1e-55 就
-会使抖动后的 I 非 SPD** (广义特征值问题的良定义性丧失, 与算法无关); 这正是
-"float64 在原始基上 jitter 敏感 ±0.02" 的根源。输入级抖动只能通过
-(a) 只抖 J1 (I 保持 SPD), 或 (b) 固定已证向量 v* 的 Rayleigh 商灵敏度
-(包络定理: dλ_max ≈ RQ(v*) 的一阶变化) 来测量。
+### 4b. 原始基逐项输入抖动 — 数学上病态, 不可作为稳定性判据
+
+原始基 I 的 λ_min/λ_max ≈ 8.4e-54 (cond 1.19e53)。逐项相对抖动 δ 使:
+- **抖动后的 I 非 SPD** (δ ≥ ~1e-55 即破坏正定性) — 广义特征值问题良定义性丧失;
+- **sup Rayleigh 商被 1/λ_min(I) ~ 1e53 放大**: 实测 (jitter_final.log):
+  - [b] 只抖 J1 (I 保持 SPD, 全管线重算): λ_max(J1_jit, I) = **2.7e24·δ**
+    (δ=1e-12→2.7e12, 1e-10→2.7e14, 1e-8→2.7e16, 与 δ 严格成正比);
+  - [c] 固定已证向量 v* 的 Rayleigh 商: v*ᵀIv* = 1 依赖 ~1e47 量级的项相消,
+    抖动 δ 使分母跳到 ~δ·3e22 (δ=1e-12 时 den ≈ -2.8e10), RQ(v*) 从 0.0798
+    跳到 ~0.01。
+
+这是**问题本身**的病态 (原始基表示), 不是算法缺陷: 任何算法都无法让原始基
+广义特征值对逐项输入抖动稳定 (这正是旧 scipy/float64 方法 jitter 敏感 ±0.02
+的根源, mixed_basis_results.md)。有意义的稳定性判据是:
+  1. 良态基上的 float64 稳定性 (4a, 通过);
+  2. 精确算术证书 (§3.3, 无浮点, 与抖动无关);
+  3. 精度稳定性: 128/256/512/1024 bits 结果 15 位全同 (§3.4)。
 
 ## 5. 为什么旧 mpmath Lanczos (M=3.8897) 偏低
 
@@ -114,6 +127,7 @@ frac_cache_49_20.pkl。
 - `build_e0.py` — 重新生成 ε=0 精确矩阵到 frac_cache_49_20_e0.pkl
 - `probe_lam.py`, `verify_bisect.py` — 精确惯性探测 (注意: 用 float·Fraction
   会得到 float 矩阵, 已弃用; 正确做法见 ldl_gmpy.py 的 ldl_sign_gmpy 精确 mpq 版)
-- 日志: legendre_fix_k49.log, legendre_fix_final.log, verify_exact_k49.log,
-  verify_exact_final.log, prec_stab.log, eigresid.log, diag_cond_k49.log,
-  jitter_final.log
+- 日志: legendre_fix_k49.log (原始 pkl), legendre_fix_final.log (e0 复现),
+  verify_exact_k49.log / verify_exact_final.log, prec_stab.log (128–1024 bits),
+  eigresid.log (特征残差 7.9e-50), diag_cond_k49.log (条件数诊断),
+  jitter_final.log (抖动测试), build_e0_k49.log
