@@ -49,3 +49,5 @@ par6_tasks_done/
 # 数值缓存/中间矩阵
 *.pkl
 dsh_scan/d16d20_out/
+lean-4.33.0-linux
+dsh_scan/routeB_artifacts/
