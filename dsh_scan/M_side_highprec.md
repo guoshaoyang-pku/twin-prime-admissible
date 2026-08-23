@@ -38,8 +38,11 @@
 | k=49 ε=1/25 D=25 | frac_cache_49_25_e1_25.pkl（n=1780） | **STRICT M<4 ✓（02:37，19256s）** |
 | **k=50 ε=1/25 D=27（健全性）** | frac_cache_50_27_e1_25.pkl | 运行中——**预期失败**（Polymath8b 证明 M_{50,1/25} > 4.0043，A 必有负特征值；若误报 STRICT 则工具/矩阵有 bug） |
 
-预计 ~2-4h/个。日志：iv_strict3_k49_d27_e25.log、iv_strict3_k49_d27_e50.log、
+预计 ~2-4h/个（实际 D=27 因 n=2526 与 400dps 区间运算需 ~12-15h/个）。
+日志：iv_strict3_k49_d27_e25.log、iv_strict3_k49_d27_e50.log、
 iv_strict3_k49_d25_e25.log、iv_strict3_k50_d27_e25.log。
+**2026-08-23 08:20 追加**：D=29（n=3542，frac_cache_49_29_e1_25.pkl，4.2G）
+判定已并行启动（iv_strict3_k49_d29_e25.log）——CPU 空闲 89%，与 D=27 并行。
 
 **意义**：若 k=49 D=27（论文基）判定成功，则"论文数值空间上 k=49 的 M<4 严格"
 成立——比 Polymath8b 的 k=50（仅数值 >4.0043）更强；配合 §"基差距标定"
