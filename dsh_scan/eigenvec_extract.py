@@ -46,7 +46,7 @@ w = np.linalg.eigh(Jtf)[1][:, -1]
 b = np.array([float(s[i]) * w[i] for i in range(n)])
 Lnp = np.array([[float(L[i][j]) if j < i else (1.0 if i == j else 0.0) for j in range(n)] for i in range(n)])
 z = np.linalg.solve(Lnp.T, b)
-v = z / np.sqrt(np.dot(z, np.dot(np.array([[float(x) for x in row] for row in I]), z)))
+v = z / np.linalg.norm(z)
 np.save(f'ev_k{k}_d{D}_eps{en}_{ed}.npy', v)
 print(f'λ_max = {lam:.15f}  M = {k*lam:.9f}  v 保存 (L2 范数: {np.linalg.norm(v):.4f})', flush=True)
 print('v 符号: 正', (v > 0).sum(), '/', n, ' 负', (v < 0).sum(), ' 零', (v == 0).sum())
