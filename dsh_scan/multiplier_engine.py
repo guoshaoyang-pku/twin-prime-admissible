@@ -113,6 +113,72 @@ def mw_at(wcoeff, edge_cache, t):
             num += eval_poly_base(edge_cache[i], t_ne)
     return num / wv
 
+
+
+# ---------------- 对称点快速评估 (m 个 a, k-m 个 b) ----------------
+def p_lambda_sym(lam, m, a, b):
+    """p_λ 在对称点的值: Π_{d∈λ}(m·a^d + (k-m)·b^d)"""
+    v = 1.0
+    kk = k
+    for d in lam:
+        v *= (m * a ** d + (kk - m) * b ** d)
+    return v
+
+def eval_poly_sym(coeff, m, a, b):
+    return sum(float(c) * p_lambda_sym(lam, m, a, b) for lam, c in coeff.items())
+
+def mw_sym(wcoeff, edge_cache, m, a, b):
+    """对称 t (m 个 a, k-m 个 b) 的 m_w"""
+    u = m * a + (k - m) * b
+    if u > 1 + eps + 1e-12:
+        return None
+    # w(t)
+    wv = 0.0
+    for (r, gamma), c in wcoeff.items():
+        p = 1.0
+        for d in gamma:
+            p *= (m * a ** d + (k - m) * b ** d)
+        wv += float(c) * (1 + eps - u) ** r * p
+    if wv <= 0:
+        return None
+    num = 0.0
+    # a 组切片的 W: t_{≠i} = (m-1) 个 a, (k-m) 个 b
+    if m > 0:
+        u_ne = u - a
+        if u_ne <= 1 - eps + 1e-12:
+            num += m * eval_poly_sym(edge_cache[0], m - 1, a, b)
+    # b 组切片的 W
+    if k - m > 0:
+        u_ne = u - b
+        if u_ne <= 1 - eps + 1e-12:
+            num += (k - m) * eval_poly_sym(edge_cache[1], m, a, b)
+    return num / wv
+
+def probe_sym(wcoeff, edge_cache, lam_star, n_grid=60, n_rand=20000, seed=7):
+    """对称网格 + 随机探针"""
+    import numpy as np
+    rng = np.random.default_rng(seed)
+    worst = -1e9; arg = None
+    # 网格
+    for m in range(1, k + 1):
+        for a in np.linspace(1e-6, (1 + eps) / m, n_grid):
+            for b in np.linspace(0, (1 + eps) / max(1, k - m), n_grid):
+                mw = mw_sym(wcoeff, edge_cache, m, float(a), float(b))
+                if mw is not None and mw > worst:
+                    worst, arg = mw, (m, a, b)
+    # 随机
+    negN = 0; totN = 0
+    for _ in range(n_rand):
+        m = int(rng.integers(1, k + 1))
+        a = rng.uniform(0, (1 + eps) / m)
+        b = rng.uniform(0, (1 + eps) / max(1, k - m))
+        mw = mw_sym(wcoeff, edge_cache, m, a, b)
+        if mw is None: continue
+        totN += 1
+        if mw - lam_star * k < 0: negN += 1
+        if mw > worst: worst, arg = mw, (m, a, b)
+    return worst, arg, negN, totN
+
 # ---------------- 主流程 ----------------
 if __name__ == '__main__':
     import numpy as np
