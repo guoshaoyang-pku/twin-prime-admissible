@@ -73,20 +73,19 @@ def max_sum_effective(a, grid=400):
     解析证明: Σ_E w_i^a = m(1-au) + ak·Σ_E t_i ≤ m(1-au) + aku = m + au(k-m)
     当 au ≤ 1 时 ≤ m + (k-m) = k (解析成立); 扫描作数值交叉确认。"""
     best = -1e18
-    a_ = float(a)
+    a_ = float(a); E1 = float(1 + eps); E0 = float(1 - eps)
     for m in range(1, k + 1):
         for ai in range(grid + 1):
-            av = (1 + float(eps)) * ai / grid / m
+            av = E1 * ai / grid / m
             for bj in range(grid + 1):
-                bv = (1 + float(eps)) * bj / grid / max(1, k - m)
+                bv = E1 * bj / grid / max(1, k - m)
                 u = m * av + (k - m) * bv
-                if u > 1 + float(eps):
+                if u > E1:
                     continue
-                s = 0.0
-                for i in range(k):
-                    ti = av if i < m else bv
-                    if u - ti <= 1 - float(eps):   # 有效
-                        s += 1 + a_ * (-u + k * ti)
+                # 有效 i 数: t_i = av (m 个) 或 bv (k-m 个)
+                cnt_a = m if u - av <= E0 else 0
+                cnt_b = (k - m) if u - bv <= E0 else 0
+                s = cnt_a * (1 + a_ * (-u + k * av)) + cnt_b * (1 + a_ * (-u + k * bv))
                 if s > best:
                     best = s
     return best
