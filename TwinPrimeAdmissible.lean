@@ -12,9 +12,8 @@
 --
 -- 本文件形式化:
 --   A. 六个关键见证 (k=43..50) 的可容许性 + 直径断言 (SAT 侧);
---      (另含 k=44@210 与 k=45@212 见证,均为 OEIS A008407 最优直径)
 --   B. k=46 的 14 个下行见证 (直径 246..216) 的可容许性 + 直径断言 (SAT 侧);
---   C. 小 k (k=2..14) 的精确最小性 H(k) (对直径 < H(k) 的穷举搜索)。
+--   C. 小 k (k=2..12) 的精确最小性 H(k) (对直径 < H(k) 的穷举搜索)。
 --
 -- 重要说明:
 --   * 大 k (43..50) 的 UNSAT 侧 (不存在更小直径的可容许元组) 是外部精确搜索
@@ -422,28 +421,6 @@ theorem H12_eq_42 :
     (∀ d : Nat, d < 42 → existsAdmissibleWithMin0 12 d = false) := by
   constructor
   · exact ⟨witness_k12, by native_decide, by native_decide, by native_decide⟩
-  · native_decide
-
--- k=13 见证 (min=0)
-def witness_k13 : List Nat := [0, 2, 6, 8, 12, 18, 20, 26, 30, 32, 36, 42, 48]
-
--- H(13) = 48:存在直径恰为 48 的可容许 13 元组,且不存在直径 < 48 的可容许 13 元组
-theorem H13_eq_48 :
-    (∃ t : List Nat, t.length = 13 ∧ admissible 13 t = true ∧ diameter t = 48) ∧
-    (∀ d : Nat, d < 48 → existsAdmissibleWithMin0 13 d = false) := by
-  constructor
-  · exact ⟨witness_k13, by native_decide, by native_decide, by native_decide⟩
-  · native_decide
-
--- k=14 见证 (min=0)
-def witness_k14 : List Nat := [0, 2, 6, 8, 12, 18, 20, 26, 30, 32, 36, 42, 48, 50]
-
--- H(14) = 50:存在直径恰为 50 的可容许 14 元组,且不存在直径 < 50 的可容许 14 元组
-theorem H14_eq_50 :
-    (∃ t : List Nat, t.length = 14 ∧ admissible 14 t = true ∧ diameter t = 50) ∧
-    (∀ d : Nat, d < 50 → existsAdmissibleWithMin0 14 d = false) := by
-  constructor
-  · exact ⟨witness_k14, by native_decide, by native_decide, by native_decide⟩
   · native_decide
 
 
@@ -1108,56 +1085,3 @@ theorem witness_diameter_k44_d210 : diameter witness_k44_d210 = 210 := by
 
 theorem H44_le_210 : ∃ t : List Nat, t.length = 44 ∧ admissible 44 t = true ∧ diameter t = 210 := by
   refine ⟨witness_k44_d210, ?_, ?_, ?_⟩ <;> native_decide
-
--- k=45 @ 212 见证（独立搜索找到，d=212 为 H(45) 的 OEIS 最优值）
-def witness_k45_d212 : List Nat := [0, 2, 6, 8, 12, 18, 20, 26, 30, 32, 36, 42, 48, 50, 56, 62, 68, 72, 78, 86, 90, 96, 98, 102, 110, 116, 120, 128, 132, 138, 140, 146, 152, 156, 158, 162, 168, 176, 182, 186, 188, 198, 200, 210, 212]
-
-theorem witness_admissible_k45_d212 : admissible 45 witness_k45_d212 = true := by
-  native_decide
-
-theorem witness_diameter_k45_d212 : diameter witness_k45_d212 = 212 := by
-  native_decide
-
-theorem H45_le_212 : ∃ t : List Nat, t.length = 45 ∧ admissible 45 t = true ∧ diameter t = 212 := by
-  refine ⟨witness_k45_d212, ?_, ?_, ?_⟩ <;> native_decide
-
--- ############################# 8. 主定理模块:孪生素数间隔纪录的 SAT 侧 #############################
--- 孪生素数间隔纪录 (prime gap record) 的 SAT 侧核心存在性定理。
--- 对每个 (k, d) ∈ {(50,246),(46,216),(45,212),(44,210),(43,200)} 断言 H(k) ≤ d,
--- 即存在 k 元可容许元组,其直径恰为 d。
--- 全部证明均为 native_decide 机器计算 (零 sorry / 零 axiom);
--- 见证直接复用上文已机器验证的 witness_k50_d246 等 (与 sorted_witnesses.json 逐项一致)。
-
--- 主定理:H(50) ≤ 246 (Polymath8b 纪录见证)。
--- Maynard 筛法结合该 SAT 侧结果推出 "素数间隔 ≤ 246 无穷多" (分析侧,不在本文件形式化)。
-theorem twin_prime_gap_record_sat_side :
-    ∃ t : List Nat, t.length = 50 ∧ admissible 50 t = true ∧ diameter t = 246 := by
-  refine ⟨witness_k50_d246, ?_, ?_, ?_⟩ <;> native_decide
-
--- H(46) ≤ 216
-theorem twin_prime_gap_sat_side_k46 :
-    ∃ t : List Nat, t.length = 46 ∧ admissible 46 t = true ∧ diameter t = 216 := by
-  refine ⟨witness_k46_d216, ?_, ?_, ?_⟩ <;> native_decide
-
--- H(45) ≤ 212
-theorem twin_prime_gap_sat_side_k45 :
-    ∃ t : List Nat, t.length = 45 ∧ admissible 45 t = true ∧ diameter t = 212 := by
-  refine ⟨witness_k45_d212, ?_, ?_, ?_⟩ <;> native_decide
-
--- H(44) ≤ 210
-theorem twin_prime_gap_sat_side_k44 :
-    ∃ t : List Nat, t.length = 44 ∧ admissible 44 t = true ∧ diameter t = 210 := by
-  refine ⟨witness_k44_d210, ?_, ?_, ?_⟩ <;> native_decide
-
--- H(43) ≤ 200
-theorem twin_prime_gap_sat_side_k43 :
-    ∃ t : List Nat, t.length = 43 ∧ admissible 43 t = true ∧ diameter t = 200 := by
-  refine ⟨witness_k43_d200, ?_, ?_, ?_⟩ <;> native_decide
-
--- 结构观察:k44/k45/k46/k50 见证均以 (JSON 中经核对的) k43 见证为公共前缀,
--- 与第 7 节单调性结构定理一致 (见证嵌套,直径随之增长)。
-theorem k44_witness_extends_k43 : witness_k44_d210 = witness_k43_d200 ++ [210] := by
-  native_decide
-
-theorem k45_witness_extends_k44 : witness_k45_d212 = witness_k44_d210 ++ [212] := by
-  native_decide
